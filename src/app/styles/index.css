@@ -11,29 +11,71 @@
 }
 
 .graident-main {
-    background: linear-gradient(204.33deg, rgb(20, 98, 214) -21.89%, rgb(144, 107, 255) 80.167%);
+    background: linear-gradient(
+        204.33deg,
+        rgb(20, 98, 214) -21.89%,
+        rgb(144, 107, 255) 80.167%
+    );
 }
 
 .nav-link {
     @apply py-2.5 px-3.5 text-white cursor-pointer rounded-sm;
-    transition: .15s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 
 .nav-link:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-
-.reversed-corner {
-    overflow: hidden;
-    position: absolute;
+.card {
+    @apply bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer overflow-hidden;
+    transition: 0.15s ease-in-out;
+    transition-delay: 0.25s;
+    max-width: 410px;
+    min-height: 415px;
 }
 
-.reversed-corner::before {
-    content: "";
+.card-text {
     position: absolute;
+    bottom: calc(30px - 66px - 16px);
+    transition: 0.3s ease-in;
+    font-size: 14px;
+}
+
+.card-hidden-text {
+    opacity: 0;
+    height: 66px;
+    transition: opacity .5s ease-out;
+    margin-top: 16px;
+}
+
+.card:hover .card-text {
+    bottom: calc(100% - 30px - 30px - 28px - 66px - 16px);
+}
+
+.card:hover .card-hidden-text {
+    opacity: 1;
+}
+
+.card:hover .card-image {
+    @apply absolute w-100 -bottom-15 z-20 left-1/2 -translate-x-1/2;
+    animation: fadeOutIn .5s ease-in-out;
+}
+
+.card::after {
+    content: "";
     display: block;
-    width: 200%;
-    height: 200%;
-    box-shadow: 0px 0px 0px 50px white;
+    position: absolute;
+    border-radius: 12px;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 20px;
+    width: 75%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }

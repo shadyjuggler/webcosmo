@@ -1,3 +1,9 @@
-h1 {
+
+h1, h2 {
     @apply font-semibold text-white;
 }
+
+h1 span, h2 span {
+    @apply text-[#1462D6];
+}
+

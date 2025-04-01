@@ -5,16 +5,16 @@ import Navbar from "./Navbar";
 import banner1 from "../assets/banner-1-bg.svg";
 import rocket from "../assets/rocket.svg";
 import banner2 from "../assets/banner-bg-2.svg";
-import arrow from "../assets/arrow.svg";
-import banner3 from "../assets/banner-3-bg.svg";
-import flag from "../assets/flag.svg";
-import gear from "../assets/gear.svg";
+import arrow from "../assets/arrow.png";
+import flag from "../assets/flag.png";
+import banner4 from "../assets/banner-bg-4.svg";
+import gear from "../assets/gear.gif";
 
 export default function Header() {
     return (
         <header
             id="main_header"
-            className="relative rounded-xl graident-main py-5 px-8 overflow-hidden flex"
+            className="relative rounded-xl graident-main py-5 pb-8 px-8 overflow-hidden flex"
         >
             <div className="container mx-auto flex flex-col">
                 <Navbar></Navbar>
@@ -49,71 +49,75 @@ export default function Header() {
                     </div>
 
                     <div
-                        className="absolute w-full left-0 top-40 flex flex-col justify-start items-end scale-90"
-                        style={{ maxWidth: "372px", height: "330px" }}
+                        className="absolute w-full left-0 bottom-55 flex flex-col items-end"
+                        style={{ maxWidth: "24%", left: "3%" }}
                     >
                         <Image
-                            className="absolute bottom-0"
-                            src={banner2}
-                            alt="banner-2"
-                        />
-                        <Image
-                            className="absolute bottom-0"
                             src={arrow}
                             alt="arrow"
                         />
-                        <div className="z-20 flex flex-col gap-8 py-5 pr-12">
-                            <p className="text-3xl text-white text-left font-semibold max-w-36">
+                        <div className="absolute top-5 right-5 z-20 flex flex-col justify-between w-1/3 h-1/3">
+                            <p className="text-2xl text-white text-left font-semibold max-w-36">
                                 +6
                             </p>
-                            <p className="text-white text-right max-w-36">
+                            <p className="text-white max-w-36">
                                 лет в digital <br /> разработке
                             </p>
                         </div>
                     </div>
 
                     <div
-                        className="absolute w-full left-80 top-25 flex flex-col justify-end items-start scale-80 2xl:scale-135 z-30"
-                        style={{ maxWidth: "400px", height: "535px" }}
+                        className="absolute w-full bottom-0 flex flex-col justify-end items-start z-30"
+                        style={{ maxWidth: "33%", left: "15%" }}
                     >
                         <Image
-                            className="absolute bottom-0"
-                            src={banner3}
-                            alt="banner-3"
-                        />
-                        <Image
-                            className="absolute bottom-0"
+                            className="w-full h-auto"
                             src={flag}
                             alt="flag"
                         />
 
-                        <div className="z-20 flex flex-col gap-12 py-4 pl-5">
-                            <p className="text-2xl text-white text-left font-semibold max-w-36">
+                        <div className="absolute bottom-5 left-5 z-20 flex flex-col justify-between h-2/5">
+                            <p className="text-3xl text-white text-left font-semibold max-w-36 ">
                                 100+
                             </p>
-                            <p
-                                className=" text-white text-right max-w-36"
-                                style={{ fontSize: "12px" }}
-                            >
+                            <p className=" text-white text-right max-w-36">
                                 Работ выполнено <br /> за последний год
                             </p>
                         </div>
                     </div>
 
-                    <div className="relative mt-auto flex justify-end z-20">
-                        <div className="w-full">
-                            <p className="text-white">Готовы к масштабированию? Давайте обсудим ваш проект и запустим его вместе!</p>
-                            <button className="btn mt-12 btn-transparent text-white py-2.5 px-4.5">Обсудить задачу</button>
+                    <div className="mt-auto flex justify-end z-20">
+                        <div
+                            className="relative bg-blur w-full flex justify-start items-center bg-white-10 rounded-xl p-12"
+                            style={{ maxWidth: "47%" }}
+                        >
+                            <div className="flex flex-col">
+                                <p className="text-white max-w-md">
+                                    Готовы к масштабированию? Давайте обсудим
+                                    ваш проект и запустим его вместе!
+                                </p>
+                                <button className="btn mt-8 btn-transparent text-white py-2.5 px-4.5 w-60">
+                                    Обсудить задачу
+                                </button>
+                            </div>
+                            {/* <Image
+                                className="absolute left-0 top-0"
+                                src={banner4}
+                                alt="banner"
+                            ></Image> */}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="absolute left-0 bottom-0 bg-white w-1/2 h-30 rounded-tr-xl"></div>
-            
-            <div className="absolute left-1/2 top-45 z-10 -translate-x-1/2">
-                <Image src={gear} alt={gear}/>
+            <div
+                className="absolute left-1/2 top-45 z-10 -translate-x-1/2 opacity-25"
+                style={{ maxWidth: "630px" }}
+            >
+                <Image src={gear} alt={"gear"} />
             </div>
+
+            <div className="absolute left-0 bottom-0 bg-white w-1/2 h-30 rounded-tr-xl z-20"></div>
 
             <div
                 id="header_corner_1"

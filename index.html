@@ -1,52 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="" id="a"></div>
-    <div class="" id="b"></div>
-    <div class="" id="c"></div>
-    <div class="" id="d"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="" id="a"></div>
+        <div class="" id="b"></div>
+        <div class="" id="c"></div>
+        <div class="" id="d"></div>
 
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            height: 100vh;
-        }
-        #a, #b, #c, #d {
-            width: 100px;
-            height: 100px;
-            background-color: purple;
-            overflow: hidden;
-            position: relative;
-        }
+        <div class="" id="e"></div>
 
-        #a::before, #b::before, #c::before, #d::before {
-            content: "";
-            display: block;
-            width: 200%;
-            height: 200%;
-            position: absolute;
-            border-radius: 50%;
-        } 
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                height: 100vh;
+                background-color: cornsilk;
+            }
+            #a,
+            #b,
+            #c,
+            #d {
+                width: 100px;
+                height: 100px;
+                background-color: purple;
+                overflow: hidden;
+                position: relative;
+            }
 
-        #a::before {
-            top: 0;
-            left: 0;
-            box-shadow: 0px 0px 0px 50px white;
-        }
+            #a::before,
+            #b::before,
+            #c::before,
+            #d::before {
+                content: "";
+                display: block;
+                width: 200%;
+                height: 200%;
+                position: absolute;
+                border-radius: 50%;
+            }
 
-        #b::before {
-            bottom: 0;
-            right: 0;
-            box-shadow: 0px 0px 0px 50px white;
-        }
-    </style>
-</body>
+            #a::before {
+                top: 0;
+                left: 0;
+                box-shadow: 0px 0px 0px 50px white;
+            }
+
+            #b::before {
+                bottom: 0;
+                right: 0;
+                box-shadow: 0px 0px 0px 50px white;
+            }
+
+            #e {
+                width: 400px;
+                height: 300px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0.1);
+
+                background-color: rgba(
+                    255,
+                    255,
+                    255,
+                    0.1
+                ); /* semi-transparent white */
+                backdrop-filter: blur(10px); /* the blur effect */
+                -webkit-backdrop-filter: blur(10px); /* Safari support */
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.2); /* optional frosted glass border */
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+                padding: 1rem;
+            }
+        </style>
+    </body>
 </html>
