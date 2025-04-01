@@ -4,10 +4,8 @@ import Navbar from "./Navbar";
 
 import banner1 from "../assets/banner-1-bg.svg";
 import rocket from "../assets/rocket.svg";
-import banner2 from "../assets/banner-bg-2.svg";
 import arrow from "../assets/arrow.png";
 import flag from "../assets/flag.png";
-import banner4 from "../assets/banner-bg-4.svg";
 import gear from "../assets/gear.gif";
 
 export default function Header() {
