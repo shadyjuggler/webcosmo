@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="" id="a"></div>
+    <div class="" id="b"></div>
+    <div class="" id="c"></div>
+    <div class="" id="d"></div>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100vh;
+        }
+        #a, #b, #c, #d {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #a::before, #b::before, #c::before, #d::before {
+            content: "";
+            display: block;
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            border-radius: 50%;
+        } 
+
+        #a::before {
+            top: 0;
+            left: 0;
+            box-shadow: 0px 0px 0px 50px white;
+        }
+
+        #b::before {
+            bottom: 0;
+            right: 0;
+            box-shadow: 0px 0px 0px 50px white;
+        }
+    </style>
+</body>
+</html>

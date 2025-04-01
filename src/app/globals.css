@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+@import "./styles/vars.css";
+@import "./styles/buttons.css";
+@import "./styles/reversecorners.css";
+@import "./styles/typography.css";
+@import "./styles/index.css";
+
+@media (width >= 96rem) {
+    .container {
+        max-width: 103rem;
+    }
+}

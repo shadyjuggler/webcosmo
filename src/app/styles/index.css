@@ -1,0 +1,39 @@
+* {
+    font-family: "Golos Text", sans-serif;
+}
+
+#main {
+    @apply bg-[#E6E9EE] min-h-screen p-5;
+}
+
+#main_header {
+    min-height: 880px;
+}
+
+.graident-main {
+    background: linear-gradient(204.33deg, rgb(20, 98, 214) -21.89%, rgb(144, 107, 255) 80.167%);
+}
+
+.nav-link {
+    @apply py-2.5 px-3.5 text-white cursor-pointer rounded-sm;
+    transition: .15s ease-in-out;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.reversed-corner {
+    overflow: hidden;
+    position: absolute;
+}
+
+.reversed-corner::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 200%;
+    box-shadow: 0px 0px 0px 50px white;
+}

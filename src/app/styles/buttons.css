@@ -1,0 +1,29 @@
+.btn {
+    @apply rounded-sm border cursor-pointer;
+    transition: .15s ease-in-out;
+}
+
+.btn-black {
+    @apply bg-[#262B3A] border-[#262B3A] text-white;
+}
+
+.btn-transparent {
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.btn-transparent:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.btn-dd {
+    @apply bg-transparent h-auto focus:ring-0;
+}
+
+.btn-dd ul {
+    @apply !bg-white rounded-sm;
+}
+
+.btn-dd ul button {
+    @apply !bg-white text-black py-3 hover:!bg-slate-100;
+    transition: .15s ease-in-out;
+}
