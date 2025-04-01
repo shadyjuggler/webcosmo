@@ -8,7 +8,6 @@ import banner2 from "../assets/banner-bg-2.svg";
 import arrow from "../assets/arrow.svg";
 import banner3 from "../assets/banner-3-bg.svg";
 import flag from "../assets/flag.svg";
-import banner4 from "../assets/banner-bg-4.svg";
 import gear from "../assets/gear.svg";
 
 export default function Header() {
