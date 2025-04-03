@@ -9,8 +9,12 @@
 @import "./styles/typography.css";
 @import "./styles/index.css";
 
-@media (width >= 96rem) {
+.container {
+    @apply px-2.5;
+}
+
+/* @media (width >= 96rem) {
     .container {
         max-width: 103rem;
     }
-}
+} */

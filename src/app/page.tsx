@@ -8,8 +8,10 @@ export default function Home() {
             <div className="p-4 bg-white rounded-xl">
                 <Header />
             </div>
-            <Features />
-            <Solutions />
+            <div className="bg-[#EFF1F5] rounded-xl">
+                <Features />
+                <Solutions />
+            </div>
         </>
     );
 }
