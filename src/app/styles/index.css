@@ -103,9 +103,8 @@
 }
 
 .solution:hover img {
-    fill: #1462D6;
+    fill: #1462d6;
 }
-
 
 .solution:hover .btn {
     @apply bg-[#1462D6] !text-white !border-transparent;
@@ -122,18 +121,25 @@
 }
 
 .mask-side-notches {
-    mask-image: url('/file.svg');
+    mask-image: url("/file.svg");
     mask-repeat: no-repeat;
     mask-position: left center;
-    mask-size:;
-  
-    -webkit-mask-image: url('/file.svg');
+    mask-size: ;
+
+    -webkit-mask-image: url("/file.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: left center;
     -webkit-mask-size: contain;
-  
+
     /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
     -webkit-mask-type: luminance;
     mask-type: luminance;
-  }
-  
+}
+
+.filter-tab {
+    @apply flex-1 bg-white py-4 rounded-md hover:bg-[#1462D6] hover:text-white cursor-pointer;
+}
+
+.slide {
+    @apply pt-8 pl-8 w-full flex gap-8 rounded-xl bg-white;
+}

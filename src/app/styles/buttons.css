@@ -1,6 +1,6 @@
 .btn {
     @apply rounded-sm border cursor-pointer;
-    transition: .15s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 
 .btn-black {
@@ -8,11 +8,11 @@
 }
 
 .btn-transparent {
-    border-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-transparent:hover {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-arrow {
@@ -21,6 +21,34 @@
 
 .btn-arrow span {
     @apply p-4 bg-white/10 rounded-sm cursor-pointer;
+}
+
+.btn-white {
+    @apply bg-white text-[#1462D6] border-white;
+}
+
+.btn-white svg {
+    fill: #1462d6;
+}
+
+.btn-white:hover svg {
+    fill: white;
+}
+
+.btn-white:hover {
+    @apply bg-[#1462D6] !text-white !border-transparent;
+}
+
+.btn-blue {
+    @apply bg-[#1462D6] !text-white border-transparent;
+}
+
+.btn-blue:hover {
+    @apply bg-white border-[#1462D6] !text-[#1462D6];
+}
+
+.btn-blue.btn-arrow:hover span {
+    @apply bg-[#1462D6];
 }
 
 .btn-dd {
@@ -33,5 +61,5 @@
 
 .btn-dd ul button {
     @apply !bg-white text-black py-3 hover:!bg-slate-100;
-    transition: .15s ease-in-out;
+    transition: 0.15s ease-in-out;
 }

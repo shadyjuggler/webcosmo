@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Solutions from "./components/Solutions";
+import Examples from "./components/Examples";
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <div className="bg-[#EFF1F5] rounded-xl">
                 <Features />
                 <Solutions />
+                <Examples />
             </div>
         </>
     );
