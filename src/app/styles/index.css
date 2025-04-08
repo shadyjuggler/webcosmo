@@ -18,6 +18,14 @@
     );
 }
 
+.graident-main2 {
+    background: linear-gradient(
+        100.36deg,
+        rgb(20, 98, 214) -56.778%,
+        rgb(144, 107, 255) 77.412%
+    );
+}
+
 .nav-link {
     @apply py-2.5 px-3.5 text-white cursor-pointer rounded-sm;
     transition: 0.15s ease-in-out;

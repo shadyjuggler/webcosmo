@@ -7,9 +7,9 @@ export const CaseSlide: React.FC<{
     descr?: string;
     techstack?: string[];
     imgUrl?: string | StaticImageData;
-}> = ({ title, descr, techstack, imgUrl }) => {
+}> = ({ techstack, imgUrl }) => {
     return (
-        <div className="slide">
+        <div className="slide relative">
             <div className="flex flex-col pb-8 max-w-[314px] w-full">
                 <p className="xl:text-xl 2x:text-2xl font-semibold text-[#1D2230]">
                     Разработка Web3 платформы Fungypack
@@ -37,6 +37,39 @@ export const CaseSlide: React.FC<{
                     <Image src={imgUrl ? imgUrl : "none"} alt="image" />
                 </div>
             </div>
+
+            <div className="absolute top-0 right-0 xl:w-17 2xl:w-20 xl:h-17 2xl:h-20 bg-[#eff1f5]">
+                <button className="case-next xl:w-14 2xl:w-17 xl:h-14 2xl:h-17 absolute top-0 right-0 btn btn-white aspect-square flex justify-center items-center !rounded-xl">
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        className="rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.0001 2.6665L4.66675 7.99984L10.0001 13.3332L11.3334 11.9998L7.33341 7.99984L11.3334 3.99984L10.0001 2.6665Z"
+                        />
+                    </svg>
+                </button>
+
+                <div
+                    id="slider_corner_1"
+                    className="reversed-corner w-3 h-3 left-0 bottom-0"
+                ></div>
+            </div>
+
+            <div
+                id="slider_corner_2"
+                className="reversed-corner w-3 h-3 right-0 xl:top-17 2xl:top-20"
+            ></div>
+            <div
+                id="slider_corner_3"
+                className="reversed-corner w-3 h-3 xl:right-17 2xl:right-20 top-0"
+            ></div>
         </div>
     );
 };

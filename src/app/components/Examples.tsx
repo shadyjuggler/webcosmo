@@ -18,13 +18,15 @@ import { Message } from "./UI/Message";
 
 import arrow from "../assets/small-arrow.svg";
 
+import blur from "../assets/Blur Effect (1).png";
+
 export default function Examples() {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
     return (
-        <section id="examples" className="py-24 overflow-hidden">
-            <div className="container mx-auto">
+        <section id="examples" className="py-24 overflow-hidden relative">
+            <div className="relative container mx-auto z-10">
                 <div className="flex justify-center items-center">
                     <div className="flex w-2/3">
                         <Tab name="Кейсы" />
@@ -169,6 +171,9 @@ export default function Examples() {
                         </span>
                     </button>
                 </div>
+            </div>
+            <div className="absolute -bottom-1/3 right-0 z-0 pointer-events-none">
+                <Image src={blur} alt="blur"/>
             </div>
         </section>
     );

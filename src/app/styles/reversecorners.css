@@ -31,5 +31,40 @@
 #soluction_corner-2::before {
     top: 0;
     right: 0;
-    box-shadow: 0px 0px 0px 10px #EFF1F5;
+    box-shadow: 0px 0px 0px 10px #eff1f5;
 }
+
+#slider_corner_1::before {
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px 0px 0px 10px #5066EA;
+}
+
+#slider_corner_2::before {
+    top: 0;
+    right: 0;
+    box-shadow: 0px 0px 0px 10px #eff1f5;
+}
+
+#slider_corner_3::before {
+    top: 0;
+    right: 0;
+    box-shadow: 0px 0px 0px 10px #eff1f5;
+}
+
+#review_corner_1::before {
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 0px 10px #897469;
+}
+#review_corner_2::before {
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 0px 0px 10px #ebebeb;
+}
+#review_corner_3::before {
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 0px 0px 10px #ebebeb;
+}
+

@@ -1,0 +1,11 @@
+.review-slide {
+    @apply p-4 pb-8 bg-[#ebebeb] rounded-xl flex flex-col hover:bg-white transition-all;
+}
+
+.review-slide .box {
+    @apply bg-[#ebebeb] transition-all;
+}
+
+.review-slide:hover .box {
+    @apply bg-white;
+}
