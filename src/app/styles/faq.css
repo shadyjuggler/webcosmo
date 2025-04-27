@@ -1,0 +1,31 @@
+.faq-row-wrapper {
+    @apply !bg-transparent;
+}
+.faq-body {
+    @apply flex flex-col gap-2;
+}
+
+.faq-row {
+    @apply !py-3 !px-8 !border-0 bg-white rounded-xl;
+}
+
+.row-title-text {
+    @apply text-[#262B3A] font-semibold;
+}
+
+.icon-wrapper {
+    @apply !p-3 !max-w-10 !max-h-10 rounded-xl border-1 border-slate-200 bg-white hover:bg-[#1462D6] !transition-all;
+    top: 15px!important;
+}
+
+.icon-wrapper:hover svg {
+    @apply !fill-[#FFFFFF];
+}
+
+.arrow-image svg {
+    @apply !fill-[#1462D6];
+}
+
+.row-content-text {
+    @apply !pr-10;
+}

@@ -1,0 +1,16 @@
+<svg width="548.000000" height="465.000000" viewBox="0 0 548 465" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_238_818_dd" x="0.000000" y="0.000000" width="548.000000" height="465.000000" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="13.3333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+	</defs>
+	<g filter="url(#filter_238_818_dd)">
+		<path id="Glass Element" d="M0 16L0 257.77C0 266.61 7.16 273.77 16 273.77L191.5 273.77C200.33 273.77 207.5 280.93 207.5 289.77L207.5 449C207.5 457.83 214.66 465 223.5 465L532 465C540.83 465 548 457.83 548 449L548 138.23C548 129.39 540.83 122.23 532 122.23L321.91 122.23C313.08 122.23 305.91 115.07 305.91 106.23L305.91 16C305.91 7.16 298.75 0 289.91 0L16 0C7.16 0 0 7.16 0 16Z" fill="#FFFFFF" fill-opacity="0.250000" fill-rule="nonzero"/>
+	</g>
+</svg>

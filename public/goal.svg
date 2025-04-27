@@ -1,0 +1,13 @@
+<svg width="551.000000" height="413.500000" viewBox="0 0 551 413.5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient x1="750.218872" y1="-439.728210" x2="77.910095" y2="506.432312" id="paint_linear_153_258_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#1462D6"/>
+			<stop offset="1.000000" stop-color="#906BFF"/>
+		</linearGradient>
+	</defs>
+	<path id="Union" d="M223 73L223 16C223 7.16 215.83 0 207 0L16 0C7.16 0 0 7.16 0 16L0 397.5C0 406.33 7.16 413.5 16 413.5L535 413.5C543.83 413.5 551 406.33 551 397.5L551 16C551 7.16 543.83 0 535 0L345 0C336.16 0 329 7.16 329 16L329 73C329 81.83 321.83 89 313 89L239 89C230.16 89 223 81.83 223 73Z" fill="#262B3A" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Union" d="M223 73L223 16C223 7.16 215.83 0 207 0L16 0C7.16 0 0 7.16 0 16L0 397.5C0 406.33 7.16 413.5 16 413.5L535 413.5C543.83 413.5 551 406.33 551 397.5L551 16C551 7.16 543.83 0 535 0L345 0C336.16 0 329 7.16 329 16L329 73C329 81.83 321.83 89 313 89L239 89C230.16 89 223 81.83 223 73Z" fill="url(#paint_linear_153_258_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>
