@@ -16,7 +16,7 @@ import moh from "../assets/moh.png";
 export default function Team() {
     return (
         <section
-            id="reviews"
+            id="team"
             className="pb-24 graident-main2 relative rounded-b-xl"
         >
             <div className="h-[260px] mb-24"></div>

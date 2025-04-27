@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import msg from "../../assets/message.png";
 
-export const Message: React.FC = () => {
+export const Message: React.FC<{title: string, message: string}> = ({title, message}) => {
     return (
         <div className="relative max-w-[562px] flex justify-end items-end">
             <Image src={msg} alt="message"></Image>
@@ -26,8 +26,8 @@ export const Message: React.FC = () => {
             </div>
 
             <div className="absolute z-20 max-w-[375px] py-6 mx-2 2xl:mx-4">
-                <p className="text-sm 2xl:text-base font-semibold text-[#262B3A]">Веб-разрабочик</p>
-                <p className="mt-1 text-sm 2xl:text-base text-[#1D2230]">Сотрудничество с этим агентством — это всегда качественный и креативный результат.</p>
+                <p className="text-sm 2xl:text-base font-semibold text-[#262B3A]">{title}</p>
+                <p className="mt-1 text-sm 2xl:text-base text-[#1D2230]">{message} </p>
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 * {
     font-family: "Golos Text", sans-serif;
+    scroll-behavior: smooth;
 }
 
 #main {
@@ -20,7 +21,7 @@
 
 .graident-main2 {
     background: linear-gradient(
-        100.36deg,
+        90deg,
         rgb(20, 98, 214) -56.778%,
         rgb(144, 107, 255) 77.412%
     );
@@ -132,12 +133,101 @@
     mask-image: url("/file.svg");
     mask-repeat: no-repeat;
     mask-position: left center;
-    mask-size: ;
 
     -webkit-mask-image: url("/file.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: left center;
     -webkit-mask-size: contain;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.mask-side-file-top {
+    mask-image: url("/file-top.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/file-top.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top left;
+    -webkit-mask-size: cover;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.mask-card {
+    mask-image: url("/card.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/card.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom right;
+    -webkit-mask-size: cover;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.mask-card {
+    mask-image: url("/slide-top.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/slide-top.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top right;
+    -webkit-mask-size: cover;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.mask-case {
+    mask-image: url("/case-bg.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/case-bg.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom right;
+    -webkit-mask-size: cover;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.mask-goal {
+    mask-image: url("/goal.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/goal.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top center;
+    -webkit-mask-size: cover;
+
+    /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
+    -webkit-mask-type: luminance;
+    mask-type: luminance;
+}
+
+.functionality-card {
+    mask-image: url("/functionality-card.svg");
+    mask-repeat: no-repeat;
+    mask-position: top top;
+
+    -webkit-mask-image: url("/functionality-card.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top right;
+    -webkit-mask-size: cover;
 
     /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
     -webkit-mask-type: luminance;
@@ -150,4 +240,44 @@
 
 .slide {
     @apply pt-8 pl-8 w-full flex gap-8 rounded-xl bg-white;
+}
+
+.circle {
+    position: absolute;
+    filter: blur(500px);
+    background: linear-gradient(
+        -55.43deg,
+        rgb(20, 98, 214) 8.857%,
+        rgb(144, 107, 255) 73.909%
+    );
+    width: 778px;
+    height: 778px;
+    border-radius: 50%;
+}
+
+.input, .textarea {
+    @apply bg-white rounded-xl text-[#262B3A] p-5 placeholder:text-[#1D2230] w-full transition-all focus:outline-[#1462d6];
+}
+
+.textarea {
+    @apply min-h-[180px];
+}
+
+.form-control {
+    @apply w-full;
+}
+
+#func-slider .swiper-wrapper {
+    padding-bottom: 25px;
+}
+
+.functionality-slide:hover .slide-bg {
+    @apply opacity-100;
+}
+.functionality-slide:hover .icon {
+    @apply bg-[#1462D6];
+}
+
+.achivements-card {
+    background: linear-gradient(90.00deg, rgba(255, 255, 255, 0),rgb(255, 255, 255) 100%);
 }

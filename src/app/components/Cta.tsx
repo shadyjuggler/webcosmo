@@ -1,33 +1,44 @@
+import { Tab } from "./UI/Tab";
+import Image from "next/image";
+import glass from "../assets/glass.svg";
+import Form from "./Form";
+import sphere from "../assets/sphere.png";
 
-export default function CTA() {
+export const CTA: React.FC<{ title: string }> = ({ title }) => {
     return (
-        <section
-            id="solutions"
-            className="rounded-b-xl rounded-tl-xl bg-[#EFF1F5] "
-        >
-            <div className="relative bg-white pb-24 rounded-xl pt-35 overflow-hidden">
-                <div
-                    className="absolute right-0 top-0 bg-[#EFF1F5] h-20"
-                    style={{ width: "calc(100% - 250px - 112px)" }}
-                >
-                    <div className="absolute -translate-x-full top-0 w-0 h-0 border-b-[80px] border-b-transparent border-r-[112px] border-r-[#EFF1F5]"></div>
-                </div>
-
-                <div
-                    id="soluction_corner-1"
-                    className="reversed-corner w-3 h-3 top-0 left-[250px]"
-                ></div>
-
-                <div
-                    id="soluction_corner-2"
-                    className="reversed-corner w-3 h-3 top-[80px] right-0"
-                ></div>
-               
-
-                <div className="container mx-auto">
-             
-                </div>
+        <>
+            <div className="absolute left-1/2 -top-[50px] z-40">
+                <Image src={glass} alt="glass" />
             </div>
-        </section>
+            <section
+                id="cta"
+                className="bg-white mask-side-file-top relative overflow-hidden rounded-b-2xl"
+            >
+                <div className="circle -top-1/2 left-1/5 bg-amber-600`"></div>
+                <Image
+                    className="max-w-[900px] absolute -bottom-30 -right-50"
+                    src={sphere}
+                    alt="abc"
+                ></Image>
+                <div className="container mx-auto py-40">
+                    <div className="flex flex-col justify-center items-start">
+                        <Tab name="Заявка" />
+                        <h2
+                            className="mt-8 text-5xl !text-[#262B3A]"
+                            dangerouslySetInnerHTML={{ __html: title }}
+                        ></h2>
+                    </div>
+                    <p className="mt-8 text-[#1D2230] max-w-[580px]">
+                        Расскажите, какая задача стоит перед Вами прямо сейчас,
+                        а мы предложим подробный план ее решения и реализуем
+                        задуманное.
+                    </p>
+
+                    <div className="mt-16 max-w-[800px] flex ">
+                        <Form isModal={false}></Form>
+                    </div>
+                </div>
+            </section>
+        </>
     );
-}
+};

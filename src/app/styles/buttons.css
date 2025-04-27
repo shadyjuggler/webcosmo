@@ -43,6 +43,19 @@
     @apply bg-[#1462D6] !text-white border-transparent;
 }
 
+.btn-bluewhite {
+    @apply bg-white !text-[#1462D6] border-transparent;
+}
+
+.btn-bluewhite:hover {
+    @apply bg-[#1462D6] !text-white border-transparent;
+}
+
+
+.btn-bluewhite.btn-arrow span {
+    @apply bg-[#1462D6];
+}
+
 .btn-blue:hover {
     @apply bg-white border-[#1462D6] !text-[#1462D6];
 }

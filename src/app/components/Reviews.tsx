@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Reviews() {
     return (
-        <section id="reviews" className="py-24 relative">
+        <section id="reviews" className="py-24 relative z-20 bg-[#EFF1F5] rounded-b-xl">
             <div className="relative container mx-auto">
                 <div className="absolute top-0 right-1/5 -translate-y-3/4 max-w-[350px]">
                     <Image src={donut} alt="donut" />
@@ -79,6 +79,7 @@ export default function Reviews() {
                 <button className="review-prev"></button>
                 <button className="review-next"></button>
             </div>
+
         </section>
     );
 }

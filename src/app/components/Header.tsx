@@ -98,11 +98,6 @@ export default function Header() {
                                     Обсудить задачу
                                 </button>
                             </div>
-                            {/* <Image
-                                className="absolute left-0 top-0"
-                                src={banner4}
-                                alt="banner"
-                            ></Image> */}
                         </div>
                     </div>
                 </div>

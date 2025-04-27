@@ -35,7 +35,7 @@ export default function Examples() {
                         </h2>
                     </div>
                     <div className="-translate-y-10">
-                        <Message />
+                        <Message title="Веб-разрабочик" message="Сотрудничество с этим агентством — это всегда качественный и креативный результат." />
                     </div>
                 </div>
 
