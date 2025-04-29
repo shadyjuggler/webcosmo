@@ -295,6 +295,8 @@
     width: 778px;
     height: 778px;
     border-radius: 50%;
+
+    -webkit-filter: blur(500px);
 }
 
 .input,
@@ -407,6 +409,8 @@
         width: 2000px;
         height: 1500px;
         border-radius: 50%;
+
+        -webkit-filter: blur(450px);
     }
 
     .solution:hover {

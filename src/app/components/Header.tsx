@@ -24,7 +24,7 @@ export default function Header() {
                         Создаем уникальные <br /> цифровые решения
                     </h1>
                     <div
-                        className="absolute w-full top-15 md:top-30 xl:top-10 -right-20 md:right-0 xl:right-10 2xl:-right-8 flex flex-col justify-end h-[250px] xl:h-[400px] items-start md:items-end max-w-[350px] xl:max-w-[400px] 2xl:max-w-[500px]"
+                        className="absolute w-full top-15 md:top-30 xl:top-10 -right-20 md:right-0 xl:-right-2 2xl:-right-8 flex flex-col justify-end h-[250px] xl:h-[400px] items-start md:items-end max-w-[350px] xl:max-w-[400px] 2xl:max-w-[500px]"
                     >
                         <Image
                             className="hidden md:block absolute z-10 -top-8 xl:-top-15 -left-5 pointer-events-none max-w-[225px] xl:max-w-[270px] 2xl:max-w-[300px]"
@@ -94,7 +94,7 @@ export default function Header() {
 
                     <div className="mt-auto flex justify-end z-20">
                         <div
-                            className="relative max-w-full md:max-w-[47%] md:bg-blur w-full flex justify-start items-center md:bg-white-10 rounded-xl md:p-8 xl:p-12"
+                            className="relative max-w-full md:max-w-[47%] bg-blur w-full flex justify-start items-center bg-white-10 rounded-xl md:p-8 xl:p-12"
                         >
                             <div className="flex flex-col">
                                 <p className="text-white md:max-w-md text-base">
