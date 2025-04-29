@@ -14,7 +14,7 @@ export default function Form({ isModal }) {
                 ""
             )}
 
-            <div className={`${isModal ? "flex-col mt-8" : "flex-row"} flex gap-4`}>
+            <div className={`!flex-col md:!flex-row ${isModal ? "flex-col mt-8" : "flex-row"} flex gap-4 `}>
                 <div className="form-control">
                     <input placeholder="Имя" type="text" className="input" />
                 </div>
@@ -35,7 +35,7 @@ export default function Form({ isModal }) {
                 ></textarea>
             </div>
             <div>
-                <button className={`btn btn-blue btn-arrow py-1 ${isModal ? "w-full justify-center !py-1.5 !px-8" : ""}`}>
+                <button className={`btn w-full md:w-fit justify-center md:justify-start btn-blue btn-arrow py-1 ${isModal ? "w-full justify-center !py-1.5 !px-8" : ""}`}>
                     Отправить заявку{" "}
                     <span>
                         <Image src={arrow} alt="smallarrow" />
@@ -43,7 +43,7 @@ export default function Form({ isModal }) {
                 </button>
 
                 {!isModal ? (
-                    <p className="mt-8 text-[rgb(29, 34, 48)] opacity-70">
+                    <p className="mt-8 text-[rgb(29, 34, 48)] opacity-70 text-center md:text-left">
                         Нажимая кнопку “Отправить заявку”, я даю согласие на{" "}
                         <a href="#" target="_blank" className="underline">
                             обработку персональных данных

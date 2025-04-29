@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Footer from "../components/Footer";
 
-import iphone from "../assets/iphone.png";
+import iphone from "../assets/phone.png"
 import aboutclient from "../assets/about-client.png";
 import figure from "../assets/figure.png";
 

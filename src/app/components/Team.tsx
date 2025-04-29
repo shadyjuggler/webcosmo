@@ -19,31 +19,31 @@ export default function Team() {
             id="team"
             className="pb-24 graident-main2 relative rounded-b-xl"
         >
-            <div className="h-[260px] mb-24"></div>
-            <div className="absolute top-1/4 right-0">
-                <Image className="max-w-[300px] 2xl:max-w-[400px] opacity-80" src={moh} alt="moh" />
+            <div className="h-[260px] mb-12 md:mb-24"></div>
+            <div className="absolute top-[100px] md:top-1/4 right-0">
+                <Image className="max-w-[200px] md:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[400px] opacity-80" src={moh} alt="moh" />
             </div>
-            <div className="absolute bottom-1/5 xl:-left-40 2xl:-left-50 rotate-[55deg]">
-                <Image className="xl:max-w-[500px] 2xl:max-w-[550px] opacity-80" src={helix} alt="helix" />
+            <div className="absolute hidden md:block bottom-1/5 -left-50 xl:-left-40 2xl:-left-50 rotate-[55deg]">
+                <Image className="max-w-[400px] xl:max-w-[500px] 2xl:max-w-[550px] opacity-80" src={helix} alt="helix" />
             </div>
             <div className="container mx-auto">
-                <div className="flex flex-col justify-center items-center relative">
+                <div className="flex flex-col justify-center items-start md:items-center relative">
                     <div className="absolute left-0 top-0">
                         <Tab name="Команда" />
                     </div>
-                    <h2 className="text-5xl !text-white">
+                    <h2 className="mt-16 md:mt-0 text-3xl text-left md:text-center md:text-4xl lg:text-5xl !text-white">
                         Наша команда экспертов
                     </h2>
-                    <p className="mt-8 text-gray-300 max-w-[750px] text-center">
+                    <p className="mt-4 md:mt-8 text-gray-300 max-w-[750px] text-left md:text-center">
                         Наше Digital агентство состоит из более чем 20
                         профессионалов, которые создают инновационные решения в
                         области веб-дизайна, разработки и маркетинга.
                     </p>
                 </div>
 
-                <div className="mt-16 flex flex-wrap gap-2 gap-y-4">
-                    <div className="py-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full">
-                        <div className="relative xl:min-h-[200px] 2xl:min-h-[250px]">
+                <div className="mt-16 flex flex-wrap gap-2 gap-y-4 justify-center">
+                    <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
+                        <div className="relative min-h-[200px] 2xl:min-h-[250px]">
                             <Image
                                 className="absolute bottom-0 left-0"
                                 src={danek}
@@ -61,8 +61,8 @@ export default function Team() {
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">CEO компании</p>
                         </div>
                     </div>
-                    <div className="py-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full">
-                        <div className="relative xl:min-h-[200px] 2xl:min-h-[250px]">
+                    <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
+                        <div className="relative min-h-[200px] 2xl:min-h-[250px]">
                             <Image
                                 className="absolute bottom-0 left-0"
                                 src={dudin}
@@ -82,8 +82,8 @@ export default function Team() {
                             </p>
                         </div>
                     </div>
-                    <div className="py-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full">
-                        <div className="relative xl:min-h-[200px] 2xl:min-h-[250px]">
+                    <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
+                        <div className="relative min-h-[200px] 2xl:min-h-[250px]">
                             <Image
                                 className="absolute bottom-0 left-0"
                                 src={sanek}
@@ -103,14 +103,14 @@ export default function Team() {
                             </p>
                         </div>
                     </div>
-                    <div className="py-8 max-w-[300px] 2xl:max-w-[360px] w-full">
+                    <div className="hidden xl:block py-8 max-w-[300px] 2xl:max-w-[360px] w-full">
                         {/* placeholder */}
                     </div>
-                    <div className="py-8 max-w-[300px] 2xl:max-w-[360px] w-full">
+                    <div className="hidden xl:block py-8 max-w-[300px] 2xl:max-w-[360px] w-full">
                         {/* placeholder */}
                     </div>
-                    <div className="py-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full">
-                        <div className="relative xl:min-h-[200px] 2xl:min-h-[250px]">
+                    <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
+                        <div className="relative min-h-[200px] 2xl:min-h-[250px]">
                             <Image
                                 className="absolute px-4 bottom-0 left-0"
                                 src={dima}
@@ -128,8 +128,8 @@ export default function Team() {
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">CEO компании</p>
                         </div>
                     </div>
-                    <div className="py-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full">
-                        <div className="relative xl:min-h-[200px] 2xl:min-h-[250px]">
+                    <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
+                        <div className="relative min-h-[200px] 2xl:min-h-[250px]">
                             <Image
                                 className="absolute bottom-0 left-0"
                                 src={dudin}

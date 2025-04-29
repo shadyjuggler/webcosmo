@@ -10,14 +10,14 @@ export const ArticleSlide: React.FC<{
     return (
         <div className=" flex flex-col gap-4 w-full max-w-[490px]">
             <div className="relative">
-                <div className="mask-card rounded-xl graident-main min-h-[420px]">
+                <div className="mask-review-slide rounded-xl graident-main min-h-[350px] xl:min-h-[420px]">
                     <Image
                         className={`absolute -bottom-1/3 -left-1/4`}
                         src={imgUrl}
                         alt="image"
                     />
                 </div>
-                <button className="absolute top-0 right-0 w-14 h-14 rounded-2xl btn btn-white aspect-square flex justify-center items-center">
+                <button className="absolute bottom-0 right-0 w-13 h-13 !rounded-xl btn btn-white aspect-square flex justify-center items-center">
                     <svg
                         width="16"
                         height="16"

@@ -2,13 +2,18 @@
 import Image from "next/image";
 import logo from "../assets/logo.svg";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Dropdown, DropdownItem } from "flowbite-react";
 import Form from "./Form";
 
 export default function Navbar() {
     const [show, setShow] = useState(false);
+    const [menu, setMenu] = useState(true);
+
+    useEffect(() => {
+        setMenu(window.innerWidth >= 768);
+    }, [])
 
     return (
         <nav className="flex items-center justify-between z-50 relative">
@@ -17,33 +22,55 @@ export default function Navbar() {
                     <Image src={logo} alt="logo" />
                 </Link>
             </div>
-            <div className=" flex gap-2">
-                <div className="flex gap-1 bg-white-10 rounded-sm p-1 ">
-                    <a href="/#features" className="nav-link">
+            <div
+                className={`${
+                    menu ? "flex w-full" : "hidden"
+                } top-10 p-4 md:p-0 rounded-xl md:rounded-none right-0 absolute md:static flex gap-2 bg-white/90 md:bg-transparent flex-col justify-end md:flex-row items-end md:items-center`}
+            >
+                <div className="flex flex-col md:flex-row md:hidden xl:flex gap-1 bg-white-10 rounded-sm p-1 ">
+                    <a
+                        href="/#features"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         О нас
                     </a>
-                    <a href="/#solutions" className="nav-link">
+                    <a
+                        href="/#solutions"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         Услуги
                     </a>
-                    <Link href="/#examples" className="nav-link">
+                    <Link
+                        href="/#examples"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         Кейсы
                     </Link>
-                    <Link href="/#reviews" className="nav-link">
+                    <Link
+                        href="/#reviews"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         Отзывы
                     </Link>
-                    <Link href="/#team" className="nav-link">
+                    <Link
+                        href="/#team"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         Команда
                     </Link>
-                    <Link href="/blogs" className="nav-link">
+                    <Link
+                        href="/blogs"
+                        className="nav-link !text-black md:!text-white text-right"
+                    >
                         Блог
                     </Link>
                 </div>
-                <button className="btn btn-transparent text-white px-4.5">
+                <button className="btn btn-transparent text-right md:text-center px-4 md:px-4.5 text-sm 2xl:text-base py-3.5 text-black md:!text-white">
                     +7 (495) 229-01-61
                 </button>
-                <div className=" relative flex">
+                <div className=" relative flex text-sm 2xl:text-base justify-end">
                     <Dropdown
-                        className="btn btn-dd btn-transparent"
+                        className="btn btn-dd py-3.5 btn-transparent text-black md:!text-white"
                         label="RUS"
                         dismissOnClick={false}
                     >
@@ -54,12 +81,54 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setShow(true)}
-                    className="btn btn-black px-4.5 flex items-center gap-2"
+                    className="max-w-[250px] btn btn-black px-4.5 py-3.5 flex items-center gap-2 text-sm 2xl:text-base"
                 >
                     <span className="w-5 h-5 bg-white-10 rounded-full flex justify-center items-center">
                         <span className="block w-2 h-2 bg-white rounded-full"></span>
                     </span>
                     Связаться с нами
+                </button>
+            </div>
+
+            <div
+                onClick={() => setMenu(!menu)}
+                className="flex md:hidden absolute -right-7 -top-5 w-12 h-12 items-start justify-end bg-[#e6e9ee] rounded-bl-xl"
+            >
+                <button className="flex z-40 bg-white rounded-xl w-10 h-10 cursor-pointer items-center justify-center">
+                    <svg
+                        width="15.553223"
+                        height="12.478760"
+                        viewBox="0 0 15.5532 12.4788"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <desc>Created with Pixso.</desc>
+                        <defs />
+                        <rect
+                            id="Rectangle 140"
+                            width="15.553191"
+                            height="1.500000"
+                            fill="#1462D6"
+                            fill-opacity="1.000000"
+                        />
+                        <rect
+                            id="Rectangle 142"
+                            y="10.978760"
+                            width="15.553191"
+                            height="1.500000"
+                            fill="#1462D6"
+                            fill-opacity="1.000000"
+                        />
+                        <rect
+                            id="Rectangle 141"
+                            x="4.574219"
+                            y="5.489380"
+                            width="10.978724"
+                            height="1.500000"
+                            fill="#1462D6"
+                            fill-opacity="1.000000"
+                        />
+                    </svg>
                 </button>
             </div>
 

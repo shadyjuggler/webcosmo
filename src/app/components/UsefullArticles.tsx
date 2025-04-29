@@ -11,17 +11,17 @@ import Link from "next/link";
 
 export default function Articles() {
     return (
-        <section id="articles" className="py-24 overflow-hidden relative">
+        <section id="articles" className="pt-12 py-32 lg:py-24 overflow-hidden relative">
             <div className="container mx-auto">
                 <div className="flex justify-between">
                     <div className="flex flex-col">
                         <Tab name="Блог" />
-                        <h2 className="mt-8 text-5xl !text-[#262B3A]">
+                        <h2 className="mt-8 text-3xl md:text-4xl lg:text-5xl !text-[#262B3A]">
                             Полезные IT статьи
                         </h2>
                     </div>
 
-                    <div className="flex ">
+                    <div className="flex absolute bottom-8 md:static">
                         <div className="flex gap-2 items-end">
                             <button className="article-prev w-14 h-14 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
@@ -57,14 +57,23 @@ export default function Articles() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16">
+                <div className="mt-8 md:mt-16">
                     <Swiper
+                        id="article_slider"
                         modules={[Navigation]}
                         spaceBetween={20}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         navigation={{
                             prevEl: ".article-prev",
                             nextEl: ".article-next",
+                        }}
+                        breakpoints={{
+                            868: {
+                                slidesPerView: 2
+                            },
+                            1278: {
+                                slidesPerView: 3
+                            }
                         }}
                     >
                         {
@@ -77,7 +86,7 @@ export default function Articles() {
                         }
                     </Swiper>
                 </div>
-                <div className="mt-8 flex justify-center">
+                <div className="hidden md:flex mt-8 justify-center">
                     <Link href="/blogs" className="btn btn-bluewhite btn-arrow py-1">
                         Смотреть еще{" "}
                         <span>

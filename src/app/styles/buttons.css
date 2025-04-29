@@ -9,6 +9,11 @@
 
 .btn-transparent {
     border-color: rgba(255, 255, 255, 0.1);
+    @apply md:bg-transparent bg-white md:text-white text-[#1462D6] md:hover:bg-white md:bg-white/10;
+}
+
+.btn-transparent span {
+    @apply !bg-[#1462D6] md:!bg-white/10;
 }
 
 .btn-transparent:hover {

@@ -1,6 +1,9 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 
 import bg from "../../assets/slide-bg.png";
+import mob from "../../assets/slide-bg-mob.png";
+import { useEffect, useState } from "react";
 
 export const CaseSlide: React.FC<{
     title?: string;
@@ -8,11 +11,22 @@ export const CaseSlide: React.FC<{
     techstack?: string[];
     imgUrl?: string | StaticImageData;
 }> = ({ techstack, imgUrl }) => {
+    const [img, setImg] = useState<StaticImageData | string>("");
+
+    useEffect(() => {
+        // This code only runs on the client
+        if (window.innerWidth >= 768) {
+            setImg(bg);
+        } else {
+            setImg(mob);
+        }
+    }, []);
+
     return (
         <div className="relative">
-            <div className="slide relative mask-card">
-                <div className="flex flex-col pb-8 max-w-[314px] w-full">
-                    <p className="xl:text-xl 2x:text-2xl font-semibold text-[#1D2230]">
+            <div className="slide max-w-[648px] md:max-w-full relative mask-card flex-col-reverse md:flex-row">
+                <div className="flex flex-col md:px-0 px-8  pb-8 md:max-w-[314px] w-full">
+                    <p className="xl:text-xl 2x:text-2xl max-w-[300px] md:max-w-full font-semibold text-[#1D2230]">
                         Разработка Web3 платформы Fungypack
                     </p>
                     <p className="mt-4 text-[#1D2230]">
@@ -20,11 +34,11 @@ export const CaseSlide: React.FC<{
                         сочетает в себе блокчейн, NFT, механики
                     </p>
 
-                    <div className="xl:mt-12 2xl:mt-auto flex flex-wrap gap-2">
+                    <div className="mt-4 md:mt-auto lg:mt-12 2xl:mt-auto flex flex-wrap gap-2">
                         {techstack?.map((tech, i) => (
                             <p
                                 key={i}
-                                className="py-2 px-2.5 rounded-sm bg-[#EFF1F5] text-[#1D2230]"
+                                className="py-3.5 md:py-2 px-2.5 rounded-sm bg-[#EFF1F5] text-[#1D2230]"
                             >
                                 {tech}
                             </p>
@@ -32,9 +46,13 @@ export const CaseSlide: React.FC<{
                     </div>
                 </div>
 
-                <div className="relative w-full 2xl:max-w-[446px] flex items-end">
-                    <Image className="h-full" src={bg} alt="bg" />
-                    <div className="absolute left-0 top-0">
+                <div className="relative w-full 2xl:max-w-[446px] flex items-end overflow-hidden">
+                    <Image
+                        className="h-full"
+                        src={img}
+                        alt="bg"
+                    />
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 rotate-25">
                         <Image src={imgUrl ? imgUrl : ""} alt="image" />
                     </div>
                 </div>
