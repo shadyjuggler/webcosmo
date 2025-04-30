@@ -17,7 +17,7 @@ export default function Header() {
             className="relative rounded-xl graident-main py-5 pb-8 px-4 2xl:px-8 overflow-hidden flex min-h-[850px] md:min-h-[780px] xl:min-h-[880px]"
         >
             <div className="container mx-auto flex flex-col">
-                <Navbar></Navbar>
+                {/* <Navbar></Navbar> */}
 
                 <div className="mt-16 relative flex flex-col flex-1">
                     <h1 className="text-4xl sm:text-5xl xl:text-6xl max-w-[300px] sm:max-w-[500px] md:max-w-full">
