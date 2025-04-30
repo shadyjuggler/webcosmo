@@ -79,7 +79,7 @@ export default function Footer() {
                     <p className="hidden xl:block text-sm  text-white/60">
                         ©все права защищены
                     </p>
-                    <p className="text-sm  text-white/60">
+                    <p className="text-sm  text-white/60 text-center">
                         Политика конфендициальности обработки персональных
                         данных
                     </p>

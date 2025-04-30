@@ -10,22 +10,40 @@ import blogs from "../assets/blogs.png";
 
 import smallarrow from "../assets/small-arrow.svg";
 
+import blogbg from "../assets/blog-mob.png";
+import { Dropdown, DropdownItem } from "flowbite-react";
+
 export default function BlogsPage() {
+    const options = [
+        "Все статьи",
+        "Аналитика",
+        "UX/UI",
+        "Веб-разработка",
+        "Полезное",
+        "Про кейсы",
+    ];
+
     return (
         <>
-            <main className="main" id="main">
-                <div className="graident-main rounded-2xl pt-8 pb-16">
+            <main className="main blog" id="main">
+                <div className="graident-main rounded-2xl pt-8 pb-16 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
+                    <div className="block lg:hidden absolute -bottom-20 sm:-bottom-40 md:-bottom-50 -right-5 sm:-right-25 -rotate-0 sm:-rotate-0 md:rotate-10">
+                        <Image src={blogbg} alt="bg" />
+                    </div>
+
                     <div className="container mx-auto">
                         <Navbar />
                         <div className="mt-8">
-                            <ReturnBack />
+                            <div className="hidden lg:block">
+                                <ReturnBack />
+                            </div>
 
-                            <div className="mt-8">
-                                <h1 className="text-6xl">
+                            <div className="mt-8 lg:mb-0 md:mb-26 mb-70">
+                                <h1 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl md:max-w-[400px] lg:max-w-full">
                                     Полезные статьи
                                     <span className="!text-white flex items-center">
                                         <Image
-                                            className="-translate-x-5 scale-150 max-w-[100px]"
+                                            className="hidden lg:block -translate-x-4 2xl:-translate-x-5 scale-150 max-w-[70px] xl:max-w-[80px] 2xl:max-w-[100px]"
                                             src={arrow}
                                             alt="arrow"
                                         />{" "}
@@ -37,59 +55,52 @@ export default function BlogsPage() {
                     </div>
                 </div>
 
-                <div className="mt-16 pt-32 bg-[#eff1f5] rounded-2xl relative">
-                    <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full bg-white py-12 rounded-2xl px-16 max-w-[1600px] mx-auto -translate-y-10 flex justify-between">
-                        <div className="flex gap-1 max-w-[900px] w-full">
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">
-                                    Все статьи
-                                </p>
-                            </div>
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">
-                                    Аналитика
-                                </p>
-                            </div>
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">UX/UI</p>
-                            </div>
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">
-                                    Веб-разработка
-                                </p>
-                            </div>
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">
-                                    Полезное
-                                </p>
-                            </div>
-                            <div className="px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
-                                <p className="font-medium text-center">
-                                    Про кейсы
-                                </p>
-                            </div>
+                <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative ">
+                    <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full bg-white py-8 2xl:py-12 rounded-2xl px-8 xl:px-12 2xl:px-16 md:max-w-[1100px] xl:max-w-[1300px] 2xl:max-w-[1600px] mx-auto -translate-y-10 flex justify-between">
+                        <div className="hidden md:flex gap-1 max-w-[900px] w-full">
+                            {options.map((item: string) => {
+                                return (
+                                    <div key={Math.random()} className="px-3 xl:px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
+                                        <p className="font-medium text-center text-sm xl:text-base">
+                                            {item}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
 
-                        <div className="flex flex-col items-end relative w-[250px]">
+                        <div className="z-50 flex md:hidden w-full justify-center text-sm 2xl:text-base">
+                            <Dropdown
+                                className="btn w-full sm:w-fit btn-dd py-3.5 border-black/20 text-black md:!text-white"
+                                label="Все статьи"
+                                dismissOnClick={false}
+                            >
+                                {options.map((item: string) => {
+                                    return <DropdownItem key={Math.random()}>{item}</DropdownItem>;
+                                })}
+                            </Dropdown>
+                        </div>
+
+                        <div className="flex flex-col items-end absolute -top-7 md:top-6 right-1/2 translate-x-[140px] md:translate-x-0 md:right-8 lg:relative w-[240px] 2xl:w-[250px]">
                             <Image
-                                className="pointer-events-none absolute right-0 bottom-0 max-w-[200%]"
+                                className="pointer-events-none absolute right-0 bottom-0 max-w-[150%] lg:max-w-[200%] xl:max-w-[185%] 2xl:max-w-[200%]"
                                 src={blogs}
                                 alt="image"
                             />
 
-                            <p className="z-20 absolute bottom-32 text-sm text-right right-4 text-white ">
+                            <p className="z-20 absolute bottom-24 max-w-[150px] md:max-w-[200px] lg:max-w-full xl:bottom-26 2xl:bottom-32 text-[11px] md:text-[12px] xl:text-[13px] 2xl:text-sm text-right right-4 text-white ">
                                 Еще больше кейсов у нас в Telegram канале
                             </p>
 
-                            <button className="z-20 bottom-4 right-4 absolute btn btn-transparent btn-arrow !p-0 !border-0">
-                                <span>
+                            <button className="z-20 bottom-4 right-4 absolute btn !bg-white/10  btn-transparent btn-arrow !p-0 !border-0">
+                                <span className="!bg-transparent">
                                     <Image src={smallarrow} alt="smallarrow" />
                                 </span>
                             </button>
                         </div>
                     </div>
 
-                    <div className="flex flex-wraps gap-8 justify-between w-full max-w-[1600px] mx-auto">
+                    <div className="relative z-30 cases-wrapper flex flex-wrap gap-8 justify-center 2xl:justify-between w-full max-w-[1600px] mx-auto">
                         {Array(3)
                             .fill(0)
                             .map((card) => {

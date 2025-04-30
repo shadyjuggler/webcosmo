@@ -11,7 +11,7 @@ export default function Functionality({ content }) {
     const slides = content.map((item: any) => {
         return (
             <SwiperSlide key={Math.random()}>
-                <div  className="functionality-slide rounded-2xl relative hover:translate-y-5 transition-all functionality-card cursor-pointer">
+                <div  className="functionality-slide rounded-2xl relative hover:translate-y-5 transition-all functionality-card cursor-pointer pointer-events-none md:pointer-events-auto">
                     <div className=" bg-white p-8 flex flex-col  z-10 relative min-h-[275px] ">
                         <div className="icon rounded-xl w-12 h-12 flex justify-center items-center bg-[#262B3A] hover:bg-[#1462D6] transition-all">
                             <Image
@@ -41,31 +41,39 @@ export default function Functionality({ content }) {
     });
 
     return (
-        <section id="functionality" className="mt-7 py-24">
+        <section id="functionality" className="mt-7 py-12 lg:py-24">
             <div className="container mx-auto">
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-start md:items-center gap-4 md:gap-0 md:flex-row flex-col">
                     <Tab name="Функционал" />
-                    <h2 className="text-5xl !text-[#262B3A] mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] md:mx-auto">
                         Функциональные <br /> <span>возможности</span> платформы
                     </h2>
                 </div>
 
-                <div className="mt-20">
+                <div className="mt-8 md:mt-20">
                     <Swiper
                         id="func-slider"
                         modules={[Navigation]}
                         spaceBetween={20}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         navigation={{
                             prevEl: ".func-prev",
                             nextEl: ".func-next",
+                        }}
+                        breakpoints={{
+                            880: {
+                                slidesPerView: 2
+                            },
+                            1280: {
+                                slidesPerView: 3
+                            }
                         }}
                     >
                         {slides}
                     </Swiper>
                 </div>
 
-                <div className="mt-6 flex justify-between">
+                <div className="mt-4 md:mt-6 flex justify-between">
                     <div className="flex gap-2">
                         <button className="func-prev w-12 h-12 btn btn-white aspect-square flex justify-center items-center">
                             <svg

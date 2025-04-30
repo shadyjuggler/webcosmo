@@ -9,25 +9,27 @@ export const WhatWeDid: React.FC<{
 }> = ({ content }) => {
     return (
         <section id="tech" className="rounded-2xl  relative">
-            <div className="relative pt-40 mask-side-file-top graident-main rounded-xl overflow-hidden">
-                <div className="z-10 absolute top-30 -right-[150px] w-[700px]">
+            <div className="relative pt-20 lg:pt-40 mask-side-file-top graident-main rounded-xl overflow-hidden">
+                <div className="z-10 absolute top-20 lg:top-30 -right-[50px] md:-right-[150px] w-[200px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]">
                     <Image src={spheres} alt="helix" />
                 </div>
 
                 <div className="container mx-auto">
-                    <Tab name="Результат" />
+                    <div className="ml-3 md:ml-0">
+                        <Tab name="Результат" />
+                    </div>
 
-                    <h2 className="mt-16 text-5xl tex-left">
+                    <h2 className="ml-3 md:ml-0 mt-4 md:mt-8 lg:mt-16 text-3xl md:text-4xl lg:text-5xl tex-left relative z-30">
                         Что мы сделали для клиента?
                     </h2>
 
-                    <div className="mt-16 flex flex-wrap gap-8 z-20 relative justify-center">
+                    <div className="mt-12 lg:mt-16 flex flex-wrap gap-6 2xl:gap-8 z-20 relative justify-center">
                         {content.map((item, i: number) => {
                             return (
                                 <div
                                     key={Math.random()}
-                                    className={`rounded-2xl bg-white/10 flex flex-col justify-center items-center max-w-[350px] w-full min-h-[400px] ${
-                                        i % 2 === 1 ? "translate-y-5" : ""
+                                    className={`rounded-2xl bg-white/10 flex flex-col justify-center items-center max-w-[310px] 2xl:max-w-[350px] w-full min-h-[350px] 2xl:min-h-[400px] ${
+                                        i % 2 === 1 ? "md:translate-y-5" : ""
                                     }`}
                                     style={{ backdropFilter: "blur(20px)" }}
                                 >
@@ -86,19 +88,19 @@ export const WhatWeDid: React.FC<{
                         })}
 
                         <Image
-                            className="absolute max-w-[150px] -bottom-[100px] rotate-90 left-1/3"
+                            className="hidden xl:block absolute max-w-[150px] -bottom-[100px] rotate-90 left-1/3"
                             src={spheres}
                             alt="helix"
                         />
                         <Image
-                            className="absolute max-w-[150px] -top-[100px] right-1/3"
+                            className="hidden md:block absolute max-w-[150px] -top-[50px] lg:-top-[100px] right-1/3"
                             src={conus}
                             alt="helix"
                         />
                     </div>
                 </div>
 
-                <div className="relative">
+                <div className="mt-32 relative">
                     <CTA
                         title={
                             "<p>Готовы внедрять Web3 <br/> в ваш бизнес?</p>"

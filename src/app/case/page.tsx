@@ -1,11 +1,12 @@
+"use client";
 import Navbar from "../components/Navbar";
 import { ReturnBack } from "../components/UI/ReturnBack";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Footer from "../components/Footer";
 
-import iphone from "../assets/phone.png"
+import iphone from "../assets/iphone.png";
 import aboutclient from "../assets/about-client.png";
 import figure from "../assets/figure.png";
 
@@ -20,43 +21,74 @@ import shop from "../assets/shop-icon.svg";
 import imgIcon from "../assets/img-icon.svg";
 import cross from "../assets/cross-icon.svg";
 import { Achievements } from "../components/Achievements";
-import {WhatWeDid} from "../components/WhatWeDid";
+import { WhatWeDid } from "../components/WhatWeDid";
+
+import { useEffect, useState } from "react";
+import casecloud from "../assets/casecloud.png";
 
 export default function BlogsPage() {
+    const [figureImg, setImg] = useState<StaticImageData | string>("");
+
+    useEffect(() => {
+        // This code only runs on the client
+        if (window.innerWidth >= 768) {
+            setImg(aboutclient);
+        } else {
+            setImg(casecloud);
+        }
+    }, []);
 
     return (
         <>
-            <main className="main" id="main">
+            <main className="main case overflow-hidden" id="main">
                 <div className="relative overflow-hidden">
-                    <div className="graident-main mask-case rounded-2xl pt-8 pb-16 overflow-hidden">
+                    <div className="graident-main mask-case rounded-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-80 md:pb-20 xl:pb-16 overflow-hidden">
                         <div className="container mx-auto relative">
                             <div className="relative z-50">
                                 <Navbar />
                             </div>
-                            <div className="mt-8 ">
-                                <ReturnBack />
+                            <div className="mt-8">
+                                <div className="hidden lg:block">
+                                    <ReturnBack />
+                                </div>
 
-                                <div className="mt-8">
-                                    <h1 className="text-6xl">
+                                <div className="mt-8 relative z-40">
+                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl">
                                         Fungypack <br />
                                         – инновационная <br /> платформа NFT
                                     </h1>
                                 </div>
 
                                 <Image
-                                    className="absolute max-w-[650px] left-1/3 bottom-[0px]"
+                                    className="absolute max-w-[100px] md:max-w-[300px] z-40 md:z-10 lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[650px] left-1/2 md:left-1/3 bottom-30 md:bottom-20 xl:bottom-[0px]"
                                     src={figure}
                                     alt="phone"
                                 />
-                                <Image
-                                    className="relative mt-20 max-w-[900px] z-40"
-                                    src={aboutclient}
-                                    alt="phone"
-                                />
+                                <div className=" flex justify-center md:justify-start">
+                                    <div className="relative">
+                                        <Image
+                                            className="relative mt-12 md:mt-20 max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] z-30"
+                                            src={figureImg}
+                                            alt="phone"
+                                        />
+
+                                        <p className="text-white text-sm xl:text-base absolute top-16 md:top-24 lg:top-26 left-6 xl:left-8 z-40">
+                                            О клиенте
+                                        </p>
+                                        <p className="text-white text-[12px] lg:text-sm xl:text-base absolute bottom-7 md:bottom-5 lg:bottom-8 xl:bottom-10 2xl:bottom-12 left-20 md:left-40 lg:left-45 xl:left-55 2xl:left-65 max-w-[250px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] z-40">
+                                            Инновационная платформа для
+                                            расширения функциональности NFT,
+                                            интеграции с блокчейном Solana и
+                                            предоставления пользователям
+                                            уникальных бонусов, наград и
+                                            возможностей стейкинга.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <Image
-                            className="absolute -top-[100px] -right-[300px] max-w-[1500px] z-20 pointer-events-none"
+                            className="absolute -bottom-[100px] rotate-45 md:rotate-0 md:bottom-auto md:top-0 lg:-top-[100px] right-1/2 translate-x-[350px] md:translate-x-0 md:-right-100 lg:-right-160 xl:-right-120 2xl:-right-80 max-w-[700px] md:max-w-[1000px] lg:max-w-[1500px] z-40 md:z-20 pointer-events-none"
                             src={iphone}
                             alt="phone"
                         />
@@ -181,7 +213,7 @@ export default function BlogsPage() {
                     ]}
                 />
 
-                <div className="mt-32">
+                <div className="mt-16 md:mt-32">
                     <Footer />
                 </div>
             </main>

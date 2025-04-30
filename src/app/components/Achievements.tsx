@@ -7,21 +7,21 @@ import mac from "../assets/mack.png";
 
 export const Achievements: React.FC<{ content: {title: string, text: string}[] }> = ({ content }) => {
     return (
-        <section id="maingoals" className="mt-7 py-24">
+        <section id="maingoals" className="mt-7 pb-80 pt-8 md:py-24">
             <div className="container mx-auto">
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-start gap-4 md:gap-0 md:items-center flex-col md:flex-row">
                     <Tab name="Задачи" />
-                    <h2 className="text-5xl !text-[#262B3A] mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] md:mx-auto">
                         <span>Результаты</span> и достижения
                     </h2>
                 </div>
 
-                <div className="mt-20 flex gap-8 relative">
-                    <div className="max-w-[600px] flex flex-col gap-4 w-full">
+                <div className="mt-10 md:mt-20 flex gap-8 relative">
+                    <div className="max-w-full md:max-w-[450px] xl:max-w-[600px] flex flex-col gap-4 w-full">
                         {content.map((item: {title: string, text: string}) => {
                             return (
                                 <div key={item.title} className="achivements-card rounded-xl flex flex-col hover:!bg-white transition-all w-ful py-8 px-8">
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-start md:items-center gap-2 md:flex-row flex-col">
                                         <svg
                                             width="44.000000"
                                             height="44.000000"
@@ -62,7 +62,7 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
                                                 />
                                             </g>
                                         </svg>
-                                        <p className="text-xl text-[#262B3A] font-semibold">
+                                        <p className="mt-8 pl-2 md:pl-0 md:mt-0 text-xl text-[#262B3A] font-semibold">
                                             {item.title}
                                         </p>
                                     </div>
@@ -74,8 +74,8 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
                         })}
                     </div>
 
-                    <Image className="absolute max-w-[500px] right-0 -bottom-1/4 rotate-60" src={helix} alt="helix"></Image>
-                    <Image className="absolute max-w-[800px] right-[150px] -top-10" src={mac} alt="helix"></Image>
+                    <Image className="absolute max-w-[200px] lg:max-w-[300px] xl:max-w-[500px] right-[-40px] md:right-[-25px] lg:right-[-50px] xl:right-[-100px] 2xl:right-0 -bottom-[200px] md:bottom-1/4 xl:-bottom-1/4 rotate-160 md:rotate-60" src={helix} alt="helix"></Image>
+                    <Image className="absolute max-w-[400px] lg:max-w-[600px] xl:max-w-[800px] right-1/2 translate-x-[170px] md:translate-x-0 md:right-[50px] 2xl:right-[150px] -bottom-[370px] md:bottom-auto md:top-10 lg:-top-10" src={mac} alt="helix"></Image>
                 </div>
             </div>
         </section>

@@ -65,12 +65,12 @@ export default function Navbar() {
                         Блог
                     </Link>
                 </div>
-                <button className="btn btn-transparent text-right md:text-center px-4 md:px-4.5 text-sm 2xl:text-base py-3.5 text-black md:!text-white">
+                <button className="btn btn-transparent text-right md:text-center px-4 md:px-4.5 text-sm 2xl:text-base py-2.5 md:py-3.5 text-black md:!text-white">
                     +7 (495) 229-01-61
                 </button>
                 <div className=" relative flex text-sm 2xl:text-base justify-end">
                     <Dropdown
-                        className="btn btn-dd py-3.5 btn-transparent text-black md:!text-white"
+                        className="btn btn-dd py-2.5 md:py-3.5 btn-transparent text-black md:!text-white"
                         label="RUS"
                         dismissOnClick={false}
                     >
@@ -81,7 +81,7 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setShow(true)}
-                    className="max-w-[250px] btn btn-black px-4.5 py-3.5 flex items-center gap-2 text-sm 2xl:text-base"
+                    className="max-w-[250px] btn btn-black px-4.5 py-3 md:py-3.5 flex items-center gap-2 text-sm 2xl:text-base"
                 >
                     <span className="w-5 h-5 bg-white-10 rounded-full flex justify-center items-center">
                         <span className="block w-2 h-2 bg-white rounded-full"></span>
@@ -91,6 +91,7 @@ export default function Navbar() {
             </div>
 
             <div
+                id="burger"
                 onClick={() => setMenu(!menu)}
                 className="flex md:hidden absolute -right-7 -top-5 w-12 h-12 items-start justify-end bg-[#e6e9ee] rounded-bl-xl"
             >

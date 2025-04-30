@@ -24,7 +24,7 @@
 }
 
 .nav-link {
-    @apply py-2.5 px-3.5 text-white cursor-pointer rounded-sm text-sm 2xl:text-base;
+    @apply py-1.5 md:py-2.5 px-3.5 text-white cursor-pointer rounded-sm text-sm 2xl:text-base;
     transition: 0.15s ease-in-out;
 }
 
@@ -313,7 +313,7 @@
 }
 
 #func-slider .swiper-wrapper {
-    padding-bottom: 25px;
+    @apply pb-1 md:pb-6;
 }
 
 .functionality-slide:hover .slide-bg {
@@ -383,6 +383,10 @@
         mask-type: luminance;
     }
 
+    .achivements-card {
+       @apply !bg-white w-full p-6;
+    }
+
     .mask-card {
         mask-image: url("/slide-top-mob.svg");
         mask-repeat: no-repeat;
@@ -431,4 +435,25 @@
 #article_slider .swiper-slide,
 #examples-slider .swiper-slide {
     @apply flex justify-center;
+}
+
+
+.blog #burger {
+    @apply !-top-8 !-right-7;
+}
+
+.cases-wrapper .article-slide {
+    @apply 2xl:!max-w-[470px] xl:!max-w-[450px] !max-w-[400px];
+}
+
+[data-testid="flowbite-dropdown"] {
+    @apply !z-[100];
+}
+
+.cases #burger {
+    @apply !-top-8 !-right-7;
+}
+
+.case #burger {
+    @apply !-top-8 !-right-7;
 }
