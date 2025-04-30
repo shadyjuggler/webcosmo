@@ -71,7 +71,7 @@ export default function Navbar() {
                         <DropdownItem>EN</DropdownItem>
                         <DropdownItem>LV</DropdownItem>
                     </Dropdown>
-                </div>
+                </div> */}
 
                 <button
                     onClick={() => setShow(true)}
@@ -81,7 +81,7 @@ export default function Navbar() {
                         <span className="block w-2 h-2 bg-white rounded-full"></span>
                     </span>
                     Связаться с нами
-                </button> */}
+                </button>
             </div>
 
             <div
