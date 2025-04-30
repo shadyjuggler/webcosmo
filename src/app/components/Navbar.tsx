@@ -2,7 +2,7 @@
 import Image from "next/image";
 import logo from "../assets/logo.svg";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Dropdown, DropdownItem } from "flowbite-react";
 import Form from "./Form";
@@ -10,10 +10,6 @@ import Form from "./Form";
 export default function Navbar() {
     const [show, setShow] = useState(false);
     const [menu, setMenu] = useState(true);
-
-    useEffect(() => {
-        setMenu(window.innerWidth >= 768);
-    }, [])
 
     return (
         <nav className="flex items-center justify-between z-50 relative">
@@ -133,7 +129,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* {show ? (
+            {show ? (
                 <div
                     className="fixed top-0 left-0 w-screen h-screen bg-black/20 flex justify-end"
                     style={{ zIndex: "100" }}
@@ -196,7 +192,7 @@ export default function Navbar() {
                 </div>
             ) : (
                 ""
-            )} */}
+            )}
         </nav>
     );
 }
