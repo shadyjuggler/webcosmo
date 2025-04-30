@@ -62,7 +62,7 @@ export default function Navbar() {
                 <button className="btn btn-transparent text-right md:text-center px-4 md:px-4.5 text-sm 2xl:text-base py-2.5 md:py-3.5 text-black md:!text-white">
                     +7 (495) 229-01-61
                 </button>
-                {/* <div className=" relative flex text-sm 2xl:text-base justify-end">
+                <div className=" relative flex text-sm 2xl:text-base justify-end">
                     <Dropdown
                         className="btn btn-dd py-2.5 md:py-3.5 btn-transparent text-black md:!text-white"
                         label="RUS"
@@ -71,7 +71,7 @@ export default function Navbar() {
                         <DropdownItem>EN</DropdownItem>
                         <DropdownItem>LV</DropdownItem>
                     </Dropdown>
-                </div> */}
+                </div>
 
                 <button
                     onClick={() => setShow(true)}
