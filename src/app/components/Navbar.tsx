@@ -22,18 +22,18 @@ export default function Navbar() {
                 className={`flex w-full top-10 p-4 md:p-0 rounded-xl md:rounded-none right-0 absolute md:static gap-2 bg-white/90 md:bg-transparent flex-col justify-end md:flex-row items-end md:items-center`}
             >
                 <div className="flex flex-col md:flex-row md:hidden xl:flex gap-1 bg-white-10 rounded-sm p-1 ">
-                    <a
+                    <Link
                         href="/#features"
                         className="nav-link !text-black md:!text-white text-right"
                     >
                         О нас
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/#solutions"
                         className="nav-link !text-black md:!text-white text-right"
                     >
                         Услуги
-                    </a>
+                    </Link>
                     <Link
                         href="/#examples"
                         className="nav-link !text-black md:!text-white text-right"
