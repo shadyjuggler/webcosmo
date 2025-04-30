@@ -18,7 +18,7 @@ export default function Navbar() {
                     <Image src={logo} alt="logo" />
                 </Link>
             </div>
-            <div
+            {/* <div
                 className={`${
                     menu ? "flex w-full" : "hidden"
                 } top-10 p-4 md:p-0 rounded-xl md:rounded-none right-0 absolute md:static flex gap-2 bg-white/90 md:bg-transparent flex-col justify-end md:flex-row items-end md:items-center`}
@@ -84,7 +84,7 @@ export default function Navbar() {
                     </span>
                     Связаться с нами
                 </button>
-            </div>
+            </div> */}
 
             <div
                 id="burger"
