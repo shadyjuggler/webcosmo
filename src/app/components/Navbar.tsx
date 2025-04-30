@@ -133,7 +133,7 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {show ? (
+            {/* {show ? (
                 <div
                     className="fixed top-0 left-0 w-screen h-screen bg-black/20 flex justify-end"
                     style={{ zIndex: "100" }}
@@ -196,7 +196,7 @@ export default function Navbar() {
                 </div>
             ) : (
                 ""
-            )}
+            )} */}
         </nav>
     );
 }
