@@ -63,14 +63,14 @@ export default function Navbar() {
                     +7 (495) 229-01-61
                 </button>
                 <div className="hidden md:flex relative text-sm 2xl:text-base justify-end">
-                    <Dropdown
+                    {/* <Dropdown
                         className="btn btn-dd py-2.5 md:py-3.5 btn-transparent text-black md:!text-white"
                         label="RUS"
                     >
                         <DropdownItem>RU</DropdownItem>
                         <DropdownItem>LV</DropdownItem>
                         <DropdownItem>EN</DropdownItem>
-                    </Dropdown>
+                    </Dropdown> */}
                 </div>
 
                 <div className="flex md:hidden">
