@@ -4,7 +4,7 @@
 }
 
 .btn-black {
-    @apply bg-[#262B3A] border-[#262B3A] text-white;
+    @apply bg-[#1462D6] md:bg-[#262B3A] border-0 border-[#1462D6] md:border-[#262B3A] text-white;
 }
 
 .btn-transparent {

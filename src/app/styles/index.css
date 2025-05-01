@@ -8,7 +8,7 @@
 }
 
 .graident-main {
-    background: linear-gradient(300.33deg, rgb(20, 98, 214) -21.89%,rgb(144, 107, 255) 80.167%);
+    background: linear-gradient(320.33deg, rgb(20, 98, 214) -21.89%,rgb(144, 107, 255) 80.167%);
 }
 
 .graident-main2 {
@@ -20,7 +20,7 @@
 }
 
 .nav-link {
-    @apply py-1.5 md:py-3.5 px-4.5 text-white cursor-pointer rounded-sm text-sm 2xl:text-base;
+    @apply py-1.5 md:py-3.5 px-0 md:px-4.5 text-white cursor-pointer rounded-sm text-xl font-semibold md:font-normal md:text-sm 2xl:text-base;
     transition: 0.15s ease-in-out;
 }
 
@@ -362,6 +362,10 @@
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
+    }
+    
+    .modal-sh { 
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
     }
 
     .mask-side-notches {

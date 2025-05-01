@@ -52,7 +52,7 @@ const DropDown: React.FC<DropdownProps> = ({
             <button
                 type="button"
                 onClick={() => setIsOpen((prev) => !prev)}
-                className="btn  btn-transparent flex gap-4 items-center py-4 px-5"
+                className="btn border-1 md:border-0 !text-[#262B3A] md:!text-white !border-slate-200 md:!border-white/10  btn-transparent flex gap-4 items-center py-3 md:py-4 px-5"
             >
                 {selected || placeholder}
 
