@@ -23,16 +23,6 @@
     left: 0;
 }
 
-@media(max-width: 768px) {
-    #header_corner_1::before {
-       box-shadow: 0px 0px 0px 10px #e6e9ee;
-    }
-    
-    #header_corner_2::before {
-       box-shadow: 0px 0px 0px 10px #e6e9ee;
-    }    
-}
-
 #soluction_corner-1::before {
     top: 0;
     right: 0;
