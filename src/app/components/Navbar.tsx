@@ -21,6 +21,16 @@ export default function Navbar() {
         }
     }, []);
 
+    useEffect(() => {
+        if (window.innerWidth <= 767) {
+            if (show || menu) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
+        }
+    }, [menu, show]);
+
     const click = () => {
         if (window.innerWidth <= 767) {
             setMenu(false);
