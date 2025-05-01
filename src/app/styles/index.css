@@ -377,7 +377,7 @@
     }
 
     .modal-sh {
-        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
     }
 
     .mask-side-notches {
