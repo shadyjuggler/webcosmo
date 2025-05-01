@@ -32,7 +32,7 @@ export default function Header() {
                     <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl z-40 max-w-[300px] sm:max-w-[500px] md:max-w-full">
                         Создаем уникальные <br /> цифровые решения
                     </h1>
-                    <div className="absolute w-full top-15 md:top-30 lg:top-15 xl:top-10 -right-20 md:right-0 lg:right-10 z-40 md:z-20 xl:-right-0 2xl:-right-8 flex flex-col justify-end h-[250px] xl:h-[400px] items-start md:items-end max-w-[350px] xl:max-w-[400px] 2xl:max-w-[500px]">
+                    <div className="absolute w-full top-15 md:top-30 lg:top-15 xl:top-10 -right-20 md:right-0 lg:right-10 z-40 md:z-20 xl:-right-0 flex flex-col justify-end h-[250px] xl:h-[400px] items-start md:items-end max-w-[350px] xl:max-w-[400px] 2xl:max-w-[500px]">
                         <Image
                             className="hidden md:block absolute z-10 -top-8 xl:-top-15 -left-5 pointer-events-none max-w-[225px] xl:max-w-[270px] 2xl:max-w-[300px]"
                             src={rocket}
@@ -102,7 +102,7 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <div className="mt-auto flex justify-end z-20 2xl:translate-x-[30px] relative">
+                    <div className="mt-auto flex justify-end z-20 relative">
                         <div className="relative border-t-1 md:border-0 pt-4 md:pt-0 border-white/10 max-w-full md:max-w-[48%] w-full flex justify-start items-center md:rounded-xl md:p-8 xl:py-6 xl:px-12 2xl:p-[2.2vw]">
                             <div className="flex flex-col">
                                 <p className="text-white md:max-w-md text-base">
