@@ -142,6 +142,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+            {/* wasup */}
 
             <div className="absolute max-w-[350px] w-full md:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[630px] left-1/2 top-55 2xl:top-45 z-10 -translate-x-[50%] opacity-25">
                 <Image src={gear} alt={"gear"} />
