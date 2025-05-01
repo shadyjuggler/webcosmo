@@ -217,13 +217,13 @@ export default function Navbar() {
 
             {show ? (
                 <div
-                    className="fixed top-0 left-0 w-screen h-screen bg-black/20 flex justify-end"
+                    className="fixed bottom-0 md:bottom-auto md:top-0 left-0 w-screen h-screen bg-black/20 flex justify-end items-end"
                     style={{ zIndex: "100" }}
                 >
-                    <div className="bg-[#eff1f5] flex items-center justify-center w-1/3 px-8 relative">
+                    <div className="bg-[#eff1f5] flex items-start pt-12 md:pt-0 md:items-center justify-center w-full h-[85%] md:h-full md:w-2/3 lg:w-1/2 rounded-t-2xl md:rounded-none xl:w-[45%] 2xl:w-[35%] px-5 nd:px-8 relative">
                         <button
                             onClick={() => setShow(false)}
-                            className="absolute top-10 right-10 cursor-pointer border border-black/50 rounded-xl w-12 h-12 flex items-center justify-center hover:bg-black/10 transition-all"
+                            className="absolute -top-15 md:top-10 right-2 md:right-10 cursor-pointer bg-white md:border border-black/20 rounded-xl w-13 h-13 2xl:w-14 2xl:h-14 flex items-center justify-center md:hover:bg-black/10 transition-all"
                         >
                             <svg
                                 width="14.000000"
