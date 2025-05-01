@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <>
             <main className="main overflow-hidden" id="main">
-                <div className="xl:p-4 md:bg-white rounded-xl">
+                <div className="xl:p-4 md:bg-white rounded-2xl">
                     <Header />
                 </div>
                 <div className="relative bg-[#EFF1F5] rounded-xl z-20">

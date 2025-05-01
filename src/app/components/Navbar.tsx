@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg";
 import Link from "next/link";
 import { useState } from "react";
 
-import { Dropdown, DropdownItem } from "flowbite-react";
+import Dropdown from "./UI/DropDown";
 import Form from "./Form";
 
 export default function Navbar() {
@@ -59,35 +59,16 @@ export default function Navbar() {
                         Блог
                     </Link>
                 </div>
-                <button className="btn btn-transparent text-right md:text-center px-4 md:px-4.5 text-sm 2xl:text-base py-2.5 md:py-3.5 text-black md:!text-white">
+                <button className="btn btn-transparent text-right md:text-center px-4 md:px-4 text-sm 2xl:text-base py-2.5 md:py-4 text-black md:!text-white">
                     +7 (495) 229-01-61
                 </button>
-                <div className="hidden md:flex relative text-sm 2xl:text-base justify-end">
-                    {/* <Dropdown
-                        className="btn btn-dd py-2.5 md:py-3.5 btn-transparent text-black md:!text-white"
-                        label="RUS"
-                    >
-                        <DropdownItem>RU</DropdownItem>
-                        <DropdownItem>LV</DropdownItem>
-                        <DropdownItem>EN</DropdownItem>
-                    </Dropdown> */}
-                </div>
-
-                <div className="flex md:hidden">
-                    <button className="nav-link !text-black md:!text-white text-right">
-                        RUS
-                    </button>
-                    <button className="nav-link !text-black md:!text-white text-right">
-                        LV
-                    </button>
-                    <button className="nav-link !text-black md:!text-white text-right">
-                        EN
-                    </button>
+                <div className="flex relative text-sm 2xl:text-base justify-end">
+                    <Dropdown options={["RUS", "LV", "EN"]} onChange={() => console.log()} />
                 </div>
 
                 <button
                     onClick={() => setShow(true)}
-                    className="max-w-[250px] btn btn-black px-4.5 py-3 md:py-3.5 flex items-center gap-2 text-sm 2xl:text-base"
+                    className="max-w-[250px] btn btn-black px-4.5 py-3 md:py-4 flex items-center gap-2 text-sm 2xl:text-base"
                 >
                     <span className="w-5 h-5 bg-white-10 rounded-full flex justify-center items-center">
                         <span className="block w-2 h-2 bg-white rounded-full"></span>
@@ -99,9 +80,9 @@ export default function Navbar() {
             <div
                 id="burger"
                 onClick={() => setMenu(!menu)}
-                className="flex md:hidden absolute -right-7 -top-5 w-12 h-12 items-start justify-end bg-[#e6e9ee] rounded-bl-xl"
+                className="flex md:hidden absolute -right-7 -top-5 w-14 h-14 items-start justify-end bg-[#e6e9ee] rounded-bl-xl"
             >
-                <button className="flex z-40 bg-white rounded-xl w-10 h-10 cursor-pointer items-center justify-center">
+                <button className="flex z-40 bg-white rounded-md w-12 h-12 cursor-pointer items-center justify-center">
                     <svg
                         width="15.553223"
                         height="12.478760"

@@ -8,11 +8,7 @@
 }
 
 .graident-main {
-    background: linear-gradient(
-        204.33deg,
-        rgb(20, 98, 214) -21.89%,
-        rgb(144, 107, 255) 80.167%
-    );
+    background: linear-gradient(300.33deg, rgb(20, 98, 214) -21.89%,rgb(144, 107, 255) 80.167%);
 }
 
 .graident-main2 {
@@ -24,7 +20,7 @@
 }
 
 .nav-link {
-    @apply py-1.5 md:py-2.5 px-3.5 text-white cursor-pointer rounded-sm text-sm 2xl:text-base;
+    @apply py-1.5 md:py-3.5 px-4.5 text-white cursor-pointer rounded-sm text-sm 2xl:text-base;
     transition: 0.15s ease-in-out;
 }
 
@@ -349,7 +345,7 @@
 
 @media (width >= 96rem) {
     .container {
-        max-width: 96rem !important;
+        max-width: 1680px;
     }
 }
 @media (max-width: 767px) {
@@ -450,10 +446,19 @@
     @apply !z-[100];
 }
 
+#main_header #burger {
+    @apply -top-8 -right-4;
+}
+
+
 .cases #burger {
     @apply !-top-8 !-right-7;
 }
 
 .case #burger {
     @apply !-top-8 !-right-7;
+}
+
+.header-container {
+    @apply w-full 2xl:max-w-[1700px];
 }
