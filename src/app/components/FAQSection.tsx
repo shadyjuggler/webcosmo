@@ -13,7 +13,7 @@ export default function FAQSection() {
             <div className="container mx-auto">
                 <div className="flex justify-between flex-col gap-8 lg:flex-row items-start">
                     <div className="flex flex-col justify-center items-start">
-                        <h2 className="mt-8 text-5xl !text-[#262B3A]">
+                        <h2 className="mt-8 text-5xl xl:text-6xl !text-[#262B3A]">
                             Ответы на <br /> частые вопросы
                         </h2>
                     </div>

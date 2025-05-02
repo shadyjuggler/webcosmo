@@ -7,7 +7,7 @@ export const Message: React.FC<{title: string, message: string}> = ({title, mess
     return (
         <div className="relative max-w-[325px] md:max-w-[562px] flex justify-end items-end">
             <Image src={msg} alt="message"></Image>
-            <div className="absolute scale-50 top-8 md:top-12 right-5">
+            <div className="absolute scale-50 md:scale-100 top-8 md:top-12 2xl:top-14 right-5">
                 <svg
                     width="21"
                     height="15"

@@ -31,7 +31,7 @@ export default function Team() {
                     <div className="absolute left-0 top-0">
                         <Tab name="Команда" />
                     </div>
-                    <h2 className="mt-16 md:mt-0 text-3xl text-left md:text-center md:text-4xl lg:text-5xl !text-white">
+                    <h2 className="mt-16 md:mt-0 text-3xl text-left md:text-center md:text-4xl lg:text-5xl 2xl:text-6xl !text-white">
                         Наша команда экспертов
                     </h2>
                     <p className="mt-4 md:mt-8 text-gray-300 max-w-[750px] text-left md:text-center">

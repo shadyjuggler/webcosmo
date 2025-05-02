@@ -10,21 +10,21 @@
 }
 
 .row-title-text {
-    @apply py-1.5 md:py-0 text-[#262B3A] font-semibold;
+    @apply py-1.5 md:py-1 text-[#262B3A] font-semibold xl:text-xl 2xl:text-2xl;
 }
 
 .icon-wrapper {
-    @apply !top-[35px] md:!top-[15px] !p-3 !max-w-10 !max-h-10 rounded-xl border-1 border-slate-200 bg-white hover:bg-[#1462D6] !transition-all;
+    @apply !top-[20px] md:!top-[15px] w-full h-full flex items-center justify-center !max-w-12 !max-h-12 xl:!max-w-14 xl:!max-h-14 rounded-xl border-1 border-slate-200 bg-white hover:bg-[#1462D6] !transition-all;
 }
 
 .icon-wrapper:hover svg {
-    @apply !fill-[#FFFFFF];
+    @apply !fill-[#FFFFFF] ;
 }
 
 .arrow-image svg {
-    @apply !fill-[#1462D6];
+    @apply !fill-[#1462D6] !w-5;
 }
 
 .row-content-text {
-    @apply !pr-10;
+    @apply !pr-10 mt-2;
 }

@@ -16,14 +16,14 @@ export default function Articles() {
                 <div className="flex justify-between">
                     <div className="flex flex-col">
                         <Tab name="Блог" />
-                        <h2 className="mt-8 text-3xl md:text-4xl lg:text-5xl !text-[#262B3A]">
+                        <h2 className="mt-8 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A]">
                             Полезные IT статьи
                         </h2>
                     </div>
 
                     <div className="flex absolute bottom-8 md:static">
                         <div className="flex gap-2 items-end">
-                            <button className="article-prev w-14 h-14 btn btn-white aspect-square flex justify-center items-center">
+                            <button className="article-prev w-15 h-15 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
                                     width="16"
                                     height="16"
@@ -38,7 +38,7 @@ export default function Articles() {
                                     />
                                 </svg>
                             </button>
-                            <button className="article-next w-14 h-14 btn btn-white aspect-square flex justify-center items-center">
+                            <button className="article-next w-15 h-15 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
                                     width="16"
                                     height="16"
@@ -61,7 +61,7 @@ export default function Articles() {
                     <Swiper
                         id="article_slider"
                         modules={[Navigation]}
-                        spaceBetween={20}
+                        spaceBetween={10}
                         slidesPerView={1}
                         navigation={{
                             prevEl: ".article-prev",
@@ -87,7 +87,7 @@ export default function Articles() {
                     </Swiper>
                 </div>
                 <div className="hidden md:flex mt-8 justify-center">
-                    <Link href="/blogs" className="btn btn-bluewhite btn-arrow py-1">
+                    <Link href="/blogs" className="btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5">
                         Смотреть еще{" "}
                         <span>
                             <Image src={arrow} alt="smallarrow" />

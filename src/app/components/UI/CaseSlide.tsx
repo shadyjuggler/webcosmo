@@ -57,7 +57,7 @@ export const CaseSlide: React.FC<{
                     </div>
                 </div>
             </div>
-            <button className="case-next w-14 h-14 absolute top-0 right-0 btn btn-white aspect-square flex justify-center items-center !rounded-xl">
+            <button className="case-next xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 absolute top-0 right-0 btn btn-white aspect-square flex justify-center items-center !rounded-lg">
                 <svg
                     width="16"
                     height="16"

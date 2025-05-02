@@ -7,7 +7,7 @@ import sphere from "../assets/sphere.png";
 export const CTA: React.FC<{ title: string }> = ({ title }) => {
     return (
         <>
-            <div className="absolute left-auto -right-10 md:right-auto max-w-[200px] md:max-w-full md:left-1/2 -top-[75px] md:-top-[50px] z-40">
+            <div className="absolute left-auto -right-10 md:right-auto max-w-[200px] md:max-w-full md:left-1/2 -top-[75px] md:-top-[0px] z-40">
                 <Image src={glass} alt="glass" />
             </div>
             <section
@@ -24,7 +24,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                     <div className="flex z-40 relative flex-col justify-center items-center md:items-start">
                         <Tab name="Заявка" />
                         <h2
-                            className="mt-8 text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] text-center md:text-left"
+                            className="mt-8 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A] text-center md:text-left"
                             dangerouslySetInnerHTML={{ __html: title }}
                         ></h2>
                     </div>

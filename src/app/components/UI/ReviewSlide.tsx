@@ -11,11 +11,11 @@ export const ReviewSlide: React.FC<{
     return (
         <a href={url} target="_blank" className="review-slide">
             <div className="rounded-xl relative mask-review-slide">
-                <Image className="w-full  min-h-[300px] object-cover" src={img} alt="girl" />
+                <Image className="w-full  min-h-[370px] object-cover" src={img} alt="girl" />
             </div>
 
             <div className="mt-8 px-2">
-                <p className="font-semibold text-2xl">{name}</p>
+                <p className="font-medium text-2xl">{name}</p>
                 <p className="mt-2 text-[#262b3a]">{job}</p>
             </div>
         </a>

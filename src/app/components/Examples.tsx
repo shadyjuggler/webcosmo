@@ -28,9 +28,9 @@ export default function Examples() {
         <section id="examples" className="py-16 md:py-24 overflow-hidden relative">
             <div className="relative container mx-auto z-10">
                 <div className="flex justify-start md:justify-center items-center ">
-                    <div className="flex md:w-2/3 flex-col lg:flex-row gap-36 md:gap-8 lg:gap-0 w-full">
+                    <div className="flex md:w-2/3 flex-col lg:flex-row gap-36 md:gap-8 lg:gap-0 w-full items-center">
                         <Tab name="Кейсы" />
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] lg:mx-auto">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl !text-[#262B3A] lg:mx-auto">
                             Наши проекты
                         </h2>
                     </div>
@@ -137,7 +137,7 @@ export default function Examples() {
                     <div className="flex gap-2">
                         <button
                             ref={prevRef}
-                            className="case-prev w-12 h-12 btn btn-white md:w-14 md:h-14 aspect-square flex justify-center items-center"
+                            className="case-prev w-12 h-12 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
                         >
                             <svg
                                 width="16"
@@ -155,7 +155,7 @@ export default function Examples() {
                         </button>
                         <button
                             ref={nextRef}
-                            className="case-next w-12 h-12 btn btn-white md:w-14 md:h-14 aspect-square flex justify-center items-center"
+                            className="case-next w-12 h-12 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
                         >
                             <svg
                                 width="16"
@@ -173,7 +173,7 @@ export default function Examples() {
                             </svg>
                         </button>
                     </div>
-                    <button className="!hidden md:!flex btn btn-blue btn-arrow py-1">
+                    <button className="!hidden md:!flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5">
                         Смотреть еще{" "}
                         <span>
                             <Image src={arrow} alt="smallarrow" />

@@ -100,7 +100,7 @@ export default function BlogsPage() {
                         </div>
                     </div>
 
-                    <div className="relative z-30 cases-wrapper flex flex-wrap gap-8 justify-center 2xl:justify-between w-full max-w-[1600px] mx-auto">
+                    <div className="relative z-30 cases-wrapper grid grid-cols-1 md:grid-cols-2 justify-items-center xl:grid-cols-3 gap-8 justify-center w-full max-w-[1600px] mx-auto">
                         {Array(3)
                             .fill(0)
                             .map((card) => {

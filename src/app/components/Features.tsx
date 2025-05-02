@@ -20,7 +20,7 @@ export default function Features() {
             <div className="container mx-auto">
                 <div className="flex justify-center items-start gap-4 md:gap-8 lg:gap-0 lg:items-center flex-col lg:flex-row">
                     <Tab name="О нас" />
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] lg:mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A] lg:mx-auto">
                         Что делает <span>нас уникальными?</span>
                     </h2>
                 </div>
@@ -39,15 +39,15 @@ export default function Features() {
                             breakpoints={{
                                 768: {
                                     slidesPerView: 2,
-                                    spaceBetween: 20,
+                                    spaceBetween: 10,
                                 },
                                 1096: {
                                     slidesPerView: 3,
-                                    spaceBetween: 30,
+                                    spaceBetween: 10,
                                 },
                                 1278: {
                                     slidesPerView: 4,
-                                    spaceBetween: 30,
+                                    spaceBetween: 10,
                                 },
                             }}
                         >
@@ -177,7 +177,7 @@ export default function Features() {
 
                     <div className="mt-8 block xl:hidden">
                         <div className="flex gap-2">
-                            <button className="features-prev w-10 h-10 btn btn-white aspect-square flex justify-center items-center">
+                            <button className="features-prev w-12 h-12 md:w-14 md:h-14 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
                                     width="16"
                                     height="16"
@@ -192,7 +192,7 @@ export default function Features() {
                                     />
                                 </svg>
                             </button>
-                            <button className="features-next w-10 h-10 btn btn-white aspect-square flex justify-center items-center">
+                            <button className="features-next w-12 h-12 md:w-14 md:h-14 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
                                     width="16"
                                     height="16"

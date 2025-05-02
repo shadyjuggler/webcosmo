@@ -18,12 +18,12 @@ export default function Reviews() {
             className="py-16 md:py-24 relative z-20 bg-[#EFF1F5] rounded-b-xl"
         >
             <div className="relative container mx-auto">
-                <div className="absolute  top-0 -right-[100px] md:right-1/5 -translate-y-3/4 max-w-[200px] md:max-w-[250px] lg:max-w-[350px]">
+                <div className="absolute  top-0 xl:top-10 -right-[100px]  md:right-1/5 2xl::right-[500px] -translate-y-3/4 max-w-[200px] md:max-w-[250px] lg:max-w-[350px] xl:max-w-[450px]">
                     <Image src={donut} alt="donut" />
                 </div>
                 <div className="flex flex-col justify-center items-center md:items-start">
                     <Tab name="Отзывы" />
-                    <h2 className="mt-8 text-3xl text-center md:text-left md:text-4xl lg:text-5xl !text-[#262B3A]">
+                    <h2 className="mt-8 text-3xl text-center md:text-left md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A]">
                         Реальные результаты: <br />{" "}
                         <span>Отзывы наших клиентов</span>
                     </h2>

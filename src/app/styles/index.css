@@ -9,9 +9,17 @@
 
 .graident-main {
     background: linear-gradient(
-        320.33deg,
+        290.33deg,
         rgb(20, 98, 214) -21.89%,
         rgb(144, 107, 255) 80.167%
+    );
+}
+
+.graident-main3 {
+    background: linear-gradient(
+        220.33deg,
+        rgb(20, 98, 214) -21.89%,
+        rgb(144, 107, 255) 70.167%
     );
 }
 
@@ -33,7 +41,7 @@
 }
 
 .card {
-    @apply bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer overflow-hidden;
+    @apply bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer;
     transition: 0.15s ease-in-out;
     transition-delay: 0.25s;
     max-width: 410px;
@@ -42,7 +50,7 @@
 
 .card::after {
     content: "";
-    @apply absolute z-10 rounded-xl h-1/4 bottom-0 left-1/2 -translate-1/2 translate-y-1/2 w-20 bg-white opacity-50;
+    @apply absolute z-50 rounded-b-lg h-[20px] -bottom-[10px] left-1/2 -translate-1/2 translate-y-1/2 w-[80%] bg-white/50;
 }
 
 .card-text {
@@ -72,8 +80,9 @@
         opacity: 1;
     }
     .card-image {
-        @apply absolute w-60 -bottom-5 z-20 left-1/2 -translate-x-1/2;
+        @apply absolute w-80 -bottom-10 z-20 left-1/2;
         animation: fadeOutIn 0.5s ease-in-out;
+        translate: -50% 0%;
     }
 }
 
@@ -82,11 +91,12 @@
 }
 
 .card:hover .card-image {
-    @apply absolute w-60 -bottom-5 z-20 left-1/2 -translate-x-1/2;
+    @apply absolute w-80 2xl:w-90 -bottom-10 2xl:-bottom-15 z-20 left-1/2;
     animation: fadeOutIn 0.5s ease-in-out;
+    translate: -50% 0%;
 }
 
-.card::after {
+/* .card::after {
     content: "";
     display: block;
     position: absolute;
@@ -97,7 +107,7 @@
     width: 75%;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 .bg-blur {
     backdrop-filter: blur(10px);
@@ -105,7 +115,7 @@
 }
 
 .solution {
-    @apply relative flex flex-col max-w-[550px] w-full pt-12 sm:pt-16 pb-8 md:py-8 pl-8 md:pl-12 pr-4 md:pr-8 rounded-md transition-all text-white min-w-[350px] lg:min-w-[400px];
+    @apply pointer-events-none md:pointer-events-auto relative flex flex-col max-w-[550px] w-full pt-12 sm:pt-16 pb-8 md:py-8 pl-8 md:pl-12 pr-4 md:pr-8 rounded-md transition-all text-white min-w-[350px] lg:min-w-[400px];
     background: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0),
@@ -113,7 +123,7 @@
     );
 }
 
-.solution img {
+.solution svg {
     fill: white;
 }
 
@@ -121,7 +131,7 @@
     @apply bg-white text-[#262B3A];
 }
 
-.solution:hover img {
+.solution:hover svg {
     fill: #1462d6;
 }
 
@@ -136,7 +146,7 @@
 .solution::before {
     content: "";
     display: block;
-    @apply absolute w-2 h-6 left-0 top-24 md:top-8 bg-white rounded-tr-sm rounded-br-sm;
+    @apply absolute w-1.5 h-8 left-0 top-24 md:top-8 bg-white rounded-tr-md rounded-br-md;
 }
 
 .mask-side-notches {
@@ -453,9 +463,9 @@
     @apply !-top-8 !-right-7;
 }
 
-.cases-wrapper .article-slide {
+/* .cases-wrapper .article-slide {
     @apply 2xl:!max-w-[470px] xl:!max-w-[450px] !max-w-[400px];
-}
+} */
 
 [data-testid="flowbite-dropdown"] {
     @apply !z-[100];
@@ -475,4 +485,8 @@
 
 .header-container {
     @apply w-full 2xl:max-w-[1700px];
+}
+
+#features_slider {
+    @apply pb-5 md:pb-15;
 }
