@@ -17,7 +17,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                 <div className="circle z-20  md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] bg-amber-600`"></div>
                 <Image
                 style={{translate: "54% 0%"}}
-                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px] absolute -bottom-50 right-1/2 md:!translate-x-0 md:-right-50"
+                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px] absolute -bottom-30 right-1/2 md:!translate-x-0 md:-right-50"
                     src={sphere}
                     alt="abc"
                 ></Image>

@@ -18,7 +18,7 @@ export default function BlogsPage() {
         <>
             <main className="main cases" id="main">
                 <div className="relative">
-                    <div className="graident-main rounded-2xl px-4 md:px-6 xl:px-8 pt-8 pb-16 overflow-hidden">
+                    <div className="graident-main rounded-tr-md rounded-tl-2xl md:rounded-2xl px-4 md:px-6 xl:px-8 pt-8 pb-16 overflow-hidden">
                         <div className="container mx-auto relative">
                             <Navbar />
                             <div className="mt-8">
@@ -52,6 +52,14 @@ export default function BlogsPage() {
                                 alt="helix"
                             />
                         </div>
+                        <div
+                            id="header_corner_1"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                        ></div>
+                        <div
+                            id="header_corner_2"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                        ></div>
                     </div>
                     <div className="absolute right-[100px] hidden md:block -translate-y-1/2 md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]">
                         <Message

@@ -100,7 +100,7 @@ export const WhatWeDid: React.FC<{
                     </div>
                 </div>
 
-                <div className="mt-40 relative z-30">
+                <div className="mt-20 md:mt-40 relative z-30">
                     <CTA
                         title={
                             "<p>Готовы внедрять Web3 <br/> в ваш бизнес?</p>"

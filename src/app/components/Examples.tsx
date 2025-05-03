@@ -137,7 +137,7 @@ export default function Examples() {
                     <div className="flex gap-2">
                         <button
                             ref={prevRef}
-                            className="case-prev w-12 h-12 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
+                            className="case-prev w-14 h-14 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
                         >
                             <svg
                                 width="16"
@@ -155,7 +155,7 @@ export default function Examples() {
                         </button>
                         <button
                             ref={nextRef}
-                            className="case-next w-12 h-12 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
+                            className="case-next w-14 h-14 btn btn-white md:w-16 md:h-16 aspect-square flex justify-center items-center"
                         >
                             <svg
                                 width="16"
@@ -181,7 +181,7 @@ export default function Examples() {
                     </button>
                 </div>
             </div>
-            <div className="absolute -bottom-[100px] md:-bottom-1/3 right-0 z-0 pointer-events-none">
+            <div className="absolute -bottom-[50px] md:-bottom-1/3 right-0 z-0 pointer-events-none">
                 <Image src={blur} alt="blur" />
             </div>
         </section>

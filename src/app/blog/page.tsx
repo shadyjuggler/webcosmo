@@ -17,7 +17,7 @@ export default function BlogPage() {
     return (
         <>
             <main className="main blogpage" id="main">
-                <div className="graident-main rounded-b-2xl rounded-tr-lg rounded-tl-2xl md:rounded-2xl pt-8 pb-16 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-32 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
+                <div className="graident-main rounded-b-2xl rounded-tr-md rounded-tl-2xl md:rounded-2xl pt-8 pb-16 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-32 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
                     <div className="absolute -rotate-90 md:rotate-0 top-1/2 scale-150 md:scale-100 md:-top-10 lg:-top-20 -right-[450px] md:-right-20 z-20 pointer-events-none">
                         <Image src={blogbg} alt="bg" />
                     </div>
@@ -39,15 +39,25 @@ export default function BlogPage() {
                                 <div className="text-white md:text-base text-sm">
                                     19 апреля, 2024 год
                                 </div>
-                                <p className="text-3xl text-white md:text-base text-sm">•</p>
+                                <p className="md:text-2xl text-white sm:text-base text-sm">
+                                    •
+                                </p>
                                 <div className="text-white">5 минут чтения</div>
                             </div>
                         </div>
                     </div>
+
+                    <div
+                        id="header_corner_1"
+                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                    ></div>
+                    <div
+                        id="header_corner_2"
+                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                    ></div>
                 </div>
 
                 <div className="mt-12 lg:py-16 p-4 sm:p-8 md:p-10 lg:px-12 2xl:px-22 bg-white rounded-2xl relative flex gap-8">
-
                     {/* blog content */}
                     <div className="w-full rounded-2xl sm:border-1 border-slate-200 p-4 sm:p-8 md:p-12">
                         {/* list */}
@@ -84,8 +94,8 @@ export default function BlogPage() {
                             </div>
                         </div>
 
-                         {/* list */}
-                         <div className="mt-6 md:mt-12">
+                        {/* list */}
+                        <div className="mt-6 md:mt-12">
                             <p className="font-medium text-xl md:text-2xl">
                                 Что вы можете ожидать от нашего блога?
                             </p>

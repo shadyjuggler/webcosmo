@@ -26,7 +26,7 @@ export default function BlogsPage() {
     return (
         <>
             <main className="main blog" id="main">
-                <div className="graident-main rounded-2xl pt-8 pb-16 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
+                <div className="graident-main rounded-b-2xl rounded-tr-md rounded-tl-2xl md:rounded-2xl pt-8 pb-16 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
                     <div className="block lg:hidden absolute -bottom-20 sm:-bottom-40 md:-bottom-50 -right-5 sm:-right-25 -rotate-0 sm:-rotate-0 md:rotate-10">
                         <Image src={blogbg} alt="bg" />
                     </div>
@@ -53,6 +53,14 @@ export default function BlogsPage() {
                             </div>
                         </div>
                     </div>
+                    <div
+                        id="header_corner_1"
+                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                    ></div>
+                    <div
+                        id="header_corner_2"
+                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                    ></div>
                 </div>
 
                 <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative ">
@@ -60,7 +68,10 @@ export default function BlogsPage() {
                         <div className="hidden md:flex gap-1 max-w-[900px] w-full">
                             {options.map((item: string) => {
                                 return (
-                                    <div key={Math.random()} className="px-3 xl:px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all">
+                                    <div
+                                        key={Math.random()}
+                                        className="px-3 xl:px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all"
+                                    >
                                         <p className="font-medium text-center text-sm xl:text-base">
                                             {item}
                                         </p>
@@ -76,7 +87,11 @@ export default function BlogsPage() {
                                 dismissOnClick={false}
                             >
                                 {options.map((item: string) => {
-                                    return <DropdownItem key={Math.random()}>{item}</DropdownItem>;
+                                    return (
+                                        <DropdownItem key={Math.random()}>
+                                            {item}
+                                        </DropdownItem>
+                                    );
                                 })}
                             </Dropdown>
                         </div>

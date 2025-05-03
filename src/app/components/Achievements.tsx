@@ -9,7 +9,7 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
     return (
         <section id="maingoals" className="mt-7 pb-80 pt-8 md:py-24">
             <div className="container mx-auto">
-                <div className="flex justify-center items-start gap-4 md:gap-0 md:items-center flex-col md:flex-row">
+                <div className="flex justify-center items-start gap-8 md:gap-0 md:items-center flex-col md:flex-row">
                     <Tab name="Задачи" />
                     <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] md:mx-auto">
                         <span>Результаты</span> и достижения
@@ -75,9 +75,9 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
                     </div>
 
                     <Image className="absolute max-w-[200px] lg:max-w-[300px] z-20 xl:max-w-[500px] right-[-40px] md:right-[-25px] lg:right-[-50px] xl:right-[-100px] 2xl:-right-[80px] -bottom-[200px] md:bottom-1/4 xl:-bottom-1/4 rotate-160 md:rotate-60" src={helix} alt="helix"></Image>
-                    <Image className="absolute max-w-[400px] lg:max-w-[600px] z-30 xl:max-w-[800px] 2xl:max-w-[900px] right-1/2 translate-x-[170px] md:translate-x-0 md:right-[50px] 2xl:right-[150px] -bottom-[370px] md:bottom-auto md:top-10 lg:-top-20" src={mac} alt="helix"></Image>
+                    <Image style={{translate: "170px"}} className="absolute max-w-[400px] lg:max-w-[600px] z-30 xl:max-w-[800px] 2xl:max-w-[900px] right-1/2  md:!translate-x-0 md:right-[50px] 2xl:right-[150px] -bottom-[370px] md:bottom-auto md:top-10 lg:-top-20" src={mac} alt="helix"></Image>
 
-                    <div className="absolute pointer-events-none -bottom-4/5 right-0 blur-[300px] z-10 w-[700px] h-[700px] bg-[#7069f4] rounded-full "></div>
+                    <div className="hidden lg:block absolute pointer-events-none -bottom-4/5 right-0 blur-[300px] z-10 w-[700px] h-[700px] bg-[#7069f4] rounded-full "></div>
                 </div>
             </div>
         </section>

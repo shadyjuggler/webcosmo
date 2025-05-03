@@ -46,18 +46,18 @@ export const CaseSlide: React.FC<{
                     </div>
                 </div>
 
-                <div className="relative w-full 2xl:max-w-[446px] flex items-end overflow-hidden">
+                <div className="relative w-full max-h-[300px] md:max-h-full md:h-full 2xl:max-w-[446px] flex items-end overflow-hidden">
                     <Image
                         className="h-full"
                         src={img}
                         alt="bg"
                     />
-                    <div style={{translate: "0% -50%"}} className="absolute left-0 top-1/2 rotate-25">
+                    <div style={{translate: "-50% -50%"}} className="absolute w-full max-w-[325px] md:max-w-full left-1/2 top-1/2 rotate-0 md:rotate-25">
                         <Image src={imgUrl ? imgUrl : ""} alt="image" />
                     </div>
                 </div>
             </div>
-            <button className="case-next xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 absolute top-0 right-0 btn btn-white aspect-square flex justify-center items-center !rounded-lg">
+            <button className="case-next w-13 h-13 sm:w-14 md:w-13 sm:h-14 md:h-13 lg:w-12 xl:w-14 lg:h-12 xl:h-14 2xl:w-16 2xl:h-16 absolute top-0 right-0 btn btn-white aspect-square flex justify-center items-center !rounded-lg">
                 <svg
                     width="16"
                     height="16"

@@ -41,8 +41,8 @@ export default function BlogsPage() {
     return (
         <>
             <main className="main case overflow-hidden" id="main">
-                <div className="relative overflow-hidden xl:p-4 md:bg-white rounded-2xl">
-                    <div className="graident-main mask-case rounded-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-80 md:pb-20 xl:pb-16 overflow-hidden">
+                <div className="relative overflow-hidden xl:p-4 md:bg-white rounded-tr-md rounded-tl-2xl md:rounded-2xl">
+                    <div className="graident-main mask-case rounded-tr-md rounded-tl-2xl md:rounded-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-70 md:pb-20 xl:pb-16 overflow-hidden">
                         <div className="container mx-auto relative">
                             <div className="relative z-50">
                                 <Navbar />
@@ -60,7 +60,7 @@ export default function BlogsPage() {
                                 </div>
 
                                 <Image
-                                    className="absolute max-w-[100px] md:max-w-[300px] z-40 md:z-10 lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[700px] left-1/2 md:left-1/3 2xl:left-2/5 bottom-30 md:bottom-20 xl:bottom-[0px]"
+                                    className="absolute max-w-[100px] md:max-w-[300px] z-40 md:z-10 lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[700px] left-[70%] md:left-1/3 2xl:left-2/5 bottom-30 md:bottom-20 xl:bottom-[0px]"
                                     src={figure}
                                     alt="phone"
                                 />
@@ -75,7 +75,7 @@ export default function BlogsPage() {
                                         <p className="text-white text-sm xl:text-base absolute top-16 md:top-24 lg:top-26 left-6 xl:left-8 z-40">
                                             О клиенте
                                         </p>
-                                        <p className="text-white text-[12px] lg:text-sm xl:text-base absolute bottom-7 md:bottom-5 lg:bottom-8 xl:bottom-10 2xl:bottom-12 left-20 md:left-40 lg:left-45 xl:left-55 2xl:left-65 max-w-[250px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] z-40">
+                                        <p className="text-white text-[13px] lg:text-sm xl:text-base absolute bottom-6 md:bottom-5 lg:bottom-8 xl:bottom-10 2xl:bottom-12 left-15    md:left-40 lg:left-45 xl:left-55 2xl:left-65 max-w-[250px] md:max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] z-40">
                                             Инновационная платформа для
                                             расширения функциональности NFT,
                                             интеграции с блокчейном Solana и
@@ -87,11 +87,29 @@ export default function BlogsPage() {
                                 </div>
                             </div>
                         </div>
+                        <div
+                            id="header_corner_1"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                        ></div>
+                        <div
+                            id="header_corner_2"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                        ></div>
                         <Image
-                            className="absolute -bottom-[100px] rotate-45 md:rotate-0 md:bottom-auto md:top-0 lg:-top-[140px] right-1/2 translate-x-[350px] md:translate-x-0 md:-right-100 lg:-right-160 xl:-right-120 2xl:-right-110 max-w-[700px] md:max-w-[1000px] lg:max-w-[1700px] z-40 md:z-20 pointer-events-none"
+                        style={{translate: "400px 0px"}}
+                            className="absolute -bottom-[200px] rotate-45 md:rotate-0 md:bottom-auto md:top-0 lg:-top-[140px] right-1/2 md:!translate-x-0 md:-right-100 lg:-right-120 xl:-right-120 2xl:-right-110 max-w-[800px] md:max-w-[1000px] lg:max-w-[1400px] xl:max-w-[1500px] 2xl:max-w-[1700px] z-40 md:z-20 pointer-events-none"
                             src={iphone}
                             alt="phone"
                         />
+
+                        {/* <div
+                            id="header_corner_1"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                        ></div>
+                        <div
+                            id="header_corner_2"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                        ></div> */}
                     </div>
                 </div>
 
