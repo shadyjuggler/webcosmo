@@ -52,7 +52,7 @@ export const CaseSlide: React.FC<{
                         src={img}
                         alt="bg"
                     />
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 rotate-25">
+                    <div style={{translate: "0% -50%"}} className="absolute left-0 top-1/2 rotate-25">
                         <Image src={imgUrl ? imgUrl : ""} alt="image" />
                     </div>
                 </div>

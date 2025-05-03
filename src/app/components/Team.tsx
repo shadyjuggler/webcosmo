@@ -149,7 +149,7 @@ export default function Team() {
                             </p>
                         </div>
                     </div>
-                    <div className="py-8 px-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full flex flex-col overflow-hidden relative">
+                    <div className="py-8 px-8 bg-white/10 max-w-[300px] 2xl:max-w-[360px] w-full hidden md:flex flex-col overflow-hidden relative">
                         <p className=" text-white font-semibold xl:-text-xl 2xl:text-2xl">
                             Связаться с нами
                         </p>

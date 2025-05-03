@@ -280,7 +280,7 @@
 
 .circle {
     position: absolute;
-    filter: blur(450px);
+    /* filter: blur(450px); */
     background: linear-gradient(
         -55.43deg,
         rgb(20, 98, 214) 8.857%,
@@ -290,9 +290,11 @@
     height: 1500px;
     border-radius: 50%;
 
-    -webkit-filter: blur(450px);
+    /* -webkit-filter: blur(450px); */
 
     translate: -50% -80%;
+    left: 50%;
+    top: 0;
 }
 
 .input,
@@ -400,7 +402,6 @@
         );
         width: 778px;
         height: 778px;
-        border-radius: 50%;
     
         -webkit-filter: blur(500px);
     }
