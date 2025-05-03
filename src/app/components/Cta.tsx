@@ -14,9 +14,10 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                 id="cta"
                 className="bg-white mask-side-file-top relative overflow-hidden rounded-b-2xl px-4 2xl:px-0"
             >
-                <div className="circle z-20 -translate-y-4/5 md:-translate-y-0 md:-top-1/2 left-1/2 -translate-x-1/2 md:-translate-x-0 md:left-1/5 bg-amber-600`"></div>
+                <div className="circle z-20  md:!-translate-y-0 md:-top-1/2 left-1/2 md:!-translate-x-0 md:left-1/5 bg-amber-600`"></div>
                 <Image
-                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] absolute -bottom-30 right-1/2 translate-x-1/2 md:translate-x-0 md:-right-50"
+                style={{translate: "50% 0%"}}
+                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] absolute -bottom-30 right-1/2 md:!translate-x-0 md:-right-50"
                     src={sphere}
                     alt="abc"
                 ></Image>

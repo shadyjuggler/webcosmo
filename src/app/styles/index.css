@@ -291,8 +291,9 @@
     border-radius: 50%;
 
     -webkit-filter: blur(450px);
-}
 
+    translate: -50% -80%;
+}
 
 .input,
 .textarea {
@@ -388,7 +389,6 @@
             rgb(255, 255, 255) 100%
         );
     }
-    
 
     .circle {
         position: absolute;
