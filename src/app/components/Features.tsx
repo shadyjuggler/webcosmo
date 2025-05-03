@@ -53,7 +53,7 @@ export default function Features() {
                         >
                             <SwiperSlide>
                                 <div className="card justify-between">
-                                    <div className="w-18 card-image">
+                                    <div className=" card-image">
                                         <Image src={light} alt="light"></Image>
                                     </div>
 
@@ -84,7 +84,7 @@ export default function Features() {
                             <SwiperSlide>
                                 {" "}
                                 <div className="card justify-between">
-                                    <div className="w-18 card-image">
+                                    <div className=" card-image">
                                         <Image src={ok} alt="light"></Image>
                                     </div>
 
@@ -113,7 +113,7 @@ export default function Features() {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="card justify-between">
-                                    <div className="w-18 card-image">
+                                    <div className=" card-image">
                                         <Image src={eye} alt="light"></Image>
                                     </div>
 
@@ -142,7 +142,7 @@ export default function Features() {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="card justify-between">
-                                    <div className="w-18 card-image">
+                                    <div className=" card-image">
                                         <Image
                                             src={thunder}
                                             alt="light"
