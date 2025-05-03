@@ -41,26 +41,26 @@ export default function BlogsPage() {
     return (
         <>
             <main className="main case overflow-hidden" id="main">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden xl:p-4 md:bg-white rounded-2xl">
                     <div className="graident-main mask-case rounded-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-80 md:pb-20 xl:pb-16 overflow-hidden">
                         <div className="container mx-auto relative">
                             <div className="relative z-50">
                                 <Navbar />
                             </div>
                             <div className="mt-8">
-                                <div className="hidden lg:block">
+                                <div className="">
                                     <ReturnBack />
                                 </div>
 
-                                <div className="mt-8 relative z-40">
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl">
+                                <div className="mt-4 md:mt-8 relative z-40">
+                                    <h1 className="text-4xl lg:text-5xl xl:text-[68px] xl:leading-16">
                                         Fungypack <br />
                                         – инновационная <br /> платформа NFT
                                     </h1>
                                 </div>
 
                                 <Image
-                                    className="absolute max-w-[100px] md:max-w-[300px] z-40 md:z-10 lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[650px] left-1/2 md:left-1/3 bottom-30 md:bottom-20 xl:bottom-[0px]"
+                                    className="absolute max-w-[100px] md:max-w-[300px] z-40 md:z-10 lg:max-w-[400px] xl:max-w-[550px] 2xl:max-w-[700px] left-1/2 md:left-1/3 2xl:left-2/5 bottom-30 md:bottom-20 xl:bottom-[0px]"
                                     src={figure}
                                     alt="phone"
                                 />
@@ -88,92 +88,93 @@ export default function BlogsPage() {
                             </div>
                         </div>
                         <Image
-                            className="absolute -bottom-[100px] rotate-45 md:rotate-0 md:bottom-auto md:top-0 lg:-top-[100px] right-1/2 translate-x-[350px] md:translate-x-0 md:-right-100 lg:-right-160 xl:-right-120 2xl:-right-80 max-w-[700px] md:max-w-[1000px] lg:max-w-[1500px] z-40 md:z-20 pointer-events-none"
+                            className="absolute -bottom-[100px] rotate-45 md:rotate-0 md:bottom-auto md:top-0 lg:-top-[140px] right-1/2 translate-x-[350px] md:translate-x-0 md:-right-100 lg:-right-160 xl:-right-120 2xl:-right-110 max-w-[700px] md:max-w-[1000px] lg:max-w-[1700px] z-40 md:z-20 pointer-events-none"
                             src={iphone}
                             alt="phone"
                         />
                     </div>
                 </div>
 
-                <MainGoals
-                    content={[
-                        {
-                            title: "Реферальная система",
-                            text: "Разработка реферальной системы для привлечения новых пользователей.",
-                        },
-                        {
-                            title: "Механизм стейкинга",
-                            text: "Внедрение механизма стейкинга, начисления бонусов и взаимодействия с NFT без вывода из кошелька",
-                        },
-                        {
-                            title: "NFT-маркетплейс",
-                            text: "Создание NFT-маркетплейса с возможностью покупки, продажи и взаимодействия с коллекциями.",
-                        },
-                        {
-                            title: "Solana blockchain",
-                            text: "Интеграция Solana blockchain для безопасного хранения и обработки NFT.",
-                        },
-                        {
-                            title: "Интерактивное веб-приложение",
-                            text: "Разработка интерактивного веб-приложения с удобным пользовательским интерфейсом",
-                        },
-                        {
-                            title: "Мультиблокчейн-экосистема",
-                            text: "Оптимизация платформы для мультиблокчейн-экосистемы с возможностью будущего расширения на Bitcoin и EVM-совместимые сети",
-                        },
-                    ]}
-                />
+                <div className="bg-[#EFF1F5] rounded-2xl">
+                    <MainGoals
+                        content={[
+                            {
+                                title: "Реферальная система",
+                                text: "Разработка реферальной системы для привлечения новых пользователей.",
+                            },
+                            {
+                                title: "Механизм стейкинга",
+                                text: "Внедрение механизма стейкинга, начисления бонусов и взаимодействия с NFT без вывода из кошелька",
+                            },
+                            {
+                                title: "NFT-маркетплейс",
+                                text: "Создание NFT-маркетплейса с возможностью покупки, продажи и взаимодействия с коллекциями.",
+                            },
+                            {
+                                title: "Solana blockchain",
+                                text: "Интеграция Solana blockchain для безопасного хранения и обработки NFT.",
+                            },
+                            {
+                                title: "Интерактивное веб-приложение",
+                                text: "Разработка интерактивного веб-приложения с удобным пользовательским интерфейсом",
+                            },
+                            {
+                                title: "Мультиблокчейн-экосистема",
+                                text: "Оптимизация платформы для мультиблокчейн-экосистемы с возможностью будущего расширения на Bitcoin и EVM-совместимые сети",
+                            },
+                        ]}
+                    />
+                    <Technologies
+                        content={[
+                            {
+                                title: "Фронтенд:",
+                                list: [
+                                    "React + Redux + TypeScript – построение динамичного UI с гибкими возможностями.",
+                                    "SASS – стилизация и адаптивный дизайн",
+                                ],
+                                img: fe,
+                            },
+                            {
+                                title: "Бэкенд и база данных:",
+                                list: [
+                                    "Firebase – реализация надежной и быстрой системы хранения данных.",
+                                    "Solana.js – интеграция с блокчейном, работа со смарт-контрактами и NFT",
+                                ],
+                                img: solana,
+                            },
+                        ]}
+                    />
 
-                <Technologies
-                    content={[
-                        {
-                            title: "Фронтенд:",
-                            list: [
-                                "React + Redux + TypeScript – построение динамичного UI с гибкими возможностями.",
-                                "SASS – стилизация и адаптивный дизайн",
-                            ],
-                            img: fe,
-                        },
-                        {
-                            title: "Бэкенд и база данных:",
-                            list: [
-                                "Firebase – реализация надежной и быстрой системы хранения данных.",
-                                "Solana.js – интеграция с блокчейном, работа со смарт-контрактами и NFT",
-                            ],
-                            img: solana,
-                        },
-                    ]}
-                />
-
-                <Functionality
-                    content={[
-                        {
-                            icon: imgIcon,
-                            title: "NFT-Хранилище (Backpack)",
-                            text: 'Пользователи могут "упаковывать" свои NFT в Fungypack, тем самым увеличивая их ценность.',
-                        },
-                        {
-                            icon: cross,
-                            title: "Генерация очков (FungyPoints)",
-                            text: "NFT начинают приносить очки после упаковки, повышая их полезность.",
-                        },
-                        {
-                            icon: shop,
-                            title: "Маркетплейс",
-                            text: "Покупка, продажа и обмен NFT внутри платформы",
-                        },
-                        {
-                            icon: cross,
-                            title: "Маркетплейс",
-                            text: "Покупка, продажа и обмен NFT внутри платформы",
-                        },
-                        {
-                            icon: cross,
-                            title: "Маркетплейс",
-                            text: "Покупка, продажа и обмен NFT внутри платформы",
-                        },
-                    ]}
-                />
+                    <Functionality
+                        content={[
+                            {
+                                icon: imgIcon,
+                                title: "NFT-Хранилище (Backpack)",
+                                text: 'Пользователи могут "упаковывать" свои NFT в Fungypack, тем самым увеличивая их ценность.',
+                            },
+                            {
+                                icon: cross,
+                                title: "Генерация очков (FungyPoints)",
+                                text: "NFT начинают приносить очки после упаковки, повышая их полезность.",
+                            },
+                            {
+                                icon: shop,
+                                title: "Маркетплейс",
+                                text: "Покупка, продажа и обмен NFT внутри платформы",
+                            },
+                            {
+                                icon: cross,
+                                title: "Маркетплейс",
+                                text: "Покупка, продажа и обмен NFT внутри платформы",
+                            },
+                            {
+                                icon: cross,
+                                title: "Маркетплейс",
+                                text: "Покупка, продажа и обмен NFT внутри платформы",
+                            },
+                        ]}
+                    />
+                </div>
 
                 <Achievements
                     content={[

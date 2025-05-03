@@ -7,21 +7,21 @@ import sphere from "../assets/sphere.png";
 export const CTA: React.FC<{ title: string }> = ({ title }) => {
     return (
         <>
-            <div className="absolute left-auto -right-10 md:right-auto max-w-[200px] md:max-w-full md:left-1/2 -top-[75px] md:-top-[0px] z-40">
+            <div className="absolute left-auto -right-10 md:right-auto w-full max-w-[200px] md:max-w-[350px] xl:max-w-[450px] 2xl:max-w-[550px] md:left-1/2 -top-[75px] md:-top-[0px] z-40">
                 <Image src={glass} alt="glass" />
             </div>
             <section
                 id="cta"
                 className="bg-white mask-side-file-top relative overflow-hidden rounded-b-2xl px-4 2xl:px-0"
             >
-                <div className="circle z-20  md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-1/5 bg-amber-600`"></div>
+                <div className="circle z-20  md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] bg-amber-600`"></div>
                 <Image
                 style={{translate: "54% 0%"}}
-                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] absolute -bottom-30 right-1/2 md:!translate-x-0 md:-right-50"
+                    className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px] absolute -bottom-50 right-1/2 md:!translate-x-0 md:-right-50"
                     src={sphere}
                     alt="abc"
                 ></Image>
-                <div className="container  mx-auto pt-16 pb-48 md:py-25 lg:py-30 xl:py-40">
+                <div className="container  mx-auto pt-16 pb-40 2xl:pb-48 md:py-25 lg:pt-30 xl:pt-40">
                     <div className="flex z-40 relative flex-col justify-center items-center md:items-start">
                         <Tab name="Заявка" />
                         <h2
@@ -29,7 +29,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                             dangerouslySetInnerHTML={{ __html: title }}
                         ></h2>
                     </div>
-                    <p className="mt-8  z-40 relative text-[#1D2230] max-w-[580px] text-center md:text-left">
+                    <p className="mt-8 opacity-60 z-40 relative text-[rgb(29, 34, 48)] max-w-[580px] text-center md:text-left">
                         Расскажите, какая задача стоит перед Вами прямо сейчас,
                         а мы предложим подробный план ее решения и реализуем
                         задуманное.

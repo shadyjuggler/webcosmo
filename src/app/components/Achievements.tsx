@@ -17,10 +17,10 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
                 </div>
 
                 <div className="mt-10 md:mt-20 flex gap-8 relative">
-                    <div className="max-w-full md:max-w-[450px] xl:max-w-[600px] flex flex-col gap-4 w-full">
+                    <div className="max-w-full md:max-w-[450px] xl:max-w-[620px] flex flex-col gap-4 w-full z-30">
                         {content.map((item: {title: string, text: string}) => {
                             return (
-                                <div key={item.title} className="achivements-card rounded-xl flex flex-col hover:!bg-white transition-all w-ful py-8 px-8">
+                                <div key={item.title} className="achivements-card rounded-xl flex flex-col  transition-all w-ful py-8 px-8">
                                     <div className="flex items-start md:items-center gap-2 md:flex-row flex-col">
                                         <svg
                                             width="44.000000"
@@ -74,8 +74,10 @@ export const Achievements: React.FC<{ content: {title: string, text: string}[] }
                         })}
                     </div>
 
-                    <Image className="absolute max-w-[200px] lg:max-w-[300px] xl:max-w-[500px] right-[-40px] md:right-[-25px] lg:right-[-50px] xl:right-[-100px] 2xl:right-0 -bottom-[200px] md:bottom-1/4 xl:-bottom-1/4 rotate-160 md:rotate-60" src={helix} alt="helix"></Image>
-                    <Image className="absolute max-w-[400px] lg:max-w-[600px] xl:max-w-[800px] right-1/2 translate-x-[170px] md:translate-x-0 md:right-[50px] 2xl:right-[150px] -bottom-[370px] md:bottom-auto md:top-10 lg:-top-10" src={mac} alt="helix"></Image>
+                    <Image className="absolute max-w-[200px] lg:max-w-[300px] z-20 xl:max-w-[500px] right-[-40px] md:right-[-25px] lg:right-[-50px] xl:right-[-100px] 2xl:-right-[80px] -bottom-[200px] md:bottom-1/4 xl:-bottom-1/4 rotate-160 md:rotate-60" src={helix} alt="helix"></Image>
+                    <Image className="absolute max-w-[400px] lg:max-w-[600px] z-30 xl:max-w-[800px] 2xl:max-w-[900px] right-1/2 translate-x-[170px] md:translate-x-0 md:right-[50px] 2xl:right-[150px] -bottom-[370px] md:bottom-auto md:top-10 lg:-top-20" src={mac} alt="helix"></Image>
+
+                    <div className="absolute pointer-events-none -bottom-4/5 right-0 blur-[300px] z-10 w-[700px] h-[700px] bg-[#7069f4] rounded-full "></div>
                 </div>
             </div>
         </section>

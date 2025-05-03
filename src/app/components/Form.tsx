@@ -4,7 +4,7 @@ import arrow from "../assets/small-arrow.svg";
 //@ts-ignore
 export default function Form({ isModal }) {
     return (
-        <div className="flex flex-col gap-2 md:gap-4 relative z-20 w-full">
+        <div className="flex flex-col gap-2 md:gap-2 relative z-20 w-full">
             {isModal ? (
                 <h2 className="max-w-[300px] md:max-w-full text-[28px] leading-8 md:leading-9 md:text-3xl !text-[#262B3A]">
                     <span> Позвоним <br className="block md:hidden" /> в течение 15 минут,</span> <br className="hidden md:block" />
@@ -14,7 +14,7 @@ export default function Form({ isModal }) {
                 ""
             )}
 
-            <div className={`flex-col md:flex-row ${isModal ? "!flex-col mt-8" : ""} flex gap-2 md:gap-4 `}>
+            <div className={`flex-col md:flex-row ${isModal ? "!flex-col mt-8" : ""} flex gap-2 md:gap-3 `}>
                 <div className="form-control">
                     <input placeholder="Имя" type="text" className="input" />
                 </div>

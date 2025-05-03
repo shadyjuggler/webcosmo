@@ -11,25 +11,24 @@ export default function Functionality({ content }) {
     const slides = content.map((item: any) => {
         return (
             <SwiperSlide key={Math.random()}>
-                <div  className="functionality-slide rounded-2xl relative hover:translate-y-5 transition-all functionality-card cursor-pointer pointer-events-none md:pointer-events-auto">
-                    <div className=" bg-white p-8 flex flex-col  z-10 relative min-h-[275px] ">
-                        <div className="icon rounded-xl w-12 h-12 flex justify-center items-center bg-[#262B3A] hover:bg-[#1462D6] transition-all">
-                            <Image
-                                className="max-w-6"
-                                src={item.icon}
-                                alt="icon"
-                            />
-                        </div>
-
-                        <p className="mt-20 text-xl font-semibold text-[#262B3A]">
-                            {item.title}
-                        </p>
-                        <p className="mt-4 text-sm text-[#262B3A]/80">
-                            {item.text}
-                        </p>
+                <div className="functionality-slide min-h-[280px] md:min-h-[340px] rounded-2xl bg-white p-8 flex flex-col z-10 relative hover:translate-y-5 transition-all functionality-card cursor-pointer pointer-events-none md:pointer-events-auto">
+                    <div className="icon rounded-xl w-14 md:w-17 h-14 md:h-17 flex justify-center items-center bg-[#262B3A] hover:bg-[#1462D6] transition-all">
+                        <Image
+                            className="max-w-7 md:max-w-10"
+                            src={item.icon}
+                            alt="icon"
+                        />
                     </div>
+
+                    <p className="mt-auto text-lg md:text-2xl relative z-40 font-semibold text-[#262B3A]">
+                        {item.title}
+                    </p>
+                    <p className="mt-4 text-sm relative z-40 text-[#262B3A]/80 max-w-[350px]">
+                        {item.text}
+                    </p>
+
                     <div
-                        className="slide-bg transition-all opacity-0 absolute z-50 -bottom-1/2 -right-1/4 rounded-full h-90 w-90"
+                        className="slide-bg bg-[#8D6CFE] transition-all opacity-0 absolute z-30 -bottom-1/2 -right-1/4 rounded-full h-90 w-90"
                         style={{
                             background: "rgb(141, 108, 254);",
                             filter: "blur(150px)",
@@ -45,7 +44,7 @@ export default function Functionality({ content }) {
             <div className="container mx-auto">
                 <div className="flex justify-center items-start md:items-center gap-4 md:gap-0 md:flex-row flex-col">
                     <Tab name="Функционал" />
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] md:mx-auto">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A] md:mx-auto">
                         Функциональные <br /> <span>возможности</span> платформы
                     </h2>
                 </div>
@@ -62,11 +61,11 @@ export default function Functionality({ content }) {
                         }}
                         breakpoints={{
                             880: {
-                                slidesPerView: 2
+                                slidesPerView: 2,
                             },
                             1280: {
-                                slidesPerView: 3
-                            }
+                                slidesPerView: 3,
+                            },
                         }}
                     >
                         {slides}
@@ -75,7 +74,7 @@ export default function Functionality({ content }) {
 
                 <div className="mt-4 md:mt-6 flex justify-between">
                     <div className="flex gap-2">
-                        <button className="func-prev w-12 h-12 btn btn-white aspect-square flex justify-center items-center">
+                        <button className="func-prev  w-14 md:w-16 h-14 md:h-16 btn btn-white aspect-square flex justify-center items-center">
                             <svg
                                 width="16"
                                 height="16"
@@ -90,7 +89,7 @@ export default function Functionality({ content }) {
                                 />
                             </svg>
                         </button>
-                        <button className="func-next w-12 h-12 btn btn-white aspect-square flex justify-center items-center">
+                        <button className="func-next w-14 md:w-16 h-14 md:h-16 btn btn-white aspect-square flex justify-center items-center">
                             <svg
                                 width="16"
                                 height="16"
