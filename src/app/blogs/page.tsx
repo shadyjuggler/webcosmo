@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "../components/Navbar";
 import { ReturnBack } from "../components/UI/ReturnBack";
 
@@ -11,7 +12,7 @@ import blogs from "../assets/blogs.png";
 import smallarrow from "../assets/small-arrow.svg";
 
 import blogbg from "../assets/blog-mob.png";
-import { Dropdown, DropdownItem } from "flowbite-react";
+import DropDown from "../components/UI/DropDown";
 
 export default function BlogsPage() {
     const options = [
@@ -63,7 +64,7 @@ export default function BlogsPage() {
                     ></div>
                 </div>
 
-                <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative ">
+                <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative z-40 ">
                     <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full bg-white py-8 2xl:py-12 rounded-2xl px-8 xl:px-12 2xl:px-16 md:max-w-[1100px] xl:max-w-[1300px] 2xl:max-w-[1600px] mx-auto -translate-y-10 flex justify-between">
                         <div className="hidden md:flex gap-1 max-w-[900px] w-full">
                             {options.map((item: string) => {
@@ -80,20 +81,11 @@ export default function BlogsPage() {
                             })}
                         </div>
 
-                        <div className="z-50 flex md:hidden w-full justify-center text-sm 2xl:text-base">
-                            <Dropdown
-                                className="btn w-full sm:w-fit btn-dd py-3.5 border-black/20 text-black md:!text-white"
-                                label="Все статьи"
-                                dismissOnClick={false}
-                            >
-                                {options.map((item: string) => {
-                                    return (
-                                        <DropdownItem key={Math.random()}>
-                                            {item}
-                                        </DropdownItem>
-                                    );
-                                })}
-                            </Dropdown>
+                        <div className="relative z-40 flex md:hidden w-full justify-center text-sm 2xl:text-base">
+                            <DropDown
+                                options={options}
+                                onChange={() => console.log()}
+                            />
                         </div>
 
                         <div className="flex flex-col items-end absolute -top-7 md:top-6 right-1/2 translate-x-[140px] md:translate-x-0 md:right-8 lg:relative w-[240px] 2xl:w-[250px]">
@@ -115,7 +107,7 @@ export default function BlogsPage() {
                         </div>
                     </div>
 
-                    <div className="relative z-30 cases-wrapper grid grid-cols-1 md:grid-cols-2 justify-items-center xl:grid-cols-3 gap-8 justify-center w-full max-w-[1600px] mx-auto">
+                    <div className="cases-wrapper grid grid-cols-1 md:grid-cols-2 justify-items-center xl:grid-cols-3 gap-8 justify-center w-full max-w-[1600px] mx-auto">
                         {Array(3)
                             .fill(0)
                             .map((card) => {

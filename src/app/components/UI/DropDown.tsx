@@ -43,7 +43,7 @@ const DropDown: React.FC<DropdownProps> = ({
     }, []);
 
     return (
-        <div className="relative " ref={dropdownRef}>
+        <div className="relative z-40" ref={dropdownRef}>
             {label && (
                 <label className="block mb-1 text-sm font-medium">
                     {label}
@@ -98,7 +98,7 @@ const DropDown: React.FC<DropdownProps> = ({
             </button>
 
             {isOpen && (
-                <ul className="absolute z-10 w-full mt-1 !bg-white  rounded-md max-h-60 overflow-y-auto">
+                <ul className="absolute z-[99] w-full mt-1 !bg-white  rounded-md max-h-60">
                     {options.map((option) => (
                         <li
                             key={option}

@@ -9,7 +9,7 @@ export const ArticleSlide: React.FC<{
 }> = ({ title, imgUrl = donut, tech }) => {
     return (
         <div className="article-slide flex flex-col gap-4 w-full max-w-[490px] 2xl:max-w-[550px]">
-            <div className="relative z-30">
+            <div className="relative">
                 <div className="mask-review-slide rounded-xl graident-main min-h-[300px] md:min-h-[350px] xl:min-h-[420px]">
                     <Image
                         className={`absolute -bottom-1/3 -left-1/4`}
