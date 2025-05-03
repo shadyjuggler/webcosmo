@@ -12,7 +12,7 @@ export default function Solutions() {
         >
             <div className="relative mask-side-file-top graident-main3 py-30 xl:py-40 rounded-xl overflow-hidden">
 
-                <div className="z-40 absolute -translate-y-4/5 md:-translate-y-0 top-[800px] md:top-30 -right-20 md:-right-25 lg:-right-35 2xl:-right-25 w-[250px] md:w-[350px] lg:w-[420px]">
+                <div style={{translate: "0% -80%"}} className="z-40 absolute md:!-translate-y-0 top-[800px] md:top-30 -right-20 md:-right-25 lg:-right-35 2xl:-right-25 w-[250px] md:w-[350px] lg:w-[420px]">
                     <Image src={helix} alt="helix"/>
                 </div>
 
