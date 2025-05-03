@@ -352,12 +352,12 @@
         max-width: 100%;
     }
 }
-@media ((width >= 48rem)) {
+@media (width >= 48rem) {
     .container {
         max-width: 100%;
     }
 }
-@media ((width >= 40rem)) {
+@media (width >= 40rem) {
     .container {
         max-width: 100%;
     }
@@ -368,10 +368,7 @@
         max-width: 1680px;
     }
 }
-@media (max-width: 767px) {
-    p {
-        color: red!important;
-    }
+@media (width <= 48rem) {
 
     .mask-side-file-top {
         mask-image: url("/file-top-mob.svg")!important;
