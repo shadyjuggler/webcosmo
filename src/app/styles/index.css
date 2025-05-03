@@ -41,7 +41,7 @@
 }
 
 .card {
-    @apply bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer;
+    @apply pointer-events-none md:pointer-events-auto bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer;
     transition: 0.15s ease-in-out;
     transition-delay: 0.25s;
     max-width: 410px;
@@ -50,7 +50,7 @@
 
 .card::after {
     content: "";
-    @apply absolute z-50 rounded-b-lg h-[20px] -bottom-[10px] left-1/2 -translate-1/2 translate-y-1/2 w-[80%] bg-white/50;
+    @apply  absolute z-50 rounded-b-lg h-[20px] -bottom-[10px] left-1/2 -translate-1/2 translate-y-1/2 w-[80%] bg-white/50;
 }
 
 .card-text {
