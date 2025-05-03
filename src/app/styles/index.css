@@ -369,12 +369,16 @@
     }
 }
 @media (max-width: 767px) {
-    .mask-side-file-top {
-        mask-image: url("/file-top-mob.svg");
-        mask-repeat: no-repeat;
-        mask-position: top top;
+    p {
+        color: red!important;
+    }
 
-        -webkit-mask-image: url("/file-top-mob.svg");
+    .mask-side-file-top {
+        mask-image: url("/file-top-mob.svg")!important;
+        mask-repeat: no-repeat;
+        mask-position: top left;
+
+        -webkit-mask-image: url("/file-top-mob.svg")!important;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: top left;
         -webkit-mask-size: cover;
