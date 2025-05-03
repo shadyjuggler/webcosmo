@@ -19,14 +19,14 @@ export default function Technologies({ content }) {
                         Реализация и технологии
                     </h2>
 
-                    <div className="absolute right-4 2xl:right-8 top-0 z-40">
+                    <div className="absolute hidden lg:block right-4 2xl:right-8 top-0 z-40 md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]">
                         <Message
                             title="Отзыв клиента"
                             message="Сотрудничество с этим агентством — это всегда качественный и креативный результат."
                         />
                     </div>
 
-                    <div className="mt-8 md:mt-16 lg:mt-24 flex gap-2 mg:gap-4 justify-center z-20 relative">
+                    <div className="mt-8 md:mt-16 lg:mt-24 flex flex-wrap lg:flex-nowrap gap-2 mg:gap-4 justify-center z-20 relative">
                         {content.map((item: any, i: number) => {
                             return (
                                 <div
