@@ -280,12 +280,8 @@
 
 .circle {
     position: absolute;
-    filter: blur(50px);
-    background: linear-gradient(
-        -55.43deg,
-        rgb(20, 98, 214) 8.857%,
-        rgb(144, 107, 255) 73.909%
-    );
+    filter: blur(300px);
+    background: #908cf5;
     width: 2000px;
     height: 1500px;
     border-radius: 50%;
