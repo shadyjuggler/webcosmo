@@ -479,6 +479,10 @@
     @apply !-top-8 !-right-7;
 }
 
+.blogpage #burger {
+    @apply !-top-8 !-right-7;
+}
+
 .case #burger {
     @apply !-top-8 !-right-7;
 }
