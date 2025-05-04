@@ -50,7 +50,7 @@
 
 .card::after {
     content: "";
-    @apply  absolute z-50 rounded-b-lg h-[20px] -bottom-[10px] left-1/2 -translate-1/2 translate-y-1/2 w-[80%] bg-white/50;
+    @apply absolute z-50 rounded-b-lg h-[20px] -bottom-[10px] left-1/2 -translate-1/2 translate-y-1/2 w-[80%] bg-white/50;
 }
 
 .card-text {
@@ -126,8 +126,6 @@
     @apply absolute w-1.5 h-8 left-0 top-24 md:top-8 bg-white rounded-tr-md rounded-br-md;
 }
 
-
-
 .mask-side-notches {
     mask-image: url("/file-mob.svg");
     mask-repeat: no-repeat;
@@ -142,7 +140,6 @@
     -webkit-mask-type: luminance;
     mask-type: luminance;
 }
-
 
 .mask-review-slide {
     mask-image: url("/review-slide.svg");
@@ -176,14 +173,12 @@
     }
 }
 
-
-
 .mask-side-file-top {
-    mask-image: url("/file-top-mob.svg")!important;
+    mask-image: url("/file-top-mob.svg") !important;
     mask-repeat: no-repeat;
     mask-position: top left;
 
-    -webkit-mask-image: url("/file-top-mob.svg")!important;
+    -webkit-mask-image: url("/file-top-mob.svg") !important;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: top left;
     -webkit-mask-size: cover;
@@ -208,8 +203,6 @@
     mask-type: luminance;
 }
 
-
-
 .mask-card {
     mask-image: url("/slide-top-mob.svg");
     mask-repeat: no-repeat;
@@ -224,10 +217,6 @@
     -webkit-mask-type: luminance;
     mask-type: luminance;
 }
-
-
-
-
 
 .functionality-card {
     mask-image: url("/functionality-card.svg");
@@ -245,7 +234,22 @@
 }
 
 .filter-tab {
-    @apply text-sm md:text-base flex-1 min-w-[250px] md:w-fit bg-white py-4 rounded-md hover:bg-[#1462D6] hover:text-white cursor-pointer;
+    @apply text-sm md:text-base flex-1 min-w-[250px] md:w-fit bg-white py-4 rounded-md hover:bg-[#1462D6] hover:text-white cursor-pointer transition-all;
+}
+
+.filter-tab_active {
+    @apply bg-[#1462D6] text-white;
+}
+
+.blog-filter {
+    @apply hover:bg-[#1462D6] hover:text-white;
+}
+.blog-filter span {
+    @apply text-[#1462D6];
+}
+
+.blog-filter:hover span {
+    @apply !text-white;
 }
 
 .slide {
@@ -340,15 +344,15 @@
     }
 
     .mask-side-file-top {
-        mask-image: url("/file-top.svg")!important;
+        mask-image: url("/file-top.svg") !important;
         mask-repeat: no-repeat;
         mask-position: top left;
-    
-        -webkit-mask-image: url("/file-top.svg")!important;
+
+        -webkit-mask-image: url("/file-top.svg") !important;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: top left;
         -webkit-mask-size: cover;
-    
+
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
@@ -358,12 +362,12 @@
         mask-image: url("/case-bg.svg");
         mask-repeat: no-repeat;
         mask-position: top top;
-    
+
         -webkit-mask-image: url("/case-bg.svg");
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: bottom right;
         -webkit-mask-size: cover;
-    
+
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
@@ -373,12 +377,12 @@
         mask-image: url("/goal.svg");
         mask-repeat: no-repeat;
         mask-position: top top;
-    
+
         -webkit-mask-image: url("/goal.svg");
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: top center;
         -webkit-mask-size: cover;
-    
+
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
@@ -388,12 +392,12 @@
         mask-image: url("/file.svg");
         mask-repeat: no-repeat;
         mask-position: left center;
-    
+
         -webkit-mask-image: url("/file.svg");
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: left center;
         -webkit-mask-size: contain;
-    
+
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
@@ -403,19 +407,28 @@
         mask-image: url("/slide-top.svg");
         mask-repeat: no-repeat;
         mask-position: top top;
-    
+
         -webkit-mask-image: url("/slide-top.svg");
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-position: top right;
         -webkit-mask-size: cover;
-    
+
         /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
         -webkit-mask-type: luminance;
         mask-type: luminance;
     }
 
+    .blogpage .mask-case {
+        mask-image: none !important;
+        border-radius: 20px;
+    }
+
     .achivements-card {
-        background: linear-gradient(90.00deg, rgba(255, 255, 255, 0),rgb(255, 255, 255) 100%);
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0),
+            rgb(255, 255, 255) 100%
+        );
         @apply hover:bg-white;
     }
 
@@ -429,27 +442,26 @@
         );
         width: 1100px;
         height: 1100px;
-    
+
         -webkit-filter: blur(450px);
     }
 
     #header_corner_1::before {
-        box-shadow: 0px 0px 0px 10px white!important;
+        box-shadow: 0px 0px 0px 10px white !important;
     }
 
     #header_corner_2::before {
-        box-shadow: 0px 0px 0px 10px white!important;
+        box-shadow: 0px 0px 0px 10px white !important;
     }
 
     .modal-sh {
-        box-shadow: none!important;
+        box-shadow: none !important;
     }
 
     html body #cta.mask-side-file-top {
-        mask-image: url("/file-top.svg")!important;
+        mask-image: url("/file-top.svg") !important;
         border-radius: 20px;
     }
-
 }
 @media (width >= 40rem) {
     .container {
@@ -464,7 +476,7 @@
 }
 
 #cta.mask-side-file-top {
-    mask-image: none!important;
+    mask-image: none !important;
     border-radius: 20px;
 }
 
@@ -508,11 +520,11 @@
 }
 
 #header_corner_1::before {
-    box-shadow: 0px 0px 0px 10px #e6e9ee!important;
+    box-shadow: 0px 0px 0px 10px #e6e9ee !important;
 }
 
 #header_corner_2::before {
-    box-shadow: 0px 0px 0px 10px #e6e9ee!important;
+    box-shadow: 0px 0px 0px 10px #e6e9ee !important;
 }
 
 .modal-sh {

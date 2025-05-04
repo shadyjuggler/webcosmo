@@ -29,6 +29,14 @@ export default function Navbar() {
                 document.body.style.overflow = "";
             }
         }
+
+        document.getElementById("blog-header")?.classList.remove('mask-case');
+        document.getElementById("case-id")?.classList.remove('mask-case');
+
+        if (!menu && !show) {
+            document.getElementById("blog-header")?.classList.add('mask-case');
+            document.getElementById("case-id")?.classList.add('mask-case');
+        }
     }, [menu, show]);
 
     const click = () => {

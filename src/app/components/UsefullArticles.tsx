@@ -9,9 +9,27 @@ import arrow from "../assets/small-arrow.svg";
 import { ArticleSlide } from "./UI/ArticleSlide";
 import Link from "next/link";
 
+import { blogs } from "../data/blogs";
+
 export default function Articles() {
+    const content = blogs.map((item) => {
+        return (
+            <SwiperSlide key={Math.random()}>
+                <ArticleSlide
+                    title={item.title}
+                    imgUrl={item.imgUrl}
+                    link={item.link}
+                    tech={item.techstack}
+                />
+            </SwiperSlide>
+        );
+    });
+
     return (
-        <section id="articles" className="pt-12 py-32 lg:py-24 overflow-hidden relative">
+        <section
+            id="articles"
+            className="pt-12 py-32 lg:py-24 overflow-hidden relative"
+        >
             <div className="container mx-auto">
                 <div className="flex justify-between">
                     <div className="flex flex-col">
@@ -69,25 +87,21 @@ export default function Articles() {
                         }}
                         breakpoints={{
                             868: {
-                                slidesPerView: 2
+                                slidesPerView: 2,
                             },
                             1278: {
-                                slidesPerView: 3
-                            }
+                                slidesPerView: 3,
+                            },
                         }}
                     >
-                        {
-                            Array(6).fill(0).map(card => {
-                                console.log(card)
-                                return <SwiperSlide key={Math.random()}>
-                                    <ArticleSlide title="WebCosmo - ваш партнер в разработке"/>
-                                </SwiperSlide>
-                            })
-                        }
+                        {content}
                     </Swiper>
                 </div>
                 <div className="hidden md:flex mt-8 justify-center">
-                    <Link href="/blogs" className="btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5">
+                    <Link
+                        href="/blogs"
+                        className="btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
+                    >
                         Смотреть еще{" "}
                         <span>
                             <Image src={arrow} alt="smallarrow" />

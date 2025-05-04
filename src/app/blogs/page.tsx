@@ -14,7 +14,12 @@ import smallarrow from "../assets/small-arrow.svg";
 import blogbg from "../assets/blog-mob.png";
 import DropDown from "../components/UI/DropDown";
 
+import { blogs as blogsData } from "../data/blogs";
+import { useState } from "react";
+
 export default function BlogsPage() {
+    const [category, setCategory] = useState("Все статьи");
+
     const options = [
         "Все статьи",
         "Аналитика",
@@ -23,6 +28,30 @@ export default function BlogsPage() {
         "Полезное",
         "Про кейсы",
     ];
+
+    const content = blogsData.map((item) => {
+        if (category === "Все статьи") {
+            return (
+                <ArticleSlide
+                    title={item.title}
+                    imgUrl={item.imgUrl}
+                    link={item.link}
+                    tech={item.techstack}
+                />
+            );
+        } else {
+            if (category === item.category) {
+                return (
+                    <ArticleSlide
+                        title={item.title}
+                        imgUrl={item.imgUrl}
+                        link={item.link}
+                        tech={item.techstack}
+                    />
+                );
+            }
+        }
+    });
 
     return (
         <>
@@ -44,7 +73,7 @@ export default function BlogsPage() {
                                     Полезные статьи
                                     <span className="!text-white flex items-center">
                                         <Image
-                                            className="hidden lg:block -translate-x-4 2xl:-translate-x-5 scale-150 max-w-[70px] xl:max-w-[80px] 2xl:max-w-[100px]"
+                                            className="hidden lg:block cursor-pointer -translate-x-4 2xl:-translate-x-5 scale-150 max-w-[70px] xl:max-w-[80px] 2xl:max-w-[100px]"
                                             src={arrow}
                                             alt="arrow"
                                         />{" "}
@@ -67,15 +96,24 @@ export default function BlogsPage() {
                 <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative z-40 ">
                     <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full bg-white py-8 2xl:py-12 rounded-2xl px-8 xl:px-12 2xl:px-16 md:max-w-[1100px] xl:max-w-[1300px] 2xl:max-w-[1600px] mx-auto -translate-y-10 flex justify-between">
                         <div className="hidden md:flex gap-1 max-w-[900px] w-full">
-                            {options.map((item: string) => {
+                            {options.map((item: string, i) => {
                                 return (
                                     <div
                                         key={Math.random()}
-                                        className="px-3 xl:px-4 w-fit flex gap-2 rounded-xl py-3 items-center border-1 border-black/10 transition-all"
+                                        onClick={() => setCategory(item)}
+                                        className="px-3 xl:px-4 w-fit !min-w-fit flex gap-2 rounded-xl py-3 blog-filter items-center justify-center  cursor-pointer border-1 border-black/10 transition-all"
                                     >
                                         <p className="font-medium text-center text-sm xl:text-base">
                                             {item}
                                         </p>
+                                        <span className="">
+                                            {i === 0
+                                                ? blogsData.length
+                                                : blogsData.filter(
+                                                      (blog) =>
+                                                          blog.category === item
+                                                  ).length}
+                                        </span>
                                     </div>
                                 );
                             })}
@@ -84,7 +122,7 @@ export default function BlogsPage() {
                         <div className="relative z-40 flex md:hidden w-full justify-center text-sm 2xl:text-base">
                             <DropDown
                                 options={options}
-                                onChange={() => console.log()}
+                                onChange={() => console.log()}                                                      
                             />
                         </div>
 
@@ -108,18 +146,7 @@ export default function BlogsPage() {
                     </div>
 
                     <div className="cases-wrapper grid grid-cols-1 md:grid-cols-2 justify-items-center xl:grid-cols-3 gap-8 justify-center w-full max-w-[1600px] mx-auto">
-                        {Array(3)
-                            .fill(0)
-                            .map((card) => {
-                                console.log(card);
-                                return (
-                                    <ArticleSlide
-                                        key={Math.random()}
-                                        title="WebCosmo - ваш партнер в разработке"
-                                        tech={["Веб-разработка", "Аналитика"]}
-                                    />
-                                );
-                            })}
+                        {content}
                     </div>
 
                     <div className="mt-24">

@@ -4,69 +4,74 @@ import { ReturnBack } from "../components/UI/ReturnBack";
 import arrow from "../assets/footer-arrow.png";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import { ArticleSlide } from "../components/UI/ArticleSlide";
-
-import blogs from "../assets/blogs.png";
-
-import smallarrow from "../assets/small-arrow.svg";
 
 import blogbg from "../assets/blogbg.png";
-import { Dropdown, DropdownItem } from "flowbite-react";
+import conus from "../assets/conus-header.png";
 
 export default function BlogPage() {
     return (
         <>
-            <main className="main blogpage" id="main">
-                <div className="graident-main rounded-b-2xl rounded-tr-md rounded-tl-2xl md:rounded-2xl pt-8 pb-16 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-32 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
-                    <div className="absolute -rotate-90 md:rotate-0 top-1/2 scale-150 md:scale-100 md:-top-10 lg:-top-20 -right-[450px] md:-right-20 z-20 pointer-events-none">
-                        <Image src={blogbg} alt="bg" />
-                    </div>
+            <main className="main blogpage relative" id="main">
+                <div className="relative">
+                    <div id="blog-header" className="graident-main mask-case rounded-b-2xl rounded-tr-md rounded-tl-2xl md:rounded-2xl pt-8 pb-70 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-32 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
+                        <div className="absolute -rotate-35 md:rotate-0 top-[60%] scale-150 md:scale-100 md:-top-10 lg:-top-20 -right-[50px] md:-right-20 z-20 pointer-events-none">
+                            <Image src={blogbg} alt="bg" />
+                        </div>
 
-                    <div className="container mx-auto">
-                        <Navbar />
-                        <div className="mt-8">
-                            <div className="">
-                                <ReturnBack />
-                            </div>
-
-                            <div className="mt-28 sm:mt-24 md:mt-16 lg:mt-24">
-                                <h1 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl md:max-w-[400px] lg:max-w-full  xl:max-w-[700px] ">
-                                    Как придумать название статьи?
-                                </h1>
-                            </div>
-
-                            <div className="mt-8 lg:mt-10 flex items-center gap-3.5 md:gap-6">
-                                <div className="text-white md:text-base text-sm">
-                                    19 апреля, 2024 год
+                        <div className="container mx-auto">
+                            <Navbar />
+                            <div className="mt-8">
+                                <div className="">
+                                    <ReturnBack />
                                 </div>
-                                <p className="md:text-2xl text-white sm:text-base text-sm">
-                                    •
-                                </p>
-                                <div className="text-white">5 минут чтения</div>
+
+                                <div className="mt-4 md:mt-16 lg:mt-24">
+                                    <h1 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl md:max-w-[400px] lg:max-w-full  xl:max-w-[700px] ">
+                                        Как придумать название статьи?
+                                    </h1>
+                                </div>
+
+                                <div className="mt-4 lg:mt-10 flex items-center gap-3.5 md:gap-6">
+                                    <div className="md:text-base text-white text-sm">
+                                        19 апреля, 2024 год
+                                    </div>
+                                    <p className="md:text-base text-white text-sm">
+                                        •
+                                    </p>
+                                    <div className="text-white">
+                                        5 минут чтения
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div
+                            id="header_corner_1"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
+                        ></div>
+                        <div
+                            id="header_corner_2"
+                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
+                        ></div>
                     </div>
 
-                    <div
-                        id="header_corner_1"
-                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
-                    ></div>
-                    <div
-                        id="header_corner_2"
-                        className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
-                    ></div>
+                    <Image
+                        className="block md:hidden absolute w-[110px] z-30 bottom-0 right-18"
+                        src={conus}
+                        alt="conus"
+                    />
                 </div>
 
-                <div className="mt-12 lg:py-16 p-4 sm:p-8 md:p-10 lg:px-12 2xl:px-22 bg-white rounded-2xl relative flex gap-8">
+                <div className="mt-12 lg:py-16 p-4 sm:p-8 flex-col-reverse lg:flex-row md:p-10 lg:px-12 2xl:px-22 bg-white rounded-2xl relative flex gap-4 md:gap-8">
                     {/* blog content */}
-                    <div className="w-full rounded-2xl sm:border-1 border-slate-200 p-4 sm:p-8 md:p-12">
+                    <div className="w-full rounded-2xl border-1 border-slate-200 p-4 sm:p-8 md:p-12">
                         {/* list */}
                         <div>
                             <p className="font-medium text-xl md:text-2xl">
                                 Что вы можете ожидать от нашего блога?
                             </p>
 
-                            <ul className="mt-3">
+                            <ul className="pl-2 mt-3">
                                 <li className="text-[#1D2230] opacity-60">
                                     • Обзоры новейших гаджетов и технологий
                                 </li>
@@ -100,7 +105,7 @@ export default function BlogPage() {
                                 Что вы можете ожидать от нашего блога?
                             </p>
 
-                            <ul className="mt-3">
+                            <ul className="pl-2 mt-3">
                                 <li className="text-[#1D2230] opacity-60">
                                     • Обзоры новейших гаджетов и технологий
                                 </li>
@@ -116,18 +121,18 @@ export default function BlogPage() {
                     </div>
 
                     {/* soderzanije */}
-                    <div className="hidden lg:block lg:max-w-[350px] xl:max-w-[420px] 2xl:max-w-[520px] rounded-2xl w-full h-fit  bg-[#eff1f5] py-8 2xl:py-12 px-6 2xl:px-8">
-                        <p className="text-[#262B3A] font-semibold text-2xl pl-3 2xl:pl-4">
+                    <div className="lg:max-w-[350px] xl:max-w-[420px] 2xl:max-w-[520px] rounded-2xl w-full h-fit  bg-[#eff1f5] p-4 sm:p-8 md:py-8 2xl:py-12 md:px-6 2xl:px-8">
+                        <p className="text-[#262B3A] font-semibold text-2xl pl-1 md:pl-3 2xl:pl-4">
                             Содержание статьи
                         </p>
                         <ul className="flex flex-col mt-6 gap-2">
-                            <li className="font-medium p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
+                            <li className="font-medium p-2 md:p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
                                 1. Что такое статья и зачем она нужна?
                             </li>
-                            <li className="font-medium p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
+                            <li className="font-medium p-2 md:p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
                                 2. Что такое статья и зачем она нужна?
                             </li>
-                            <li className="font-medium p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
+                            <li className="font-medium p-2 md:p-3 2xl:p-4 cursor-pointer hover:bg-white rounded-lg transition-all">
                                 3. Что такое статья и зачем она нужна?
                             </li>
                         </ul>

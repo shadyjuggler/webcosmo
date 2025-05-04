@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
-    const { name, phone, message } = await req.json();
+    const { name, phone, message, tg } = await req.json();
 
-    if (!name || !phone || !message) {
+    if (!name || !phone || !message || !tg) {
         return NextResponse.json({ message: 'Missing fields' }, { status: 400 });
     }
 
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
             from: `"Website Contact" <${process.env.SMTP_USER}>`,
             to: process.env.RECEIVER_EMAIL,
             subject: 'New Contact Form Submission',
-            text: `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`,
+            text: `Name: ${name}\nPhone: ${phone}\nTelegram: ${tg}\nMessage: ${message}`,
         });
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
