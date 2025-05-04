@@ -1,114 +1,190 @@
-
 import phone from "../assets/phone.png";
 import phone2 from "../assets/phone2.png";
 
-export const cases = [
-    {
-        category: "Web",
-        title: "Разработка Web3 платформы Fungypack",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone,
-        link: ""
-    },
-    {
-        category: "Web",
-        title: "Разработка Web3 платформы Fungypack",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "Web",
-        title: "Разработка Web3 платформы Fungypack",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone,
-        link: ""
-    },
-    {
-        category: "Web",
-        title: "Разработка Web3 платформы Fungypack",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "Bots",
-        title: "Bots",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "Web3",
-        title: "Web3",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "UI/UX",
-        title: "UI/UX",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "Mobile",
-        title: "Mobile",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-    {
-        category: "Mobile",
-        title: "Mobile",
-        text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
-        techstack: [
-            "Разработка",
-            "UX/UI дизайн",
-            "Блокчейн-интеграция",
-        ],
-        imgUrl: phone2,
-        link: ""
-    },
-]
+export const cases = {
+    RUS: [
+        {
+            category: "Web",
+            title: "Разработка Web3 платформы Fungypack",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Разработка Web3 платформы Fungypack",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Разработка Web3 платформы Fungypack",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Разработка Web3 платформы Fungypack",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Bots",
+            title: "Bots",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Web3",
+            title: "Web3",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "UI/UX",
+            title: "UI/UX",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Mobile",
+            title: "Mobile",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Mobile",
+            title: "Mobile",
+            text: "Проект Fungypack – это пример Web3-разработки, которая сочетает в себе блокчейн, NFT, механики",
+            techstack: ["Разработка", "UX/UI дизайн", "Блокчейн-интеграция"],
+            imgUrl: phone2,
+            link: "",
+        },
+    ],
+
+    EN: [
+        {
+            category: "Web",
+            title: "Web3 Platform Development: Fungypack",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Web3 Platform Development: Fungypack",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Web3 Platform Development: Fungypack",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone,
+            link: "",
+        },
+        {
+            category: "Web",
+            title: "Web3 Platform Development: Fungypack",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Bots",
+            title: "Bots",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Web3",
+            title: "Web3",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "UI/UX",
+            title: "UI/UX",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Mobile",
+            title: "Mobile",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+        {
+            category: "Mobile",
+            title: "Mobile",
+            text: "Fungypack is an example of a Web3 project combining blockchain, NFTs, and interactive mechanics.",
+            techstack: [
+                "Development",
+                "UX/UI Design",
+                "Blockchain Integration",
+            ],
+            imgUrl: phone2,
+            link: "",
+        },
+    ],
+};

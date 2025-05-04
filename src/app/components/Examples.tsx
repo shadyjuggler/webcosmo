@@ -18,6 +18,8 @@ import arrow from "../assets/small-arrow.svg";
 
 import blur from "../assets/Blur Effect (1).png";
 
+import { useLang } from "../context/LangContext";
+import languages from "../data/lang";
 
 import { cases } from "../data/cases";
 import Link from "next/link";
@@ -28,7 +30,12 @@ export default function Examples() {
 
     const [category, setCategory] = useState("Web");
 
-    const content = cases.map((item) => {
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].examples;
+
+    // @ts-ignore
+    const content = cases[lang].map((item) => {
         if (item.category === category) {
             return (
                 <SwiperSlide key={Math.random()}>
@@ -59,36 +66,61 @@ export default function Examples() {
                     </div>
                     <div className="absolute md:static md:-translate-y-10">
                         <Message
-                            title="Веб-разрабочик"
-                            message="Сотрудничество с этим агентством — это всегда качественный и креативный результат."
+                            title={tr.message.title}
+                            message={tr.message.content}
                         />
                     </div>
                 </div>
 
                 <div className="mt-4 md:mt-8 lg:mt-16 flex gap-1 justify-between overflow-x-scroll pb-4 xl:pb-0">
-                    <div onClick={() => setCategory("Web")} className={`filter-tab ${category === "Web" ? "filter-tab_active" : ""}`}>
+                    <div
+                        onClick={() => setCategory("Web")}
+                        className={`filter-tab ${
+                            category === "Web" ? "filter-tab_active" : ""
+                        }`}
+                    >
                         <p className="font-medium text-center">
-                            Веб-разработка, сайты
+                            {tr.categories.Web}
                         </p>
                     </div>
-                    <div onClick={() => setCategory("Bots")} className={`filter-tab ${category === "Bots" ? "filter-tab_active" : ""}`}>
+                    <div
+                        onClick={() => setCategory("Bots")}
+                        className={`filter-tab ${
+                            category === "Bots" ? "filter-tab_active" : ""
+                        }`}
+                    >
                         <p className="font-medium text-center">
-                            Боты и Веб-Апп
+                            {tr.categories.Bots}
                         </p>
                     </div>
-                    <div onClick={() => setCategory("Web3")} className={`filter-tab ${category === "Web3" ? "filter-tab_active" : ""}`}>
+                    <div
+                        onClick={() => setCategory("Web3")}
+                        className={`filter-tab ${
+                            category === "Web3" ? "filter-tab_active" : ""
+                        }`}
+                    >
                         <p className="font-medium text-center">
-                            Web3, dApps, NFTs
+                            {tr.categories.Web3}
                         </p>
                     </div>
-                    <div onClick={() => setCategory("UI/UX")} className={`filter-tab ${category === "UI/UX" ? "filter-tab_active" : ""}`}>
+                    <div
+                        onClick={() => setCategory("UI/UX")}
+                        className={`filter-tab ${
+                            category === "UI/UX" ? "filter-tab_active" : ""
+                        }`}
+                    >
                         <p className="font-medium text-center">
-                            UI/UX-дизайн и брендинг
+                            {tr.categories["UI/UX"]}
                         </p>
                     </div>
-                    <div onClick={() => setCategory("Mobile")} className={`filter-tab ${category === "Mobile" ? "filter-tab_active" : ""}`}>
+                    <div
+                        onClick={() => setCategory("Mobile")}
+                        className={`filter-tab ${
+                            category === "Mobile" ? "filter-tab_active" : ""
+                        }`}
+                    >
                         <p className="font-medium text-center">
-                            Мобильные приложения
+                            {tr.categories.Mobile}
                         </p>
                     </div>
                 </div>
@@ -155,8 +187,9 @@ export default function Examples() {
                             </svg>
                         </button>
                     </div>
+
                     <Link href={"/cases"} className="!hidden md:!flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5">
-                        Смотреть еще{" "}
+                        {tr.more}
                         <span>
                             <Image src={arrow} alt="smallarrow" />
                         </span>

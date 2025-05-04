@@ -16,17 +16,24 @@ import { cases } from "../data/cases";
 import { useState } from "react";
 
 import arrow from "../assets/small-arrow.svg";
+import { useLang } from "../context/LangContext";
+import languages from "../data/lang";
 
 export default function BlogsPage() {
     const [pagination, setPagination] = useState(4);
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].casesPage;
 
-    const content = cases.map((item, i) => {
+    // @ts-ignore
+    const content = cases[lang].map((item, i) => {
         return (
             <div
                 key={i}
                 className={`max-w-[325px] md:max-w-[650px] lg:max-w-[680px] 2xl:max-w-[780px] ${
                     i % 2 === 1 ? "md:translate-y-10" : ""
-                } ${cases.length - 1 === i ? "md:translate-y-10" : ""}`}
+                    // @ts-ignore
+                } ${cases[lang].length - 1 === i ? "md:translate-y-10" : ""}`}
             >
                 <CaseSlide
                     title={item.title}
@@ -53,16 +60,16 @@ export default function BlogsPage() {
 
                                 <div className="mt-4 md:mt-8">
                                     <h1 className="text-4xl md:text-5xl 2xl:text-6xl">
-                                        Кейсы, которые сами <br /> говорят за
-                                        себя
+                                        {tr.heading}
                                     </h1>
                                 </div>
 
                                 <div className="mt-8 md:mt-32">
                                     <button className="relative w-full md:w-fit z-40 btn btn-transparent md:!bg-white/10 btn-arrow py-1 pl-3 md:pl-4 pr-1 text-white">
                                         <p className="mx-auto md:mx-0">
-                                            Обсудить задачу
-                                        </p>{" "}
+                                            {tr.cta}
+                                        </p>
+
                                         <span className="ml-auto md:ml-0">
                                             <Image
                                                 src={smallarrow}
@@ -93,8 +100,8 @@ export default function BlogsPage() {
                         className="absolute scale-110 md:scale-100 bottom-0 md:bottom-auto right-1/2 md:right-[100px] md:!-translate-y-1/2 max-w-[325px] w-full md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]"
                     >
                         <Message
-                            title="Веб-разрабочик"
-                            message="Сотрудничество с этим агентством — это всегда качественный и креативный результат."
+                            title={tr.messageTitle}
+                            message={tr.messageText}
                         />
                     </div>
                 </div>
@@ -108,13 +115,14 @@ export default function BlogsPage() {
                 <div className="mt-16 md:mt-32 flex justify-center">
                     <button
                         onClick={() => {
-                            if (!(pagination >= cases.length)) {
-                                setPagination(pagination + 4)
+                            // @ts-ignore
+                            if (!(pagination >= cases[lang].length)) {
+                                setPagination(pagination + 4);
                             }
                         }}
                         className="flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
                     >
-                        Смотреть еще{" "}
+                        {tr.loadMore}
                         <span>
                             <Image src={arrow} alt="smallarrow" />
                         </span>

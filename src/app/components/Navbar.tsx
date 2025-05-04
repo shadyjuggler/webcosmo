@@ -9,11 +9,16 @@ import Form from "./Form";
 
 import smallarrow from "../assets/small-arrow.svg";
 
+import { useLang } from "../context/LangContext";
+
+import languages from "../data/lang/index";
+
 export default function Navbar() {
     const [show, setShow] = useState(false);
     const [menu, setMenu] = useState(true);
 
-    const nav = ["О нас", "Услуги", "Кейсы", "Отзывы", "Команда", "Блог"];
+    const { lang, setLang } = useLang();
+    
 
     useEffect(() => {
         if (window.innerWidth <= 767) {
@@ -30,12 +35,16 @@ export default function Navbar() {
             }
         }
 
-        document.getElementById("blog-header")?.classList.remove('mask-case');
-        document.getElementById("case-id")?.classList.remove('mask-case');
+        document.getElementById("blog-header")?.classList.remove("mask-case");
+        if (window.innerWidth <= 767) {
+            document.getElementById("case-id")?.classList.remove("mask-case");
+        }
 
         if (!menu && !show) {
-            document.getElementById("blog-header")?.classList.add('mask-case');
-            document.getElementById("case-id")?.classList.add('mask-case');
+            document.getElementById("blog-header")?.classList.add("mask-case");
+            if (window.innerWidth <= 767) {
+                document.getElementById("case-id")?.classList.add("mask-case");
+            }
         }
     }, [menu, show]);
 
@@ -44,6 +53,9 @@ export default function Navbar() {
             setMenu(false);
         }
     };
+
+    //@ts-ignore
+    const tr = languages[lang].navbar;
 
     return (
         <nav className="flex items-center justify-between z-50 relative">
@@ -63,42 +75,42 @@ export default function Navbar() {
                         href="/#features"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        О нас
+                        {tr.aboutus}
                     </Link>
                     <Link
                         onClick={() => click()}
                         href="/#solutions"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        Услуги
+                        {tr.services}
                     </Link>
                     <Link
                         onClick={() => click()}
                         href="/#examples"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        Кейсы
+                        {tr.cases}
                     </Link>
                     <Link
                         onClick={() => click()}
                         href="/#reviews"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        Отзывы
+                        {tr.reviews}
                     </Link>
                     <Link
                         onClick={() => click()}
                         href="/#team"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        Команда
+                        {tr.team}
                     </Link>
                     <Link
                         onClick={() => click()}
                         href="/blogs"
                         className="nav-link !text-black md:!text-white text-left"
                     >
-                        Блог
+                        {tr.blog}
                     </Link>
                 </div>
                 <button
@@ -113,7 +125,7 @@ export default function Navbar() {
                 <div className="order-3 absolute top-2 right-18 md:static flex text-sm 2xl:text-base justify-end">
                     <Dropdown
                         options={["RUS", "LV", "EN"]}
-                        onChange={() => console.log()}
+                        onChange={(lang: string) => setLang(lang)}
                     />
                 </div>
 
@@ -128,7 +140,7 @@ export default function Navbar() {
                         <div className="block w-2 h-2 bg-white rounded-full"></div>
                     </div>
 
-                    <p className="mx-auto md:mx-0">Связаться с нами</p>
+                    <p className="mx-auto md:mx-0">{tr.contactus}</p>
                     <span className="block md:hidden ml-auto">
                         <Image src={smallarrow} alt="smallarrow" />
                     </span>

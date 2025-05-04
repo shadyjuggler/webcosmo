@@ -101,15 +101,6 @@ export default function BlogsPage() {
                             src={iphone}
                             alt="phone"
                         />
-
-                        {/* <div
-                            id="header_corner_1"
-                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-0 md:right-auto md:left-1/2 bottom-auto top-14  rotate-180 md:rotate-0 md:top-auto md:bottom-0"
-                        ></div>
-                        <div
-                            id="header_corner_2"
-                            className="block md:hidden reversed-corner w-3 h-3 left-auto right-13 md:right-auto md:left-0 rotate-180 md:rotate-0 top-0 md:top-auto md:bottom-30"
-                        ></div> */}
                     </div>
                 </div>
 

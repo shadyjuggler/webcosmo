@@ -11,8 +11,16 @@ import Link from "next/link";
 
 import { blogs } from "../data/blogs";
 
+import { useLang } from "../context/LangContext";
+import languages from "../data/lang";
+
 export default function Articles() {
-    const content = blogs.map((item) => {
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].articles;
+
+     // @ts-ignore
+    const content = blogs[lang].map((item) => {
         return (
             <SwiperSlide key={Math.random()}>
                 <ArticleSlide
@@ -33,9 +41,9 @@ export default function Articles() {
             <div className="container mx-auto">
                 <div className="flex justify-between">
                     <div className="flex flex-col">
-                        <Tab name="Блог" />
+                        <Tab name={tr.tab} />
                         <h2 className="mt-8 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A]">
-                            Полезные IT статьи
+                            {tr.title}
                         </h2>
                     </div>
 
@@ -102,7 +110,7 @@ export default function Articles() {
                         href="/blogs"
                         className="btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
                     >
-                        Смотреть еще{" "}
+                        {tr.more}
                         <span>
                             <Image src={arrow} alt="smallarrow" />
                         </span>

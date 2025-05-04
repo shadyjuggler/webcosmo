@@ -17,22 +17,25 @@ import DropDown from "../components/UI/DropDown";
 import { blogs as blogsData } from "../data/blogs";
 import { useState } from "react";
 
+import { useLang } from "../context/LangContext";
+import languages from "../data/lang";
+
 export default function BlogsPage() {
     const [category, setCategory] = useState("Все статьи");
 
-    const options = [
-        "Все статьи",
-        "Аналитика",
-        "UX/UI",
-        "Веб-разработка",
-        "Полезное",
-        "Про кейсы",
-    ];
 
-    const content = blogsData.map((item) => {
-        if (category === "Все статьи") {
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].blogs;
+    const options = tr.categories;
+
+
+    // @ts-ignore
+    const content = blogsData[lang].map((item) => {
+        if (category === tr.categories[0]) {
             return (
                 <ArticleSlide
+                    key={Math.random()}
                     title={item.title}
                     imgUrl={item.imgUrl}
                     link={item.link}
@@ -43,6 +46,7 @@ export default function BlogsPage() {
             if (category === item.category) {
                 return (
                     <ArticleSlide
+                        key={Math.random()}
                         title={item.title}
                         imgUrl={item.imgUrl}
                         link={item.link}
@@ -70,14 +74,15 @@ export default function BlogsPage() {
 
                             <div className="mt-8 lg:mb-0 md:mb-26 mb-70">
                                 <h1 className="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl md:max-w-[400px] lg:max-w-full">
-                                    Полезные статьи
+                                    {tr.heading}
+
                                     <span className="!text-white flex items-center">
                                         <Image
                                             className="hidden lg:block cursor-pointer -translate-x-4 2xl:-translate-x-5 scale-150 max-w-[70px] xl:max-w-[80px] 2xl:max-w-[100px]"
                                             src={arrow}
                                             alt="arrow"
                                         />{" "}
-                                        по дизайну и разработке
+                                        {tr.subheading}
                                     </span>
                                 </h1>
                             </div>
@@ -96,7 +101,7 @@ export default function BlogsPage() {
                 <div className="mt-16 pt-16 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative z-40 ">
                     <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full bg-white py-8 2xl:py-12 rounded-2xl px-8 xl:px-12 2xl:px-16 md:max-w-[1100px] xl:max-w-[1300px] 2xl:max-w-[1600px] mx-auto -translate-y-10 flex justify-between">
                         <div className="hidden md:flex gap-1 max-w-[900px] w-full">
-                            {options.map((item: string, i) => {
+                            {options.map((item: string, i: number) => {
                                 return (
                                     <div
                                         key={Math.random()}
@@ -108,8 +113,11 @@ export default function BlogsPage() {
                                         </p>
                                         <span className="">
                                             {i === 0
-                                                ? blogsData.length
-                                                : blogsData.filter(
+                                                ? //@ts-ignore
+                                                  blogsData[lang].length
+                                                : //@ts-ignore
+                                                  blogsData[lang].filter(
+                                                      //@ts-ignore
                                                       (blog) =>
                                                           blog.category === item
                                                   ).length}
@@ -122,7 +130,7 @@ export default function BlogsPage() {
                         <div className="relative z-40 flex md:hidden w-full justify-center text-sm 2xl:text-base">
                             <DropDown
                                 options={options}
-                                onChange={() => console.log()}                                                      
+                                onChange={() => console.log()}
                             />
                         </div>
 
@@ -134,7 +142,7 @@ export default function BlogsPage() {
                             />
 
                             <p className="z-20 absolute bottom-24 max-w-[150px] md:max-w-[200px] lg:max-w-full xl:bottom-26 2xl:bottom-32 text-[11px] md:text-[12px] xl:text-[13px] 2xl:text-sm text-right right-4 text-white ">
-                                Еще больше кейсов у нас в Telegram канале
+                                {tr.telegramNote}
                             </p>
 
                             <button className="z-20 bottom-4 right-4 absolute btn !bg-white/10  btn-transparent btn-arrow !p-0 !border-0">

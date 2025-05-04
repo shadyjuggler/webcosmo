@@ -11,14 +11,17 @@ type DropdownProps = {
     placeholder?: string;
 };
 
+import { useLang } from "@/app/context/LangContext";
+
 const DropDown: React.FC<DropdownProps> = ({
     options,
     onChange,
     label,
     placeholder = "abc",
 }) => {
+    const {lang} = useLang();
     const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState<string>(options[0]);
+    const [selected, setSelected] = useState<string>(lang);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     const handleSelect = (option: string) => {

@@ -18,8 +18,16 @@ import smallarrow from "../assets/small-arrow.svg";
 import conus from "../assets/conus-header.png";
 
 import CircleButton from "./UI/CircleButton";
+import { useLang } from "../context/LangContext";
+
+import languages from "../data/lang/index";
 
 export default function Header() {
+    const { lang } = useLang();
+
+    //@ts-ignore
+    const tr = languages[lang].header;
+
     return (
         <header
             id="main_header"
@@ -29,8 +37,8 @@ export default function Header() {
                 <Navbar></Navbar>
 
                 <div className="mt-12 relative flex flex-col flex-1">
-                    <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl z-40 max-w-[300px] sm:max-w-[500px] md:max-w-full">
-                        Создаем уникальные <br /> цифровые решения
+                    <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl z-40 max-w-[300px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1000px]">
+                        {tr.title}
                     </h1>
                     <div className="absolute w-full top-15 md:top-30 lg:top-15 xl:top-10 -right-20 md:right-0 lg:right-10 z-40 md:z-20 xl:-right-0 flex flex-col justify-end h-[250px] xl:h-[400px] items-start md:items-end max-w-[350px] xl:max-w-[400px] 2xl:max-w-[500px]">
                         <Image
@@ -55,8 +63,8 @@ export default function Header() {
                             <p className=" text-white text-left md:text-right font-medium text-xl 2xl:text-3xl">
                                 1
                             </p>
-                            <p className="text-white text-left md:text-right max-w-36 text-[12px] xl:text-sm 2xl:text-base">
-                                Топ 1 агентство <br /> в веб-разработке
+                            <p className="text-white text-left md:text-right max-w-30 2xl:max-w-36 text-[12px] xl:text-sm 2xl:text-base">
+                                {tr.cloud1}
                             </p>
                         </div>
                     </div>
@@ -71,7 +79,7 @@ export default function Header() {
                                 +6
                             </p>
                             <p className="text-white max-w-36 text-[12px] xl:text-sm 2xl:text-base">
-                                лет в digital <br /> разработке
+                                {tr.cloud2}
                             </p>
                         </div>
                     </div>
@@ -96,8 +104,8 @@ export default function Header() {
                             <p className="text-xl 2xl:text-3xl text-white text-right md:text-left font-medium max-w-36 ">
                                 100+
                             </p>
-                            <p className=" text-white text-right max-w-36 text-[12px] xl:text-sm 2xl:text-base">
-                                Работ выполнено <br /> за последний год
+                            <p className=" text-white text-right md:text-left max-w-32 2xl:max-w-36 text-[12px] xl:text-sm 2xl:text-base">
+                                {tr.cloud3}
                             </p>
                         </div>
                     </div>
@@ -108,13 +116,14 @@ export default function Header() {
                                 <p className="text-white md:max-w-md text-base">
                                     <span className=" font-semibold">
                                         {" "}
-                                        Готовы к масштабированию?
+                                        {tr.question}
                                     </span>{" "}
-                                    Давайте обсудим ваш проект и запустим его
-                                    вместе!
+                                    {tr.call}
                                 </p>
                                 <button className="mt-6 2xl:mt-10 btn btn-transparent btn-arrow w-full !bg-white md:!bg-white/10 justify-center md:w-fit py-1 2x:py-1.5 !pl-8 !gap-6 ">
-                                    <p className="mx-auto md:mx-0">Обсудить задачу</p>
+                                    <p className="mx-auto md:mx-0">
+                                        {tr.task}
+                                    </p>
                                     <span>
                                         <Image
                                             src={smallarrow}
@@ -144,14 +153,17 @@ export default function Header() {
             </div>
             {/* wasup */}
 
-            <div style={{translate: "-50% 0%"}} className="absolute max-w-[350px] w-full md:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[630px] left-1/2 top-55 2xl:top-45 z-10 opacity-25">
+            <div
+                style={{ translate: "-50% 0%" }}
+                className="absolute max-w-[350px] w-full md:max-w-[450px] xl:max-w-[500px] 2xl:max-w-[630px] left-1/2 top-55 2xl:top-45 z-10 opacity-25"
+            >
                 <Image src={gear} alt={"gear"} />
             </div>
 
             <div className="hidden md:block absolute left-0 bottom-0 bg-white w-1/2 h-30 rounded-tr-xl z-20"></div>
 
             <div className="absolute bottom-4 hidden lg:block lg:left-8 xl:left-12 2xl:left-16 w-16 h-16 z-40">
-            <CircleButton/>
+                <CircleButton />
             </div>
 
             <div
