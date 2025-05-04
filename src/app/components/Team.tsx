@@ -15,6 +15,7 @@ import moh from "../assets/moh.png";
 
 import { useLang } from "../context/LangContext";
 import languages from "../data/lang/index";
+import chel from "../assets/chel.png";
 
 export default function Team() {
     const { lang } = useLang();
@@ -118,7 +119,7 @@ export default function Team() {
                     {/* Member 5 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute bottom-0 left-0" src={dudin} alt="employee" />
+                            <Image className="absolute bottom-0 left-0" src={chel} alt="employee" />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">

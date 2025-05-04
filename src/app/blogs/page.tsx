@@ -11,7 +11,8 @@ import blogs from "../assets/blogs.png";
 
 import smallarrow from "../assets/small-arrow.svg";
 
-import blogbg from "../assets/blog-mob.png";
+// import blogbg from "../assets/blog-mob.png";
+import blogbg from "../assets/blogbg.png";
 import DropDown from "../components/UI/DropDown";
 
 import { blogs as blogsData } from "../data/blogs";
@@ -23,12 +24,10 @@ import languages from "../data/lang";
 export default function BlogsPage() {
     const [category, setCategory] = useState("Все статьи");
 
-
     const { lang } = useLang();
     // @ts-ignore
     const tr = languages[lang].blogs;
     const options = tr.categories;
-
 
     // @ts-ignore
     const content = blogsData[lang].map((item) => {
@@ -61,7 +60,7 @@ export default function BlogsPage() {
         <>
             <main className="main blog" id="main">
                 <div className="graident-main rounded-b-2xl rounded-tr-md rounded-tl-2xl md:rounded-2xl pt-8 pb-16 px-4 md:px-6 xl:px-8 2xl:px-0 overflow-hidden relative">
-                    <div className="block lg:hidden absolute -bottom-20 sm:-bottom-40 md:-bottom-50 -right-5 sm:-right-25 -rotate-0 sm:-rotate-0 md:rotate-10">
+                    <div className="absolute -rotate-70 md:rotate-0 top-[75%] scale-250 md:scale-100 md:-top-10 lg:-top-20 -right-[100px] md:-right-20 z-20 pointer-events-none">
                         <Image src={blogbg} alt="bg" />
                     </div>
 

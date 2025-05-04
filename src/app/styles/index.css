@@ -41,7 +41,7 @@
 }
 
 .card {
-    @apply pointer-events-none xl:pointer-events-auto bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer;
+    @apply pointer-events-none overflow-hidden xl:pointer-events-auto bg-white w-full rounded-xl p-7 flex flex-col relative cursor-pointer;
     transition: 0.15s ease-in-out;
     transition-delay: 0.25s;
     max-width: 410px;
@@ -154,6 +154,14 @@
     /* FIX: treat mask as a sharp cutoff based on brightness or alpha */
     -webkit-mask-type: luminance;
     mask-type: luminance;
+}
+
+.review-slide .play {
+    @apply transition-all;
+}
+
+.review-slide:hover .play {
+    @apply opacity-100;
 }
 
 @media ((width <= 48rem)) {
@@ -329,9 +337,18 @@
     @apply bg-white w-full p-6;
 }
 
-@media (width >= 64rem) {
+@media (width >= 96rem) {
+    body {
+        zoom: 1!important;
+    }
+}
+
+@media (width >= 80rem) {
     .container {
         max-width: 100%;
+    }
+    body {
+        zoom: 0.7;
     }
 }
 @media (width >= 48rem) {
@@ -485,6 +502,10 @@
 #article_slider .swiper-slide,
 #examples-slider .swiper-slide {
     @apply flex justify-center;
+}
+
+#article_slider {
+    overflow: visible;
 }
 
 .blog #burger {

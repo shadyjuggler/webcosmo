@@ -36,7 +36,7 @@ export default function Articles() {
     return (
         <section
             id="articles"
-            className="pt-12 py-32 lg:py-24 overflow-hidden relative"
+            className="pt-12 py-32 lg:py-24 relative"
         >
             <div className="container mx-auto">
                 <div className="flex justify-between">
