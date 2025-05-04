@@ -24,7 +24,7 @@ export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
                         return (
                             <div
                                 key={Math.random()}
-                                className="relative w-full max-w-[400px] 2xl:max-w-[480px] "
+                                className="maingoals-slide relative w-full max-w-[400px] 2xl:max-w-[480px] "
                             >
                                 <div className="rounded-xl bg-white flex justify-center items-center mask-goal min-h-[300px] xl:min-h-[325px] 2xl:min-h-[350px] flex-col">
                                     <p className="mt-12 text-xl text-[#262B3A] font-semibold">
