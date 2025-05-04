@@ -121,9 +121,7 @@ export default function Header() {
                                     {tr.call}
                                 </p>
                                 <button className="mt-6 2xl:mt-10 btn btn-transparent btn-arrow w-full !bg-white md:!bg-white/10 justify-center md:w-fit py-1 2x:py-1.5 !pl-8 !gap-6 ">
-                                    <p className="mx-auto md:mx-0">
-                                        {tr.task}
-                                    </p>
+                                    <p className="mx-auto md:mx-0">{tr.task}</p>
                                     <span>
                                         <Image
                                             src={smallarrow}

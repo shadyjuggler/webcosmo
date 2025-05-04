@@ -36,13 +36,26 @@ export default function Navbar() {
         }
 
         document.getElementById("blog-header")?.classList.remove("mask-case");
-        if (window.innerWidth <= 767) {
-            document.getElementById("case-id")?.classList.remove("mask-case");
-        }
+        // if (window.innerWidth <= 767) {
+        //     document.getElementById("case-id")?.classList.remove("mask-case");
+        // }
+        document.getElementById("case-id")?.classList.remove("mask-case");
+
+
 
         if (!menu && !show) {
             document.getElementById("blog-header")?.classList.add("mask-case");
             if (window.innerWidth <= 767) {
+                document.getElementById("case-id")?.classList.add("mask-case");
+            }
+            document.getElementById("case-id")?.classList.add("mask-case");
+
+            // document.getElementById("case-id")?.classList.add("mask-case");
+
+        }
+
+        if (!show && menu) {
+            if (window.innerWidth >= 767) {
                 document.getElementById("case-id")?.classList.add("mask-case");
             }
         }

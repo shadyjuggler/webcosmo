@@ -47,7 +47,7 @@ export default function Form({ isModal }) {
     return (
         <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-2 md:gap-2 relative z-20 w-full"
+            className={`${isModal ? "modal_form" : ""} flex flex-col gap-2 md:gap-2 relative z-20 w-full`}
         >
             {isModal && (
                 <h2 className="max-w-[300px] md:max-w-full text-[28px] leading-8 md:leading-9 md:text-3xl !text-[#262B3A]">

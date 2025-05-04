@@ -16,6 +16,7 @@ import moh from "../assets/moh.png";
 import { useLang } from "../context/LangContext";
 import languages from "../data/lang/index";
 import chel from "../assets/chel.png";
+import glass from "../assets/glass.svg";
 
 export default function Team() {
     const { lang } = useLang();
@@ -23,14 +24,25 @@ export default function Team() {
     const tr = languages[lang].team;
 
     return (
-        <section id="team" className="pb-24 graident-main2 relative rounded-b-xl">
+        <section
+            id="team"
+            className="pb-24 graident-main2 relative rounded-b-xl overflow-hidden"
+        >
             <div className="h-[260px] mb-12 md:mb-24"></div>
 
             <div className="absolute top-[100px] md:top-1/4 right-0">
-                <Image className="max-w-[200px] md:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[400px] opacity-80" src={moh} alt="moh" />
+                <Image
+                    className="max-w-[200px] md:max-w-[250px] xl:max-w-[300px] 2xl:max-w-[400px] opacity-80"
+                    src={moh}
+                    alt="moh"
+                />
             </div>
             <div className="absolute hidden md:block bottom-1/5 -left-50 xl:-left-40 2xl:-left-50 rotate-[55deg]">
-                <Image className="max-w-[400px] xl:max-w-[500px] 2xl:max-w-[550px] opacity-80" src={helix} alt="helix" />
+                <Image
+                    className="max-w-[400px] xl:max-w-[500px] 2xl:max-w-[550px] opacity-80"
+                    src={helix}
+                    alt="helix"
+                />
             </div>
 
             <div className="container mx-auto">
@@ -50,13 +62,20 @@ export default function Team() {
                     {/* Member 1 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute bottom-0 left-0" src={danek} alt="employee" />
+                            <Image
+                                className="absolute bottom-0 left-0"
+                                src={danek}
+                                alt="employee"
+                            />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">
                                 {tr.members[0].name}
                             </p>
-                            <div className="mt-2 w-1/5 bg-white/20" style={{ height: "1px" }}></div>
+                            <div
+                                className="mt-2 w-1/5 bg-white/20"
+                                style={{ height: "1px" }}
+                            ></div>
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">
                                 {tr.members[0].role}
                             </p>
@@ -66,13 +85,20 @@ export default function Team() {
                     {/* Member 2 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute bottom-0 left-0" src={dudin} alt="employee" />
+                            <Image
+                                className="absolute bottom-0 left-0"
+                                src={dudin}
+                                alt="employee"
+                            />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">
                                 {tr.members[1].name}
                             </p>
-                            <div className="mt-2 w-1/5 bg-white/20" style={{ height: "1px" }}></div>
+                            <div
+                                className="mt-2 w-1/5 bg-white/20"
+                                style={{ height: "1px" }}
+                            ></div>
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">
                                 {tr.members[1].role}
                             </p>
@@ -82,13 +108,20 @@ export default function Team() {
                     {/* Member 3 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute bottom-0 left-0" src={sanek} alt="employee" />
+                            <Image
+                                className="absolute bottom-0 left-0"
+                                src={sanek}
+                                alt="employee"
+                            />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">
                                 {tr.members[2].name}
                             </p>
-                            <div className="mt-2 w-1/5 bg-white/20" style={{ height: "1px" }}></div>
+                            <div
+                                className="mt-2 w-1/5 bg-white/20"
+                                style={{ height: "1px" }}
+                            ></div>
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">
                                 {tr.members[2].role}
                             </p>
@@ -103,13 +136,20 @@ export default function Team() {
                     {/* Member 4 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute px-4 bottom-0 left-0" src={dima} alt="employee" />
+                            <Image
+                                className="absolute px-4 bottom-0 left-0"
+                                src={dima}
+                                alt="employee"
+                            />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">
                                 {tr.members[3].name}
                             </p>
-                            <div className="mt-2 w-1/5 bg-white/20" style={{ height: "1px" }}></div>
+                            <div
+                                className="mt-2 w-1/5 bg-white/20"
+                                style={{ height: "1px" }}
+                            ></div>
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">
                                 {tr.members[3].role}
                             </p>
@@ -119,13 +159,20 @@ export default function Team() {
                     {/* Member 5 */}
                     <div className="py-8 bg-white/10 max-w-[300px] rounded-xl 2xl:max-w-[360px] w-full">
                         <div className="relative min-h-[200px] 2xl:min-h-[250px]">
-                            <Image className="absolute bottom-0 left-0" src={chel} alt="employee" />
+                            <Image
+                                className="absolute bottom-0 left-0"
+                                src={chel}
+                                alt="employee"
+                            />
                         </div>
                         <div className="px-6">
                             <p className="mt-6 text-white font-semibold xl:-text-xl 2xl:text-2xl">
                                 {tr.members[4].name}
                             </p>
-                            <div className="mt-2 w-1/5 bg-white/20" style={{ height: "1px" }}></div>
+                            <div
+                                className="mt-2 w-1/5 bg-white/20"
+                                style={{ height: "1px" }}
+                            ></div>
                             <p className="mt-2 text-gray-300 text-sm 2xl:text-base">
                                 {tr.members[4].role}
                             </p>
@@ -138,10 +185,20 @@ export default function Team() {
                             {tr.contactCta}
                         </p>
                         <div className="absolute -bottom-10 2xl:bottom-0 xl:-right-20 2xl:-right-10">
-                            <Image className="max-w-70 opacity-20" src={gear} alt="gear" />
+                            <Image
+                                className="max-w-70 opacity-20"
+                                src={gear}
+                                alt="gear"
+                            />
                         </div>
                         <button className="mt-auto w-12 2xl:w-14 h-12 2xl:h-14 btn btn-white aspect-square flex justify-center items-center !rounded-xl">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="rotate-180">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                className="rotate-180"
+                            >
                                 <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -153,6 +210,9 @@ export default function Team() {
                 </div>
             </div>
             <div className="h-[260px]"></div>
+            <div className="absolute left-auto block md:hidden -right-10 md:right-auto w-full max-w-[200px] md:max-w-[350px] xl:max-w-[450px] 2xl:max-w-[550px] md:left-1/2 bottom-60 md:-top-[0px] z-10">
+                <Image src={glass} alt="glass" />
+            </div>
         </section>
     );
 }

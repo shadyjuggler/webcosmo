@@ -30,7 +30,7 @@ export default function BlogsPage() {
         return (
             <div
                 key={i}
-                className={`max-w-[325px] md:max-w-[650px] lg:max-w-[680px] 2xl:max-w-[780px] ${
+                className={`max-w-[400px] md:max-w-[650px] lg:max-w-[680px] 2xl:max-w-[780px] ${
                     i % 2 === 1 ? "md:translate-y-10" : ""
                     // @ts-ignore
                 } ${cases[lang].length - 1 === i ? "md:translate-y-10" : ""}`}
@@ -59,7 +59,7 @@ export default function BlogsPage() {
                                 </div>
 
                                 <div className="mt-4 md:mt-8">
-                                    <h1 className="text-4xl md:text-5xl 2xl:text-6xl">
+                                    <h1 className="text-4xl md:text-5xl 2xl:text-6xl max-w-[300px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px]">
                                         {tr.heading}
                                     </h1>
                                 </div>
@@ -97,7 +97,7 @@ export default function BlogsPage() {
                     </div>
                     <div
                         style={{ translate: "50% 20%" }}
-                        className="absolute scale-110 md:scale-100 bottom-0 md:bottom-auto right-1/2 md:right-[100px] md:!-translate-y-1/2 max-w-[325px] w-full md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]"
+                        className="absolute scale-95 sm:scale-100 md:scale-100 bottom-0 md:bottom-auto right-1/2 md:right-[100px] md:!-translate-y-1/2 max-w-[370px] w-full md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]"
                     >
                         <Message
                             title={tr.messageTitle}
@@ -120,10 +120,10 @@ export default function BlogsPage() {
                                 setPagination(pagination + 4);
                             }
                         }}
-                        className="flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
+                        className="w-[96%] !bg-white sm:!bg-[#1462d6] !text-[#1462d6] sm:!text-white sm:w-fit flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
                     >
-                        {tr.loadMore}
-                        <span>
+                        <p className="mx-auto md:mx-0">{tr.loadMore}</p>
+                        <span className="!bg-[#1462d6]">
                             <Image src={arrow} alt="smallarrow" />
                         </span>
                     </button>

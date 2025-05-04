@@ -26,7 +26,7 @@ export const CaseSlide: React.FC<{
 
     return (
         <div className="relative">
-            <div className="slide max-w-[325px] md:max-w-full relative mask-card flex-col-reverse md:flex-row">
+            <div className="slide max-w-[400px] md:max-w-full relative mask-card flex-col-reverse md:flex-row">
                 <div className="flex flex-col md:px-0 px-8  pb-8 md:max-w-[314px] w-full">
                     <p className="xl:text-xl 2x:text-2xl max-w-[300px] md:max-w-full font-semibold text-[#1D2230]">
                         {title}
@@ -45,11 +45,11 @@ export const CaseSlide: React.FC<{
                     </div>
                 </div>
 
-                <div className="relative w-full max-h-[300px] md:max-h-full md:h-full 2xl:max-w-[446px] flex items-end overflow-hidden">
+                <div className="relative w-full max-h-[400px] md:max-h-full md:h-full 2xl:max-w-[446px] flex items-end overflow-hidden">
                     <Image className="h-full" src={img} alt="bg" />
                     <div
                         style={{ translate: "-50% -50%" }}
-                        className="absolute w-full max-w-[325px] md:max-w-full left-1/2 top-1/2 rotate-0 md:rotate-25"
+                        className="absolute w-full max-w-[400px] md:max-w-full left-1/2 top-1/2 rotate-0 md:rotate-25"
                     >
                         <Image src={imgUrl ? imgUrl : ""} alt="image" />
                     </div>

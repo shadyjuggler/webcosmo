@@ -67,7 +67,7 @@ export default function BlogPage() {
                     />
                 </div>
 
-                <div className="mt-12 lg:py-16 p-4 sm:p-8 flex-col-reverse lg:flex-row md:p-10 lg:px-12 2xl:px-22 bg-white rounded-2xl relative flex gap-4 md:gap-8">
+                <div className="mt-8 md:mt-12 lg:py-16 p-4 sm:p-8 flex-col-reverse lg:flex-row md:p-10 lg:px-12 2xl:px-22 bg-white rounded-2xl relative flex gap-4 md:gap-8">
                     {/* blog content */}
                     <div className="w-full rounded-2xl border-1 border-slate-200 p-4 sm:p-8 md:p-12 relative overflow-hidden">
                         <div className="relative z-20">

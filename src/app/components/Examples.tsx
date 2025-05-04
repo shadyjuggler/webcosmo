@@ -57,14 +57,14 @@ export default function Examples() {
             className="py-16 md:py-24 overflow-hidden relative"
         >
             <div className="relative container mx-auto z-10">
-                <div className="flex justify-start md:justify-center items-center ">
+                <div className="flex justify-start md:justify-center items-center relative">
                     <div className="flex md:w-2/3 flex-col lg:flex-row gap-36 md:gap-8 lg:gap-0 w-full items-center">
                         <Tab name="Кейсы" />
                         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl !text-[#262B3A] lg:mx-auto">
                             Наши проекты
                         </h2>
                     </div>
-                    <div className="absolute md:static md:-translate-y-10">
+                    <div className="absolute w-full md:w-fit flex justify-center md:block md:static md:-translate-y-10">
                         <Message
                             title={tr.message.title}
                             message={tr.message.content}

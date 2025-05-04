@@ -8,6 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 
+import donut from "../assets/donut.png";
+
+
 export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
     return (
         <section id="maingoals" className="mt-7 py-8 lg:py-24">
@@ -24,13 +27,13 @@ export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
                         return (
                             <div
                                 key={Math.random()}
-                                className="maingoals-slide relative w-full max-w-[400px] 2xl:max-w-[480px] "
+                                className="relative w-full max-w-[400px] 2xl:max-w-[480px] overflow-hidden"
                             >
-                                <div className="rounded-xl bg-white flex justify-center items-center mask-goal min-h-[300px] xl:min-h-[325px] 2xl:min-h-[350px] flex-col">
-                                    <p className="mt-12 text-xl text-[#262B3A] font-semibold">
+                                <div className="maingoals-slide relative z-50 rounded-xl bg-white flex justify-center items-center mask-goal min-h-[300px] xl:min-h-[325px] 2xl:min-h-[350px] flex-col">
+                                    <p className="relative z-50 mt-12 text-xl text-[#262B3A] font-semibold">
                                         {item.title}
                                     </p>
-                                    <p className="max-w-[420px] mt-4 text-[#262B3A]/60 text-center text-sm">
+                                    <p className="relative z-50 max-w-[420px] mt-4 text-[#262B3A]/60 text-center text-sm">
                                         {item.text}
                                     </p>
                                 </div>
@@ -39,6 +42,7 @@ export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
                                     src={ok}
                                     alt="ok"
                                 />
+                                <Image src={donut} alt="donut" className="maingoalsdonut z-50 absolute max-w-[400px] -bottom-30 -left-30"/>
                             </div>
                         );
                     })}

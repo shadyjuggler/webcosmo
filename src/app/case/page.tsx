@@ -42,7 +42,7 @@ export default function BlogsPage() {
         <>
             <main className="main case overflow-hidden" id="main">
                 <div className="relative overflow-hidden xl:p-4 md:bg-white rounded-tr-md rounded-tl-2xl md:rounded-2xl">
-                    <div id="case-id" className="graident-main mask-case rounded-tr-md rounded-tl-2xl md:rounded-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-70 md:pb-20 xl:pb-16 overflow-hidden">
+                    <div id="case-id" className="graident-main mask-case rounded-tr-md rounded-tl-2xl px-4 md:px-6 xl:px-8 2xl:px-0 pt-8 pb-70 md:pb-20 xl:pb-16 overflow-hidden">
                         <div className="container mx-auto relative">
                             <div className="relative z-50">
                                 <Navbar />
@@ -206,7 +206,7 @@ export default function BlogsPage() {
                     content={[
                         {
                             title: "Полный цикл разработки",
-                            text: "Полный цикл разработки",
+                            text: "Полный цикл разработки – от идеи до развертывания на mainnet",
                         },
                         {
                             title: "Оптимизированный UI/UX-дизайн",

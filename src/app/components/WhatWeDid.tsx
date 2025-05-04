@@ -9,8 +9,8 @@ export const WhatWeDid: React.FC<{
 }> = ({ content }) => {
     return (
         <section id="tech" className="rounded-2xl z-30  relative">
-            <div className="relative pt-20 lg:pt-40 mask-side-file-top graident-main rounded-2xl overflow-hidden">
-                <div className="z-10 absolute top-20 lg:top-30 -right-[50px] md:-right-[150px] w-[200px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[820px]">
+            <div className="relative pt-20 lg:pt-40 mask-side-file-top  graident-main rounded-[22px]">
+                <div className="z-10 absolute top-35 lg:top-30 -right-[50px] md:-right-[150px] w-[200px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[820px]">
                     <Image src={spheres} alt="helix" />
                 </div>
 
@@ -28,12 +28,12 @@ export const WhatWeDid: React.FC<{
                             return (
                                 <div
                                     key={Math.random()}
-                                    className={`rounded-2xl bg-white/10 flex flex-col justify-center items-center max-w-[310px] 2xl:max-w-[400px] px-6 w-full min-h-[350px] 2xl:min-h-[400px] ${
+                                    className={`rounded-2xl bg-white/10 flex flex-col justify-center items-center max-w-full sm:max-w-[310px] 2xl:max-w-[400px] px-6 w-full min-h-[350px] 2xl:min-h-[400px] ${
                                         i % 2 === 1 ? "md:translate-y-5" : ""
                                     }`}
                                     style={{ backdropFilter: "blur(20px)" }}
                                 >
-                                    <div className="rounded-md bg-white/10 w-14 h-14 border-1 border-white/10 flex items-center justify-center">
+                                    <div className="rounded-md bg-white/10 w-16 h-16 sm:w-14 sm:h-14 border-1 border-white/10 flex items-center justify-center">
                                         <svg
                                             width="30.000000"
                                             height="30.000000"
@@ -100,12 +100,17 @@ export const WhatWeDid: React.FC<{
                     </div>
                 </div>
 
-                <div className="mt-20 md:mt-40 relative z-30">
-                    <CTA
-                        title={
-                            "<p>Готовы внедрять Web3 <br/> в ваш бизнес?</p>"
-                        }
-                    />
+                <div className="mt-20 md:mt-40 relative z-30 bg-[#e6e9ee] sm:bg-transparent">
+                    <div className="w-full h-20 z-20 rounded-b-2xl bg-[#5f67ef] absolute top-0 left-0 block sm:hidden">
+
+                    </div>
+                    <div className="w-[93%] relative z-30 sm:w-full mx-auto sm:mx-0">
+                        <CTA
+                            title={
+                                "<p>Готовы внедрять Web3 <br/> в ваш бизнес?</p>"
+                            }
+                        />
+                    </div>
                 </div>
             </div>
         </section>

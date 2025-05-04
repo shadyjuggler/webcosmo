@@ -5,7 +5,7 @@ import msg from "../../assets/message.png";
 export const Message: React.FC<{title: string, message: string}> = ({title, message}) => {
 
     return (
-        <div className="relative max-w-[325px] md:max-w-[562px] flex justify-end items-end">
+        <div className="relative w-full max-w-[380px] md:max-w-[562px] flex justify-end items-end">
             <Image src={msg} alt="message"></Image>
             <div className="absolute scale-50 md:scale-100 top-8 md:top-12 2xl:top-14 right-5">
                 <svg
@@ -26,9 +26,9 @@ export const Message: React.FC<{title: string, message: string}> = ({title, mess
                 </svg>
             </div>
 
-            <div className="absolute z-20 max-w-[225px] md:max-w-[325px] lg:max-w-[350px] xl:max-w-[375px] py-3 lg:py-6 mx-4 md:mx-0 xl:mx-2 2xl:mx-4">
-                <p className="text-[9px] md:text-[12px] lg:text-sm 2xl:text-base font-semibold text-[#262B3A]">{title}</p>
-                <p className="lg:mt-1 text-[9px] md:text-[12px] lg:text-sm 2xl:text-base text-[#1D2230]">{message} </p>
+            <div className="absolute z-20 max-w-[260px] md:max-w-[325px] lg:max-w-[350px] xl:max-w-[375px] py-4 lg:py-6 mx-4 md:mx-0 xl:mx-2 2xl:mx-4">
+                <p className="text-[11px] md:text-[12px] lg:text-sm 2xl:text-base font-semibold text-[#262B3A]">{title}</p>
+                <p className="lg:mt-1 text-[11px] md:text-[12px] lg:text-sm 2xl:text-base text-[#1D2230]">{message} </p>
             </div>
         </div>
     );

@@ -52,6 +52,7 @@ export default function Functionality({ content }) {
                 <div className="mt-8 md:mt-20">
                     <Swiper
                         id="func-slider"
+                        className="!overflow-visible"
                         modules={[Navigation]}
                         spaceBetween={20}
                         slidesPerView={1}

@@ -326,7 +326,7 @@
     @apply pb-1 md:pb-6;
 }
 
-.maingoals-slide::before {
+.maingoals-slide::after {
     content: "";
     border-radius: 14px;
     position: absolute;
@@ -334,8 +334,33 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(208.15deg, rgb(20, 98, 214) -72.208%,rgb(144, 107, 255) 104.667%),rgb(38, 43, 58);
+    background: linear-gradient(
+            208.15deg,
+            rgb(20, 98, 214) -72.208%,
+            rgb(144, 107, 255) 104.667%
+        ),
+        rgb(38, 43, 58);
     display: block;
+    z-index: 20;
+    opacity: 0;
+    @apply transition-all;
+    /* pointer-events: none; */
+}
+
+.maingoalsdonut {
+    opacity: 0%;
+    /* pointer-events: none; */
+}
+
+.maingoals-slide:hover::after {
+    opacity: 100;
+}
+.maingoals-slide:hover p {
+    color: white !important;
+}
+
+.maingoals-slide:hover .maingoalsdonut {
+    opacity: 20% !important;
 }
 
 .functionality-slide:hover .slide-bg {
@@ -492,6 +517,18 @@
         mask-image: url("/file-top.svg") !important;
         border-radius: 20px;
     }
+
+    #cta {
+        background: white !important;
+    }
+
+    #tech .graident-main {
+        background: linear-gradient(
+            280deg,
+            rgb(20, 98, 214) -21.89%,
+            rgb(144, 107, 255) 80.167%
+        ) !important;
+    }
 }
 @media (width >= 40rem) {
     .container {
@@ -567,4 +604,30 @@
 
 #maingoals_slider {
     @apply pt-4;
+}
+
+#cta {
+    background: linear-gradient(
+        180deg,
+        #8280ee 8.852%,
+        #9d98f7 15%,
+        #b4b2f9 25%,
+        #ffffff
+    );
+}
+
+#tech .graident-main {
+    background: linear-gradient(
+        0deg,
+        rgb(20, 98, 214) -21.89%,
+        rgb(144, 107, 255) 80.167%
+    );
+}
+
+.modal_form .input {
+    @apply !py-3 md:!py-5;
+}
+
+.modal_form textarea {
+    @apply !min-h-[120px];
 }

@@ -333,7 +333,7 @@ export default function Solutions() {
 
                                 <div className="mt-8 2xl:mt-10 flex justify-end">
                                     <button className="btn btn-transparent btn-arrow w-full justify-center md:w-fit !py-1 !pl-6 !pr-1.5 ">
-                                        {tr.more}
+                                        <p className="mx-auto md:mx-0">{tr.more}</p>
                                         <span>
                                             <Image src={arrow} alt="arrow" />
                                         </span>
