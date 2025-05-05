@@ -17,13 +17,63 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
     return (
         <>
             <div className="absolute left-auto hidden md:block -right-10 md:right-auto w-full max-w-[200px] md:max-w-[350px] xl:max-w-[450px] 2xl:max-w-[550px] md:left-1/2 -top-[75px] md:-top-[0px] z-40">
-                <Image src={glass} alt="glass" />
+                {/* <Image src={glass} alt="glass" /> */}
+                <svg
+                    viewBox="0 0 548 465"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <desc>Created with Pixso.</desc>
+                    <defs>
+                        <filter
+                            id="filter_238_818_dd"
+                            x="0.000000"
+                            y="0.000000"
+                            width="548.000000"
+                            height="465.000000"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB"
+                        >
+                            <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                            />
+                            <feGaussianBlur
+                                in="BackgroundImage"
+                                stdDeviation="13.3333"
+                            />
+                            <feComposite
+                                in2="SourceAlpha"
+                                operator="in"
+                                result="effect_backgroundBlur_1"
+                            />
+                            <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect_backgroundBlur_1"
+                                result="shape"
+                            />
+                        </filter>
+                    </defs>
+                    <g>
+                        <path
+                            id="Glass Element"
+                            d="M0 16L0 257.77C0 266.61 7.16 273.77 16 273.77L191.5 273.77C200.33 273.77 207.5 280.93 207.5 289.77L207.5 449C207.5 457.83 214.66 465 223.5 465L532 465C540.83 465 548 457.83 548 449L548 138.23C548 129.39 540.83 122.23 532 122.23L321.91 122.23C313.08 122.23 305.91 115.07 305.91 106.23L305.91 16C305.91 7.16 298.75 0 289.91 0L16 0C7.16 0 0 7.16 0 16Z"
+                            fill="#FFFFFF"
+                            fill-opacity="0.250000"
+                            fill-rule="nonzero"
+                        />
+                    </g>
+                </svg>
             </div>
             <section
                 id="cta"
                 className=" mask-side-file-top relative overflow-hidden rounded-b-2xl px-4 2xl:px-0"
             >
-                <div style={{filter: "blur(250px)", opacity: "0.5"}} className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] "></div>
+                <div
+                    style={{ filter: "blur(250px)", opacity: "0.5" }}
+                    className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] "
+                ></div>
                 <Image
                     style={{ translate: "54% 0%" }}
                     className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px] absolute -bottom-35 right-1/2 md:!translate-x-0 md:-right-50"

@@ -151,8 +151,6 @@ export default function Header() {
                         /> */}
                         <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
                             <svg
-                                width="1054.000000"
-                                height="364.067627"
                                 viewBox="0 0 1054 364.068"
                                 fill="none"
                             >
