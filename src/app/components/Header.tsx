@@ -144,12 +144,12 @@ export default function Header() {
                             src={conus}
                             alt="conus"
                         />
-                        {/* <Image
+                        <Image
                             className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none"
                             src={headerB}
                             alt="abc"
-                        /> */}
-                        <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
+                        />
+                        {/* <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
                             <svg
                                 width="1054.000000"
                                 height="364.067627"
@@ -197,7 +197,7 @@ export default function Header() {
                                     />
                                 </g>
                             </svg>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
