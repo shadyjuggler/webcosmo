@@ -32,7 +32,7 @@ export default function Header() {
     return (
         <header
             id="main_header"
-            className="relative rounded-b-2xl rounded-tl-2xl md:rounded-2xl graident-main py-8 pb-12 px-4 2xl:px-8 overflow-hidden flex min-h-[850px] md:min-h-[780px] lg:min-h-[750px] xl:min-h-[800px] 2xl:min-h-[910px]"
+            className="relative rounded-b-2xl rounded-tl-2xl md:rounded-2xl graident-main py-8 pb-12 px-4 2xl:px-8 flex min-h-[850px] md:min-h-[780px] lg:min-h-[750px] xl:min-h-[800px] 2xl:min-h-[910px]"
         >
             <div className="header-container mx-auto flex flex-col">
                 <Navbar></Navbar>
