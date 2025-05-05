@@ -71,7 +71,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                 className=" mask-side-file-top relative overflow-hidden rounded-b-2xl px-4 2xl:px-0"
             >
                 <div
-                    style={{ filter: "blur(250px)", opacity: "0.5" }}
+                    style={{ filter: "blur(100px)", opacity: "0.4" }}
                     className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[150px] "
                 ></div>
                 <Image
