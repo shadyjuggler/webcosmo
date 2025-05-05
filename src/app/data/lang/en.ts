@@ -1,3 +1,7 @@
+import mac from "../../assets/mack.png";
+import fe from "../../assets/fe.png";
+import solana from "../../assets/solana.png";
+
 export const en = {
     navbar: {
         aboutus: "About us",
@@ -8,6 +12,7 @@ export const en = {
         blog: "Blog",
         contactus: "Contact with us",
     },
+    returnback: "Return back",
     header: {
         title: "We make unique solutions",
         cloud1: "Top 1 in web development",
@@ -19,7 +24,8 @@ export const en = {
     },
     features: {
         tab: "About us",
-        title: "What makes us unique?",
+        titleBlack: "What makes us ",
+        titleBlue: "unique?",
         items: [
             {
                 title: "Deep understanding of business",
@@ -140,6 +146,8 @@ export const en = {
     },
     cta: {
         tab: "Request",
+        titleBlue: "Let's do",
+        titleBlack: "something cool :)",
         description:
             "Tell us what challenge you're facing right now, and we’ll propose a detailed plan to solve it and bring your idea to life.",
     },
@@ -255,6 +263,7 @@ export const en = {
         ],
         telegramNote: "More studies in our Telegram channel",
     },
+
     casesPage: {
         heading: "Cases that speak for themselves",
         cta: "Discuss a task",
@@ -262,5 +271,156 @@ export const en = {
         messageText:
             "Working with this agency always results in high-quality and creative outcomes.",
         loadMore: "See more",
+    },
+
+    caseFungypack: {
+        title: "Fungypack – an innovative NFT platform",
+        aboutClient: {
+            heading: "About the client",
+            description:
+                "An innovative platform for expanding NFT functionality, integrating with the Solana blockchain, and offering users unique bonuses, rewards, and staking opportunities.",
+        },
+        goals: {
+            titleBluePart: "Main project",
+            titleBlackPart: "goals",
+            tab: "Tasks",
+            content: [
+                {
+                    title: "Referral system",
+                    text: "Development of a referral system to attract new users.",
+                },
+                {
+                    title: "Staking mechanism",
+                    text: "Implementation of a staking mechanism, bonus accrual, and interaction with NFTs without removing them from the wallet.",
+                },
+                {
+                    title: "NFT marketplace",
+                    text: "Creation of an NFT marketplace for buying, selling, and interacting with collections.",
+                },
+                {
+                    title: "Solana blockchain",
+                    text: "Integration of the Solana blockchain for secure NFT storage and processing.",
+                },
+                {
+                    title: "Interactive web app",
+                    text: "Development of an interactive web application with a user-friendly interface.",
+                },
+                {
+                    title: "Multi-blockchain ecosystem",
+                    text: "Platform optimization for a multi-blockchain ecosystem with potential future support for Bitcoin and EVM-compatible networks.",
+                },
+            ],
+        },
+        tech: {
+            title: "Implementation and techstack",
+            tab: "Technologies",
+            messageTitle: "Client review",
+            messageText:
+                "Cooperation with this agency always results in high-quality and creative results.  ",
+            frontend: {
+                title: "Frontend:",
+                list: [
+                    "React + Redux + TypeScript – building a dynamic UI with flexible capabilities.",
+                    "SASS – styling and responsive design.",
+                ],
+                img: fe
+            },
+            backend: {
+                title: "Backend and database:",
+                list: [
+                    "Firebase – implementation of a reliable and fast data storage system.",
+                    "Solana.js – blockchain integration, working with smart contracts and NFTs.",
+                ],
+                img: solana
+            },
+        },
+        features: {
+            titleBluePart: "functional",
+            titleBlackPart: "Platform",
+            titleBlackPart2: "abilities",
+            tab: "Functionality",
+            content: [
+                {
+                    icon: "imgIcon",
+                    title: "NFT Storage (Backpack)",
+                    text: 'Users can "pack" their NFTs into Fungypack, increasing their value.',
+                },
+                {
+                    icon: "cross",
+                    title: "Point Generation (FungyPoints)",
+                    text: "NFTs start generating points after being packed, increasing their utility.",
+                },
+                {
+                    icon: "shop",
+                    title: "Marketplace",
+                    text: "Buy, sell, and trade NFTs within the platform.",
+                },
+            ],
+        },
+        achievements: {
+            titleBluePart: "Results",
+            titleBlackPart: "and achievements",
+            tab: "Achievements",
+            imgUrl: mac,
+            content: [
+                {
+                    title: "Point Generation (FungyPoints)",
+                    text: "NFTs start generating points after being packed, increasing their utility.",
+                },
+                {
+                    title: "Point Generation (FungyPoints)",
+                    text: "NFTs start generating points after being packed, increasing their utility.",
+                },
+                {
+                    title: "Point Generation (FungyPoints)",
+                    text: "NFTs start generating points after being packed, increasing their utility.",
+                },
+            ],
+        },
+        whatWeDid: {
+            title: "What did we do for the client?",
+            tab: "Result",
+            content: [
+                {
+                    title: "Full development cycle",
+                    text: "Complete development cycle – from idea to mainnet deployment.",
+                },
+                {
+                    title: "Optimized UI/UX design",
+                    text: "Optimized UI/UX design aligned with the Web3 concept.",
+                },
+                {
+                    title: "Full development cycle",
+                    text: "Complete development cycle – from idea to mainnet deployment.",
+                },
+                {
+                    title: "Optimized UI/UX design",
+                    text: "Optimized UI/UX design aligned with the Web3 concept.",
+                },
+            ],
+            //dla CTA fomri svoj title
+            formTitle: "<p>Ready to implement Web3 <br/> in your business? </p>"
+        },
+    },
+
+    blogArticle: {
+        title: "How to come up with a blog post title?",
+        date: "April 19, 2024",
+        readingTime: "5 min read",
+        sectionListTitle: "Article outline",
+        sections: [
+            "1. What is an article and why do you need one?",
+            "2. What is an article and why do you need one?",
+            "3. What is an article and why do you need one?",
+        ],
+        mainContent: {
+            heading: "What can you expect from our blog?",
+            list: [
+                "• Reviews of the latest gadgets and technologies",
+                "• Analysis of trends in the IT industry",
+                "• Tips on using technology in everyday life",
+            ],
+            blockTitle: "1. Why write an article?",
+        },
     },
 };

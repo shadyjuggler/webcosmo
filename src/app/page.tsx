@@ -9,8 +9,13 @@ import { CTA } from "./components/Cta";
 import FAQSection from "./components/FAQSection";
 import Articles from "./components/UsefullArticles";
 import Footer from "./components/Footer";
+import { useLang } from "./context/LangContext";
+import languages from "./data/lang/index";
 
 export default function Home() {
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].cta;
     return (
         <>
             <main className="main overflow-hidden" id="main">
@@ -36,7 +41,7 @@ export default function Home() {
                 <div className="relative">
                     <CTA
                         title={
-                            " <p><span>Давайте сделаем</span> <br /> что-нибудь классное :)</p>"
+                            `<p><span>${tr.titleBlue}</span> <br /> ${tr.titleBlack}</p>`
                         }
                     />
                 </div>

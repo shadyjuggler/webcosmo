@@ -23,7 +23,7 @@
     );
 }
 
-.graident-main2 {
+.graident-main2 {   
     background: linear-gradient(
         90deg,
         rgb(20, 98, 214) -56.778%,
@@ -325,6 +325,9 @@
 #func-slider .swiper-wrapper {
     @apply pb-1 md:pb-6;
 }
+.maingoals-slide {
+    @apply cursor-pointer;
+}
 
 .maingoals-slide::after {
     content: "";
@@ -349,7 +352,6 @@
 
 .maingoalsdonut {
     opacity: 0%;
-    /* pointer-events: none; */
 }
 
 .maingoals-slide:hover::after {

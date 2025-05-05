@@ -5,8 +5,11 @@ import conus from "../assets/conus.png";
 import { CTA } from "./Cta";
 
 export const WhatWeDid: React.FC<{
+    formTitle: string,
+    title: string;
+    tab: string;
     content: { title: string; text: string }[];
-}> = ({ content }) => {
+}> = ({ formTitle, title, tab, content }) => {
     return (
         <section id="tech" className="rounded-2xl z-30  relative">
             <div className="relative pt-20 lg:pt-40 mask-side-file-top  graident-main rounded-[22px]">
@@ -16,11 +19,11 @@ export const WhatWeDid: React.FC<{
 
                 <div className="container mx-auto">
                     <div className="ml-3 md:ml-0">
-                        <Tab name="Результат" />
+                        <Tab name={tab} />
                     </div>
 
                     <h2 className="ml-3 md:ml-0 mt-4 md:mt-8 lg:mt-16 text-3xl md:text-4xl lg:text-5xl tex-left relative z-30">
-                        Что мы сделали для клиента?
+                        {title}
                     </h2>
 
                     <div className="mt-12 lg:mt-16 flex flex-wrap gap-3 2xl:gap-3 z-20 relative justify-center">
@@ -101,14 +104,10 @@ export const WhatWeDid: React.FC<{
                 </div>
 
                 <div className="mt-20 md:mt-40 relative z-30 bg-[#e6e9ee] sm:bg-transparent">
-                    <div className="w-full h-20 z-20 rounded-b-2xl bg-[#5f67ef] absolute top-0 left-0 block sm:hidden">
-
-                    </div>
+                    <div className="w-full h-20 z-20 rounded-b-2xl bg-[#5f67ef] absolute top-0 left-0 block sm:hidden"></div>
                     <div className="w-[93%] relative z-30 sm:w-full mx-auto sm:mx-0">
                         <CTA
-                            title={
-                                "<p>Готовы внедрять Web3 <br/> в ваш бизнес?</p>"
-                            }
+                            title={formTitle}
                         />
                     </div>
                 </div>

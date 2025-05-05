@@ -1,13 +1,20 @@
 "use client";
 import { useRouter } from "next/navigation";
 
+import { useLang } from "../../context/LangContext";
+import languages from "../../data/lang";
+
 export const ReturnBack: React.FC = () => {
     const router = useRouter();
+
+    const { lang } = useLang();
+    // @ts-ignore
+    const tr = languages[lang].returnback;
 
     return (
         <button
             onClick={() => router.back()}
-            className="btn btn-transparent !bg-white/10 items-center w-fit flex gap-1 md:gap-2 lg:gap-4 py-2 lg:py-2.5 px-3.5 lg:px-4 !rounded-4xl"
+            className="btn btn-transparent !bg-transparent hover:!bg-white/10 items-center w-fit flex gap-1 md:gap-2 lg:gap-4 py-2 lg:py-2.5 px-3.5 lg:px-4 !rounded-4xl"
         >
             <div className="scale-75 md:scale-80 lg:scale-100">
                 <svg
@@ -51,7 +58,7 @@ export const ReturnBack: React.FC = () => {
                     </g>
                 </svg>
             </div>
-            <p className="text-white text-sm md:text-base ">Вернуться назад</p>
+            <p className="text-white text-sm md:text-base ">{tr}</p>
         </button>
     );
 };

@@ -34,7 +34,8 @@ export default function Features() {
                 <div className="flex justify-center items-start gap-4 md:gap-8 lg:gap-0 lg:items-center flex-col lg:flex-row">
                     <Tab name={tr.tab} />
                     <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A] lg:mx-auto">
-                        {tr.title}
+                        {tr.titleBlack}
+                        <span>{tr.titleBlue}</span>
                     </h2>
                 </div>
 
@@ -59,14 +60,23 @@ export default function Features() {
                                 <SwiperSlide key={index}>
                                     <div className="card justify-between">
                                         <div className=" card-image">
-                                            <Image src={feature.icon} alt="feature-icon" />
+                                            <Image
+                                                src={feature.icon}
+                                                alt="feature-icon"
+                                            />
                                         </div>
 
                                         <div className="card-text">
                                             <p className="text-lg xl:text-xl 2xl:text-2xl font-semibold xl:max-w-[200px] 2xl:max-w-[250px]">
                                                 {feature.title}
                                             </p>
-                                            <p className="card-hidden-text" style={{ color: "#1D2230", maxWidth: "230px" }}>
+                                            <p
+                                                className="card-hidden-text"
+                                                style={{
+                                                    color: "#1D2230",
+                                                    maxWidth: "230px",
+                                                }}
+                                            >
                                                 {feature.text}
                                             </p>
                                         </div>
@@ -89,7 +99,12 @@ export default function Features() {
                                 </svg>
                             </button>
                             <button className="features-next w-12 h-12 md:w-14 md:h-14 btn btn-white aspect-square flex justify-center items-center">
-                                <svg width="16" height="16" viewBox="0 0 16 16" className="rotate-180">
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    className="rotate-180"
+                                >
                                     <path d="M10.0001 2.6665L4.66675 7.99984L10.0001 13.3332L11.3334 11.9998L7.33341 7.99984L11.3334 3.99984L10.0001 2.6665Z" />
                                 </svg>
                             </button>

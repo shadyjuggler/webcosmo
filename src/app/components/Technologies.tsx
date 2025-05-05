@@ -4,7 +4,23 @@ import moh from "../assets/moh.png";
 import { Message } from "./UI/Message";
 
 //@ts-ignore
-export default function Technologies({ content }) {
+export default function Technologies({
+//@ts-ignore
+
+    title,
+//@ts-ignore
+
+    messageTitle,
+//@ts-ignore
+
+    messageText,
+//@ts-ignore
+
+    tab,
+//@ts-ignore
+
+    content,
+}) {
     return (
         <section id="tech" className="rounded-2xl ">
             <div className="relative mask-side-file-top graident-main px-4 md:px-6 xl:px-8 py-20 md:py-40 rounded-xl overflow-hidden">
@@ -13,17 +29,14 @@ export default function Technologies({ content }) {
                 </div>
 
                 <div className="container mx-auto relative">
-                    <Tab name="Технологии" />
+                    <Tab name={tab} />
 
                     <h2 className="mt-8 lg:mt-16 text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl tex-left">
-                        Реализация и технологии
+                        {title}
                     </h2>
 
                     <div className="absolute hidden lg:block right-4 2xl:right-8 top-0 z-40 md:max-w-[430px] lg:max-w-[482px] xl:max-w-[522px] 2xl:max-w-[562px]">
-                        <Message
-                            title="Отзыв клиента"
-                            message="Сотрудничество с этим агентством — это всегда качественный и креативный результат."
-                        />
+                        <Message title={messageTitle} message={messageText} />
                     </div>
 
                     <div className="mt-8 md:mt-16 lg:mt-24 flex flex-wrap lg:flex-nowrap gap-2 mg:gap-4 justify-center z-20 relative">
@@ -31,7 +44,7 @@ export default function Technologies({ content }) {
                             return (
                                 <div
                                     key={Math.random()}
-                                    className={`py-12 md:py-8 lg:py-12 px-8 lg:px-12 w-full max-w-[400px] lg:max-w-[425px] xl:max-w-[650px] 2xl:max-w-[800px] mask-side-notches bg-[#8380F6] relative min-h-[425px] xl:min-h-[500px]  ${
+                                    className={`py-12 md:py-8 rounded-xl lg:py-12 px-8 lg:px-12 w-full max-w-[400px] lg:max-w-[425px] xl:max-w-[650px] 2xl:max-w-[800px] mask-side-notches bg-[#8380F6] relative min-h-[425px] xl:min-h-[500px]  ${
                                         i % 2 === 1 ? "translate-y-10" : ""
                                     }`}
                                 >
@@ -96,7 +109,8 @@ export default function Technologies({ content }) {
                                         })}
                                     </ul>
                                     <Image
-                                        className=" absolute -bottom-1/3 left-1/2 -translate-x-1/2 lg:max-w-[400px] xl:max-w-[550px]"
+                                        style={{translate: "-50% 0%"}}
+                                        className=" absolute -bottom-1/3 left-1/2 lg:max-w-[400px] xl:max-w-[550px]"
                                         src={item.img}
                                         alt="img"
                                     />

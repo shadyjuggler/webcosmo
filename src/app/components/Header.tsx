@@ -35,7 +35,6 @@ export default function Header() {
         >
             <div className="header-container mx-auto flex flex-col">
                 <Navbar></Navbar>
-
                 <div className="mt-12 relative flex flex-col flex-1">
                     <h1 className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl z-40 max-w-[300px] sm:max-w-[500px] md:max-w-[550px] lg:max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1000px]">
                         {tr.title}

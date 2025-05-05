@@ -10,15 +10,19 @@ import "swiper/css";
 
 import donut from "../assets/donut.png";
 
-
-export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
+export const MainGoals: React.FC<{
+    titleBluePart: string;
+    titleBlackPart: string;
+    tab: string;
+    content: any;
+}> = ({ titleBluePart, titleBlackPart, tab, content }) => {
     return (
         <section id="maingoals" className="mt-7 py-8 lg:py-24">
             <div className="container mx-auto">
                 <div className="flex items-start justify-center gap-4 md:gap-0 md:items-center flex-col md:flex-row">
-                    <Tab name="Задачи" />
+                    <Tab name={tab} />
                     <h2 className="text-3xl md:text-4xl lg:text-5xl !text-[#262B3A] md:mx-auto">
-                        <span>Основные задачи</span> проекта
+                        <span>{titleBluePart}</span> {titleBlackPart}
                     </h2>
                 </div>
 
@@ -36,13 +40,17 @@ export const MainGoals: React.FC<{ content: any }> = ({ content }) => {
                                     <p className="relative z-50 max-w-[420px] mt-4 text-[#262B3A]/60 text-center text-sm">
                                         {item.text}
                                     </p>
+                                    <Image
+                                        src={donut}
+                                        alt="donut"
+                                        className="maingoalsdonut z-30 absolute max-w-[400px] -bottom-30 -left-30"
+                                    />
                                 </div>
                                 <Image
                                     className="w-30 absolute top-0 left-1/2 -translate-y-1/4 -translate-x-1/2"
                                     src={ok}
                                     alt="ok"
                                 />
-                                <Image src={donut} alt="donut" className="maingoalsdonut z-50 absolute max-w-[400px] -bottom-30 -left-30"/>
                             </div>
                         );
                     })}

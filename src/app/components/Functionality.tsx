@@ -7,7 +7,7 @@ import Image from "next/image";
 import "swiper/css";
 
 //@ts-ignore
-export default function Functionality({ content }) {
+export default function Functionality({ titleBluePart, titleBlackPart,titleBlackPart2, tab, content }) {
     const slides = content.map((item: any) => {
         return (
             <SwiperSlide key={Math.random()}>
@@ -43,9 +43,9 @@ export default function Functionality({ content }) {
         <section id="functionality" className="mt-7 py-12 lg:py-24">
             <div className="container mx-auto">
                 <div className="flex justify-center items-start md:items-center gap-4 md:gap-0 md:flex-row flex-col">
-                    <Tab name="Функционал" />
+                    <Tab name={tab} />
                     <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl !text-[#262B3A] md:mx-auto">
-                        Функциональные <br /> <span>возможности</span> платформы
+                        {titleBlackPart} <br /> <span>{titleBluePart}</span> {titleBlackPart2}
                     </h2>
                 </div>
 
