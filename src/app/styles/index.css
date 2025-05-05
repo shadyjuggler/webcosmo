@@ -268,14 +268,14 @@
     position: absolute;
     /* filter: blur(300px); */
     background: #908cf5;
-    width: 2000px;
+    width: 1800px;
     height: 1500px;
     border-radius: 50%;
 
     /* -webkit-filter: blur(450px); */
 
     translate: -50% -80%;
-    left: 50%;
+    left: 20%;
     top: 0;
 }
 
@@ -497,9 +497,9 @@
             rgb(20, 98, 214) 8.857%,
             rgb(144, 107, 255) 73.909%
         );
-        width: 1500px;
-        height: 1500px;
-
+        width: 1200px;
+        height: 1300px;
+        /* left: 30%!important; */
         /* -webkit-filter: blur(450px); */
     }
 

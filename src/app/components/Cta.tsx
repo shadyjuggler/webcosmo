@@ -72,7 +72,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
             >
                 <div
                     style={{ filter: "blur(250px)", opacity: "0.5" }}
-                    className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] "
+                    className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[150px] "
                 ></div>
                 <Image
                     style={{ translate: "54% 0%" }}
