@@ -140,7 +140,7 @@ export const ru = {
             { name: "Дмитрий Дудин", role: "Full Stack разработчик" },
             { name: "Александр Юрьев", role: "Front-end разработчик" },
             { name: "Дмитрий Петров", role: "CEO компании" },
-            { name: "Дмитрий Дудин", role: "Full Stack разработчик" },
+            { name: "Jason Dixon", role: "Full Stack разработчик" },
         ],
         contactCta: "Связаться с нами",
     },

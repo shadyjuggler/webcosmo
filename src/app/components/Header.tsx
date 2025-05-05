@@ -11,8 +11,8 @@ import gear from "../assets/gear.gif";
 
 import trophyMob from "../assets/trophy-mob.png";
 
-// import headerB from "../assets/header-bottom.svg";
-import headerB from "../assets/header-bottom2.png";
+import headerB from "../assets/header-bottom.svg";
+// import headerB from "../assets/header-bottom2.png";
 
 import smallarrow from "../assets/small-arrow.svg";
 

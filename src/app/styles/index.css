@@ -538,6 +538,26 @@
     }
 }
 
+
+/* @media (width >= 80rem) {
+    .container {
+        max-width: 82rem!important;
+    }
+}
+
+@media (width >= 96rem) {
+    .container {
+        max-width: 85rem!important;
+    }
+}
+
+
+@media (width >= 64rem) {
+    .container {
+        max-width: 64rem;
+    }
+} */
+
 @media (width >= 96rem) {
     .container {
         max-width: 1680px;
