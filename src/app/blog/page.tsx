@@ -141,7 +141,7 @@ export default function BlogPage() {
                                                         //@ts-ignore
                                                         (item) => {
                                                             return (
-                                                                <li className="text-[#1D2230] opacity-60">
+                                                                <li key={Math.random()} className="text-[#1D2230] opacity-60">
                                                                     {item}
                                                                 </li>
                                                             );
