@@ -191,7 +191,7 @@ export default function Team() {
                                 alt="gear"
                             />
                         </div>
-                        <button className="mt-auto w-12 2xl:w-14 h-12 2xl:h-14 btn btn-white aspect-square flex justify-center items-center !rounded-xl">
+                        <a href="#cta" className="mt-auto w-12 2xl:w-14 h-12 2xl:h-14 btn btn-white aspect-square flex justify-center items-center !rounded-xl">
                             <svg
                                 width="16"
                                 height="16"
@@ -205,7 +205,7 @@ export default function Team() {
                                     d="M10.0001 2.6665L4.66675 7.99984L10.0001 13.3332L11.3334 11.9998L7.33341 7.99984L11.3334 3.99984L10.0001 2.6665Z"
                                 />
                             </svg>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

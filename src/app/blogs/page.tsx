@@ -99,7 +99,7 @@ export default function BlogsPage() {
 
                 <div className="mt-4 md:mt-16 pt-18 md:pt-24 lg:pt-32 bg-[#eff1f5] rounded-2xl relative z-40 ">
                     <div className="absolute -top-[50px] left-1/2 -translate-x-1/2 w-full over bg-white pt-8 pb-4 md:py-8 2xl:py-12 rounded-xl md:rounded-2xl px-6 md:px-8 xl:px-12 2xl:px-16 max-w-[90%] md:max-w-[1100px] xl:max-w-[1300px] 2xl:max-w-[1600px] mx-auto -translate-y-5 md:-translate-y-10 flex justify-between">
-                        <div className="flex gap-1 max-w-[900px] w-full overflow-x-scroll md:overflow-x-auto pb-4 md:pb-0">
+                        <div className="flex gap-1 max-w-[900px] w-full overflow-x-scroll scrollbar-none md:overflow-x-auto pb-4 md:pb-0">
                             {options.map((item: string, i: number) => {
                                 return (
                                     <div
@@ -137,11 +137,11 @@ export default function BlogsPage() {
                                 {tr.telegramNote}
                             </p>
 
-                            <button className="z-20 bottom-4 right-4 absolute btn !bg-white/10  btn-transparent btn-arrow !p-0 !border-0">
+                            <a href="https://t.me/thewebcosmo" target="_blank" className="z-20 hover:!bg-white/20 bottom-4 right-4 absolute btn !bg-white/10  btn-transparent btn-arrow !p-0 !border-0">
                                 <span className="!bg-transparent">
                                     <Image src={smallarrow} alt="smallarrow" />
                                 </span>
-                            </button>
+                            </a>
                         </div>
                     </div>
 

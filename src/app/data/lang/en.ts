@@ -355,6 +355,11 @@ export const en = {
                     title: "Marketplace",
                     text: "Buy, sell, and trade NFTs within the platform.",
                 },
+                {
+                    icon: "shop",
+                    title: "Marketplace",
+                    text: "Buy, sell, and trade NFTs within the platform.",
+                },
             ],
         },
         achievements: {

@@ -11,7 +11,8 @@ import gear from "../assets/gear.gif";
 
 import trophyMob from "../assets/trophy-mob.png";
 
-import headerB from "../assets/header-bottom.svg";
+// import headerB from "../assets/header-bottom.svg";
+import headerB from "../assets/header-bottom2.png";
 
 import smallarrow from "../assets/small-arrow.svg";
 
@@ -110,7 +111,7 @@ export default function Header() {
                     </div>
 
                     <div className="mt-auto flex justify-end z-20 relative">
-                        <div className="relative border-t-1 md:border-0 pt-4 md:pt-0 border-white/10 max-w-full md:max-w-[48%] w-full flex justify-start items-center md:rounded-xl md:p-8 xl:py-6 xl:px-12 2xl:p-[2.2vw]">
+                        <div className="relative z-40 border-t-1 md:border-0 pt-4 md:pt-0 border-white/10 max-w-full md:max-w-[48%] w-full flex justify-start items-center md:rounded-xl md:p-8 xl:py-6 xl:px-12 2xl:p-[2.2vw]">
                             <div className="flex flex-col">
                                 <p className="text-white md:max-w-md text-base">
                                     <span className=" font-semibold">
@@ -119,7 +120,10 @@ export default function Header() {
                                     </span>{" "}
                                     {tr.call}
                                 </p>
-                                <button className="mt-6 2xl:mt-10 btn btn-transparent btn-arrow w-full !bg-white md:!bg-white/10 justify-center md:w-fit py-1 2x:py-1.5 !pl-8 !gap-6 ">
+                                <a
+                                    href="#cta"
+                                    className="mt-6 2xl:mt-10 btn btn-transparent btn-arrow w-full !bg-white md:hover:!bg-white/20 md:!bg-white/10 justify-center md:w-fit py-1 2x:py-1.5 !pl-8 !gap-6 "
+                                >
                                     <p className="mx-auto md:mx-0">{tr.task}</p>
                                     <span>
                                         <Image
@@ -127,7 +131,7 @@ export default function Header() {
                                             alt="smallarrow"
                                         />
                                     </span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <Image
@@ -140,11 +144,60 @@ export default function Header() {
                             src={conus}
                             alt="conus"
                         />
-                        <Image
-                            className="hidden xl:block absolute bottom-0 right-0 w-[60%] 2xl:w-[62%] pointer-events-none"
+                        {/* <Image
+                            className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none"
                             src={headerB}
                             alt="abc"
-                        />
+                        /> */}
+                        <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
+                            <svg
+                                width="1054.000000"
+                                height="364.067627"
+                                viewBox="0 0 1054 364.068"
+                                fill="none"
+                            >
+                                <defs>
+                                    <filter
+                                        id="filter_0_40_dd"
+                                        x="0.000000"
+                                        y="0.000000"
+                                        width="1054.000000"
+                                        height="364.067627"
+                                        filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB"
+                                    >
+                                        <feFlood
+                                            flood-opacity="0"
+                                            result="BackgroundImageFix"
+                                        />
+                                        <feGaussianBlur
+                                            in="BackgroundImage"
+                                            stdDeviation="13.3333"
+                                        />
+                                        <feComposite
+                                            in2="SourceAlpha"
+                                            operator="in"
+                                            result="effect_backgroundBlur_1"
+                                        />
+                                        <feBlend
+                                            mode="normal"
+                                            in="SourceGraphic"
+                                            in2="effect_backgroundBlur_1"
+                                            result="shape"
+                                        />
+                                    </filter>
+                                </defs>
+                                <g filter="url(#filter_0_40_dd)">
+                                    <path
+                                        id="Glass Element"
+                                        d="M0 16L6.1e-5 201.63C6.1e-5 210.47 7.16 217.63 16 217.63L207.5 217.63C216.33 217.63 223.5 224.8 223.5 233.63L223.5 348.06C223.5 356.9 230.66 364.06 239.5 364.06L1038 364.06C1046.84 364.06 1054 356.9 1054 348.06L1054 128.87C1054 120.02 1046.81 112.85 1037.94 112.87L239.54 115.29C230.69 115.31 223.5 108.14 223.5 99.28L223.5 16C223.5 7.16 216.33 0 207.5 0L16 0C7.16 0 0 7.16 0 16Z"
+                                        fill="#FFFFFF"
+                                        fill-opacity="0.120000"
+                                        fill-rule="evenodd"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

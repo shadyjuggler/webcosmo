@@ -46,31 +46,31 @@ export default function Footer() {
 
                 <div className="basis-4/5 flex flex-col md:flex-row gap-4">
                     {/* Instagram Block */}
-                    <div className="relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
+                    <a href="https://www.instagram.com/thewebcosmo/" target="_blank" className="relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
                         <div className="flex justify-between">
                             <p className="text-white/60">{tr.contact.instagram}</p>
                             <Image className="absolute max-w-[300px] scale-50 lg:scale-75 xl:scale-90 2xl:scale-100 -right-[25px] md:-right-[50px] 2xl:right-0 translate-x-[50px] top-0 -translate-y-[100px] md:-translate-y-[140px] lg:-translate-y-[150px]" src={arrow} alt="arrow" />
                         </div>
-                        <a href="@thewebcosmo" target="_blank" className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">@thewebcosmo</a>
-                    </div>
+                        <p className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">@thewebcosmo</p>
+                    </a>
 
                     {/* Telegram Block */}
-                    <div className="lg:mt-8 relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
+                    <a href="https://t.me/thewebcosmo" target="_blank" className="lg:mt-8 relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
                         <div className="flex justify-between">
                             <p className="text-white/60">{tr.contact.telegram}</p>
                             <Image className="absolute max-w-[300px] scale-50 lg:scale-75 xl:scale-90 2xl:scale-100 -right-[25px] md:-right-[50px] 2xl:right-0 translate-x-[50px] top-0 -translate-y-[100px] md:-translate-y-[130px] lg:-translate-y-[120px]" src={tg} alt="arrow" />
                         </div>
-                        <a href="t.me/thewebcosmo" target="_blank" className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">t.me/thewebcosmo</a>
-                    </div>
+                        <p className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">t.me/thewebcosmo</p>
+                    </a>
 
                     {/* Email Block */}
-                    <div className="lg:mt-16 relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
+                    <a href="mailto:thewebcosmo@gmail.com" target="_blank" className="lg:mt-16 relative flex flex-col rounded-xl p-4 lg:p-8 bg-white/20 w-full md:w-1/3 h-full max-h-[270px]">
                         <div className="flex justify-between">
                             <p className="text-white/60">{tr.contact.email}</p>
                             <Image className="absolute max-w-[250px] scale-50 lg:scale-75 xl:scale-90 2xl:scale-100 -right-[35px] 2xl:right-0 -translate-y-[60px] translate-x-[10px] top-0 md:-translate-y-[100px]" src={email} alt="arrow" />
                         </div>
-                        <a href="mailto:thewebcosmo@gmail.com" target="_blank" className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">thewebcosmo@gmail.com</a>
-                    </div>
+                        <p className="hover:opacity-90 transition-all xl:mt-auto md:mt-8 mt-12 text-base lg:text-lg 2xl:text-2xl text-white">thewebcosmo@gmail.com</p>
+                    </a>
                 </div>
             </div>
 

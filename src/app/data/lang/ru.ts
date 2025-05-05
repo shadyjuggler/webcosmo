@@ -335,10 +335,10 @@ export const ru = {
             },
         },
         features: {
-            titleBluePart: "functional",
-            titleBlackPart: "Platform",
-            titleBlackPart2: "abilities",
-            tab: "functionality",
+            titleBluePart: " возможности ",
+            titleBlackPart: "Функциональные",
+            titleBlackPart2: "платформы",
+            tab: "Функционал",
             content: [
                 {
                     icon: "imgIcon",
@@ -349,6 +349,11 @@ export const ru = {
                     icon: "cross",
                     title: "Генерация очков (FungyPoints)",
                     text: "NFT начинают приносить очки после упаковки, повышая их полезность.",
+                },
+                {
+                    icon: "shop",
+                    title: "Маркетплейс",
+                    text: "Покупка, продажа и обмен NFT внутри платформы",
                 },
                 {
                     icon: "shop",

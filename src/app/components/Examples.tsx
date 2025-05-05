@@ -59,7 +59,9 @@ export default function Examples() {
             <div className="relative container mx-auto z-10">
                 <div className="flex justify-start md:justify-center items-center relative">
                     <div className="flex md:w-2/3 flex-col lg:flex-row gap-36 md:gap-8 lg:gap-0 w-full items-center">
-                        <Tab name="Кейсы" />
+                        <div className="mr-auto md:mr-0">
+                            <Tab name="Кейсы" />
+                        </div>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl !text-[#262B3A] lg:mx-auto">
                             Наши проекты
                         </h2>
@@ -72,7 +74,7 @@ export default function Examples() {
                     </div>
                 </div>
 
-                <div className="mt-4 md:mt-8 lg:mt-16 flex gap-1 justify-between overflow-x-scroll pb-4 xl:pb-0">
+                <div className="mt-4 md:mt-8 lg:mt-16 flex gap-1 justify-between overflow-x-scroll scrollbar-none pb-4 xl:pb-0">
                     <div
                         onClick={() => setCategory("Web")}
                         className={`filter-tab ${
@@ -188,7 +190,10 @@ export default function Examples() {
                         </button>
                     </div>
 
-                    <Link href={"/cases"} className="!hidden md:!flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5">
+                    <Link
+                        href={"/cases"}
+                        className="!hidden md:!flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
+                    >
                         {tr.more}
                         <span>
                             <Image src={arrow} alt="smallarrow" />

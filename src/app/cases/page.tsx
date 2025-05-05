@@ -65,7 +65,7 @@ export default function BlogsPage() {
                                 </div>
 
                                 <div className="mt-8 md:mt-32">
-                                    <button className="relative w-full md:w-fit z-40 btn btn-transparent md:!bg-white/10 btn-arrow py-1 pl-3 md:pl-4 pr-1 text-white">
+                                    <a href="/#cta" className="relative w-full md:w-fit z-40 btn btn-transparent md:!bg-white/10 md:hover:!bg-white/20 btn-arrow py-1 pl-3 md:pl-4 pr-1 text-white">
                                         <p className="mx-auto md:mx-0">
                                             {tr.cta}
                                         </p>
@@ -76,7 +76,7 @@ export default function BlogsPage() {
                                                 alt="smallarrow"
                                             />
                                         </span>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 

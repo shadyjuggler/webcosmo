@@ -87,7 +87,7 @@ export default function Articles() {
                     <Swiper
                         id="article_slider"
                         modules={[Navigation]}
-                        spaceBetween={10}
+                        spaceBetween={23}
                         slidesPerView={1}
                         navigation={{
                             prevEl: ".article-prev",

@@ -633,3 +633,8 @@
 .modal_form textarea {
     @apply !min-h-[120px];
 }
+
+
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}

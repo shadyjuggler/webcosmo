@@ -45,7 +45,7 @@ export const CaseSlide: React.FC<{
                     </div>
                 </div>
 
-                <div className="relative w-full max-h-[400px] md:max-h-full md:h-full 2xl:max-w-[446px] flex items-end overflow-hidden">
+                <Link href={link} className="relative w-full max-h-[400px] md:max-h-full md:h-full 2xl:max-w-[446px] flex items-end overflow-hidden">
                     <Image className="h-full" src={img} alt="bg" />
                     <div
                         style={{ translate: "-50% -50%" }}
@@ -53,7 +53,7 @@ export const CaseSlide: React.FC<{
                     >
                         <Image src={imgUrl ? imgUrl : ""} alt="image" />
                     </div>
-                </div>
+                </Link>
             </div>
             <Link
                 href={link}
