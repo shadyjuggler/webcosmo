@@ -144,12 +144,12 @@ export default function Header() {
                             src={conus}
                             alt="conus"
                         />
-                        <Image
+                        {/* <Image
                             className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none"
                             src={headerB}
                             alt="abc"
-                        />
-                        {/* <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
+                        /> */}
+                        <div className="hidden xl:block absolute bottom-0 right-0 lg:w-[80%] xl:w-[60%] 2xl:w-[62%] pointer-events-none">
                             <svg
                                 width="1054.000000"
                                 height="364.067627"
@@ -187,7 +187,7 @@ export default function Header() {
                                         />
                                     </filter>
                                 </defs>
-                                <g filter="url(#filter_0_40_dd)">
+                                <g>
                                     <path
                                         id="Glass Element"
                                         d="M0 16L6.1e-5 201.63C6.1e-5 210.47 7.16 217.63 16 217.63L207.5 217.63C216.33 217.63 223.5 224.8 223.5 233.63L223.5 348.06C223.5 356.9 230.66 364.06 239.5 364.06L1038 364.06C1046.84 364.06 1054 356.9 1054 348.06L1054 128.87C1054 120.02 1046.81 112.85 1037.94 112.87L239.54 115.29C230.69 115.31 223.5 108.14 223.5 99.28L223.5 16C223.5 7.16 216.33 0 207.5 0L16 0C7.16 0 0 7.16 0 16Z"
@@ -197,7 +197,7 @@ export default function Header() {
                                     />
                                 </g>
                             </svg>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
