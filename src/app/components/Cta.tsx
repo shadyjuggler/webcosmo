@@ -23,7 +23,7 @@ export const CTA: React.FC<{ title: string }> = ({ title }) => {
                 id="cta"
                 className=" mask-side-file-top relative overflow-hidden rounded-b-2xl px-4 2xl:px-0"
             >
-                <div className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] "></div>
+                <div style={{filter: "blur(250px)", opacity: "0.5"}} className="circle hidden md:block z-20 md:!-translate-y-0 md:!-top-1/2 md:!-translate-x-0 md:!left-[200px] "></div>
                 <Image
                     style={{ translate: "54% 0%" }}
                     className="max-w-[300px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[1000px] absolute -bottom-35 right-1/2 md:!translate-x-0 md:-right-50"

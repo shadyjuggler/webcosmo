@@ -266,7 +266,7 @@
 
 .circle {
     position: absolute;
-    filter: blur(300px);
+    /* filter: blur(300px); */
     background: #908cf5;
     width: 2000px;
     height: 1500px;
@@ -491,7 +491,7 @@
 
     .circle {
         position: absolute;
-        filter: blur(450px);
+        /* filter: blur(450px); */
         background: linear-gradient(
             -55.43deg,
             rgb(20, 98, 214) 8.857%,
@@ -500,7 +500,7 @@
         width: 1100px;
         height: 1100px;
 
-        -webkit-filter: blur(450px);
+        /* -webkit-filter: blur(450px); */
     }
 
     #header_corner_1::before {
