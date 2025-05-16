@@ -85,8 +85,8 @@ export default function Header() {
                     </div>
 
                     <div
-                        className="absolute w-full bottom-45 sm:bottom-48 md:-bottom-10 lg:bottom-0 xl:-bottom-5 2xl:-bottom-10 left-0 md:left-[8%] lg:left-[16%] xl:left-[15%] 2xl:left-[15%] flex flex-col justify-end items-end md:items-start z-30 min-w-[280px] xl:min-w-[380px]"
-                        style={{ maxWidth: "33%" }}
+                        className="absolute w-full max-w-[33%] bottom-45 sm:bottom-48 md:-bottom-7    lg:-bottom-0 xl:-bottom-5 2xl:-bottom-10 left-0 md:left-[8%] lg:left-[16%] xl:left-[15%] 2xl:left-[15%] flex flex-col justify-end items-end md:items-start z-30 min-w-[280px] md:min-w-[320px] xl:min-w-[380px]"
+
                     >
                         <Image
                             className="hidden md:block w-full h-auto rotate-y-180 md:rotate-y-0"

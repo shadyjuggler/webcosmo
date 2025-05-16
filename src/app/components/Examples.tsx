@@ -149,7 +149,7 @@ export default function Examples() {
                     </Swiper>
                 </div>
 
-                <div className="mt-12 flex justify-between">
+                <div className="mt-12 flex justify-between flex-col gap-6 md:gap-0 md:flex-row">
                     <div className="flex gap-2">
                         <button
                             ref={prevRef}
@@ -192,7 +192,7 @@ export default function Examples() {
 
                     <Link
                         href={"/cases"}
-                        className="!hidden md:!flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
+                        className="relative w-fit z-40 flex btn btn-blue btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
                     >
                         {tr.more}
                         <span>

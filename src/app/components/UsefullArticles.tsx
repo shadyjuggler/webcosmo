@@ -36,7 +36,7 @@ export default function Articles() {
     return (
         <section
             id="articles"
-            className="pt-12 py-32 lg:py-24 relative"
+            className="pt-12 pt-32 pb-16 lg:py-24 relative"
         >
             <div className="container mx-auto">
                 <div className="flex justify-between">
@@ -47,7 +47,7 @@ export default function Articles() {
                         </h2>
                     </div>
 
-                    <div className="flex absolute bottom-8 md:static">
+                    <div className="flex absolute bottom-40 md:static">
                         <div className="flex gap-2 items-end">
                             <button className="article-prev w-15 h-15 btn btn-white aspect-square flex justify-center items-center">
                                 <svg
@@ -105,10 +105,10 @@ export default function Articles() {
                         {content}
                     </Swiper>
                 </div>
-                <div className="hidden md:flex mt-8 justify-center">
+                <div className="mt-32 md:mt-8 flex justify-start md:justify-center">
                     <Link
                         href="/blogs"
-                        className="btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
+                        className="w-fit btn btn-bluewhite btn-arrow !py-1 !pl-7 !pr-1.5 !gap-5"
                     >
                         {tr.more}
                         <span>

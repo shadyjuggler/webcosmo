@@ -3,7 +3,7 @@
 import { Tab } from "./UI/Tab";
 import Image from "next/image";
 import glass from "../assets/glass.svg";
-import sphere from "../assets/sphere.png";
+import sphere from "../assets/sphere.gif";
 import Form from "./Form";
 
 import { useLang } from "../context/LangContext";
